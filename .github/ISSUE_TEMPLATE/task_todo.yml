@@ -1,0 +1,56 @@
+name: Task / TODO
+description: A small, single-owner coordination item for this hub — a routing fix, a label update, a template tweak, or a triage chore
+title: "TODO: "
+labels: ["status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## TODO item
+
+        Use this for **small, single-session, low-risk** items that live in
+        this repository: triage chores, template/label fixes, doc updates,
+        and routing corrections. Implementation work — anything that writes
+        application code — is not accepted here (Law 1: no code). Card-worthy
+        cross-agent work tracks on the hub board
+        (`Digital-Mailroom/governance/TASKS.md`), not as a loose TODO.
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      multiple: true
+      options:
+        - Governance
+        - Digital Mailroom
+        - LLM Mailroom
+        - Mailroom Sandbox
+        - Agents
+        - HuggingFace
+        - Modal
+        - Langfuse
+        - Braintrust
+        - Database
+        - Datasets
+        - Vercel
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: What needs doing
+      description: The concrete change — files, commands, expected outcome
+    validations:
+      required: true
+  - type: textarea
+    id: done_when
+    attributes:
+      label: Done when
+      description: The verifiable criterion — a command that passes, a doc section that exists, an audit that reads zero
+      placeholder: "python scripts/labels.py audit exits 0 / README section covers X"
+    validations:
+      required: true
+  - type: input
+    id: related
+    attributes:
+      label: Related issue / epic
+      description: "#NNN if this item extends existing work (update, don't duplicate)"

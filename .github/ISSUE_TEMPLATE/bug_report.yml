@@ -1,0 +1,83 @@
+name: Bug report
+description: Something is broken across the constellation — a cross-repo bug, a platform integration failure, or a defect touching more than one repository
+title: "[Bug]: "
+labels: ["bug", "status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before filing
+
+        - **Read the routing guide** (`docs/ROUTING.md`). A bug scoped to a
+          single package (`Exios66/*`) belongs in that package's repo — not
+          here. File it here only when it spans repositories, touches the
+          org, or needs a shared decision.
+        - **Search first** — update an existing issue instead of duplicating
+          it (update, don't duplicate).
+        - Every issue starts in `status/triage`; the triage pass confirms
+          routing, scope, and priority.
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain (which repos/platforms does this touch?)
+      description: Cross-repo bugs carry MULTIPLE domain labels — one per touched repo/platform
+      multiple: true
+      options:
+        - Digital Mailroom
+        - LLM Mailroom
+        - Mailroom Sandbox
+        - Agents
+        - HuggingFace
+        - Modal
+        - Langfuse
+        - Braintrust
+        - Governance
+        - Database
+        - Datasets
+        - Vercel
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - cross-repo integration / data flow
+        - platform integration (HF / Modal / Langfuse / Braintrust / Vercel)
+        - agent / specialist behavior
+        - governance / label / template
+        - docs drift
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: Actual behavior, including the exact command/endpoint and its output/error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened (cite the AGENTS.md rule / README section / issue it regressed against if one defines it)
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      description: Minimal steps from the affected repository's checkout (setup → command → failure)
+      placeholder: |
+        1. cd packages/llm-mailroom
+        2. python -m ...
+        3. error
+    validations:
+      required: true
+  - type: input
+    id: related
+    attributes:
+      label: Related issue / epic
+      description: "Epic or issue this bug extends (#NNN). If this is card-worthy on the hub board, reference the DMR-0NN card on Digital-Mailroom/governance/TASKS.md."
+      placeholder: "#12 / DMR-0NN"

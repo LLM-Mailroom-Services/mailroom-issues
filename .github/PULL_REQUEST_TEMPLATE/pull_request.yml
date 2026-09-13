@@ -1,0 +1,49 @@
+name: Pull request
+description: Standard PR form for this hub — changes are docs, templates, the label manifest, or the governance tooling
+title: "[PR]: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before opening
+
+        This repository accepts **no code and no packages** — PRs here change
+        docs, issue templates, the label manifest (`.github/labels.json`), or
+        the governance tooling. Implementation changes belong in the sibling
+        repo where the code lives.
+  - type: input
+    id: issue
+    attributes:
+      label: Issue
+      description: "The issue(s) this PR resolves or advances (#NNN — reference, don't fabricate numbers)"
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What this PR changes and why — files touched, and the behavior those files describe
+    validations:
+      required: true
+  - type: checkboxes
+    id: governance
+    attributes:
+      label: Governance discipline
+      options:
+        - label: "Docs currency — README.md / AGENTS.md / docs/* updated in the same commit where behavior they describe changed"
+        - label: "Label manifest changes update docs/LABELS.md in the same commit as .github/labels.json"
+        - label: "Commits carry detailed messages referencing issue numbers (subject + body naming each file)"
+        - label: "No code or packages introduced"
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      options:
+        - label: "`python scripts/labels.py audit --repo LLM-Mailroom-Services/mailroom-issues` exits 0 (if labels/templates changed)"
+        - label: "YAML/JSON in .github/ is valid (templates + workflow parse)"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Reviewer notes
+      description: Edge cases, follow-ups, risk

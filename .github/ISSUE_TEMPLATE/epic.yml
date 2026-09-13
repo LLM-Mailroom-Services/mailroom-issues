@@ -1,0 +1,76 @@
+name: Epic (cross-repo workstream)
+description: A coordinated program of work spanning multiple repositories — one concern, tracked as child issues (one per repo/phase)
+title: "Epic: "
+labels: ["type/epic", "status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Epic — one concern, many child issues
+
+        An epic is a **cross-repo workstream** (Law 3): one issue = one
+        concern, and the program is tracked as child issues — one per
+        repository or phase — all linked from this epic body. This issue is
+        the parent; it carries the scope, the child-issue checklist, and the
+        overall progress. Implementation never happens in this repository.
+
+        A single-repo workstream is NOT an epic — file it in that repo.
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope & success criteria
+      description: What this program achieves, its boundaries, and how we know the program is complete
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domains touched (one per repository/platform)
+      multiple: true
+      options:
+        - Digital Mailroom
+        - LLM Mailroom
+        - Mailroom Sandbox
+        - Agents
+        - HuggingFace
+        - Modal
+        - Langfuse
+        - Braintrust
+        - Governance
+        - Database
+        - Datasets
+        - Vercel
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - low
+        - medium
+        - high
+        - critical
+    validations:
+      required: true
+  - type: textarea
+    id: children
+    attributes:
+      label: Child issues (checklist)
+      description: One child issue per repository/phase — open each in the repo where the work lands (or here if the phase is itself cross-repo) and link it
+      placeholder: |
+        - [ ] #NNN — phase: architecture & bootstrap
+        - [ ] Exios66/Mailroom-Corpus-EDA#NNN — expansion
+        - [ ] LLM-Mailroom-Services/Digital-Mailroom#NNN — consumer migration
+    validations:
+      required: true
+  - type: textarea
+    id: plan
+    attributes:
+      label: Sequencing & dependencies
+      description: The order phases land, what each child depends on, and any external platform dependencies (HF Hub, Modal, Langfuse, Braintrust, Vercel)
+  - type: input
+    id: owner
+    attributes:
+      label: Owner / lead
+      description: "The agent or person shepherding this epic (e.g. lucius, athena, human)"

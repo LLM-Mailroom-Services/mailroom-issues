@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "note": "Declarative label taxonomy for LLM-Mailroom-Services/mailroom-issues — the cross-repo issue hub. Source of truth for scripts/labels.py sync/audit. Four orthogonal families route work: type/* (what the issue is), domain/* (which repo/platform it touches), priority/* (how urgent), status/* (where it is in the lifecycle). GitHub lifecycle labels (bug, enhancement, duplicate, invalid, wontfix, ...) follow their standard meanings. New labels are a manifest change, never a GitHub edit.",
+  "labels": [
+    {
+      "name": "bug",
+      "color": "D73A4A",
+      "description": "Something isn't working"
+    },
+    {
+      "name": "enhancement",
+      "color": "A2EEEF",
+      "description": "New feature or request"
+    },
+    {
+      "name": "documentation",
+      "color": "0075CA",
+      "description": "Improvements or additions to documentation"
+    },
+    {
+      "name": "question",
+      "color": "D876E3",
+      "description": "Further information is requested"
+    },
+    {
+      "name": "type/epic",
+      "color": "6F42C1",
+      "description": "Cross-repo workstream: a program of work with child issues (one per repo/phase)"
+    },
+    {
+      "name": "type/rfc",
+      "color": "05438C",
+      "description": "Design proposal for cross-repo review before implementation"
+    },
+    {
+      "name": "Digital Mailroom",
+      "color": "A8C85C",
+      "description": "Issues, discussions, or tasks associated with the Monorepo."
+    },
+    {
+      "name": "LLM Mailroom",
+      "color": "C8D5C1",
+      "description": "Core llm-mailroom repository/package related issue, task, or discussion."
+    },
+    {
+      "name": "Mailroom Sandbox",
+      "color": "56093C",
+      "description": "Local-Mailroom-Sandbox / Mailroom Sandbox related issue or task."
+    },
+    {
+      "name": "Agents",
+      "color": "AEE133",
+      "description": "Agent infrastructure, enhancements, configuration, and/or design improvement related work."
+    },
+    {
+      "name": "HuggingFace",
+      "color": "620076",
+      "description": "HuggingFace associated issue or task."
+    },
+    {
+      "name": "Modal",
+      "color": "083B29",
+      "description": "Modal API or Modal related issue, discussion, or task."
+    },
+    {
+      "name": "Langfuse",
+      "color": "F726D8",
+      "description": "Langfuse tracing, database, or agent related issue, task, or discussion."
+    },
+    {
+      "name": "Braintrust",
+      "color": "503695",
+      "description": "Braintrust tracing, dataset, or logging related work."
+    },
+    {
+      "name": "Governance",
+      "color": "BA4D0B",
+      "description": "Governance protocol, task board, or AGENTS.md related work."
+    },
+    {
+      "name": "Database",
+      "color": "0846FA",
+      "description": "Work associated with database management within the project (SQLite, PostGres, Google Drive)."
+    },
+    {
+      "name": "Datasets",
+      "color": "E38DAA",
+      "description": "Data / Dataset related work — outside of strictly the HuggingFace domain."
+    },
+    {
+      "name": "Vercel",
+      "color": "ECF999",
+      "description": "Vercel ecosystem, deployment, or integration related work."
+    },
+    {
+      "name": "priority/critical",
+      "color": "B60205",
+      "description": "Blocks other work; must land immediately"
+    },
+    {
+      "name": "priority/high",
+      "color": "D93F0B",
+      "description": "High priority - lands before routine work"
+    },
+    {
+      "name": "priority/medium",
+      "color": "FBCA04",
+      "description": "Normal priority"
+    },
+    {
+      "name": "priority/low",
+      "color": "CCCCCC",
+      "description": "Low priority - when capacity allows"
+    },
+    {
+      "name": "status/triage",
+      "color": "EDEDED",
+      "description": "Freshly filed; needs routing, scoping, prioritization, or a decision"
+    },
+    {
+      "name": "status/accepted",
+      "color": "C2E0C6",
+      "description": "Triaged and scheduled — owned or explicitly backlogged"
+    },
+    {
+      "name": "status/in-progress",
+      "color": "C5DEF5",
+      "description": "Work is actively underway"
+    },
+    {
+      "name": "status/blocked",
+      "color": "5319E7",
+      "description": "Blocked on a dependency or decision (named in the thread)"
+    },
+    {
+      "name": "good first issue",
+      "color": "7057FF",
+      "description": "Good for newcomers"
+    },
+    {
+      "name": "help wanted",
+      "color": "008672",
+      "description": "Extra attention is needed"
+    },
+    {
+      "name": "duplicate",
+      "color": "CFD3D7",
+      "description": "This issue or pull request already exists"
+    },
+    {
+      "name": "invalid",
+      "color": "E4E669",
+      "description": "This doesn't seem right"
+    },
+    {
+      "name": "wontfix",
+      "color": "FFFFFF",
+      "description": "This will not be worked on"
+    },
+    {
+      "name": "accessibility",
+      "color": "F143AB",
+      "description": "Barrier affecting people with disabilities"
+    }
+  ]
+}

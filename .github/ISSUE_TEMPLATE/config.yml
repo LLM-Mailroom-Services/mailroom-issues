@@ -1,0 +1,17 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Issue routing guide
+    url: https://github.com/LLM-Mailroom-Services/mailroom-issues/blob/main/docs/ROUTING.md
+    about: Read before filing — this hub is for cross-repo, org-wide, and shared-decision work only. Single-repo issues go to that repo.
+  - name: Constellation map
+    url: https://github.com/LLM-Mailroom-Services/mailroom-issues/blob/main/docs/CONSTELLATION.md
+    about: Which repository owns which concern — find where the code you are reporting on actually lives.
+  - name: Label taxonomy
+    url: https://github.com/LLM-Mailroom-Services/mailroom-issues/blob/main/docs/LABELS.md
+    about: The four label families (type / domain / priority / status). Labels are the routing mechanism.
+  - name: Hub task board (Digital-Mailroom governance/TASKS.md)
+    url: https://github.com/LLM-Mailroom-Services/Digital-Mailroom/blob/main/governance/TASKS.md
+    about: Cross-agent task state lives next door on the hub board — not here. This hub tracks issues.
+  - name: Single-package work
+    url: https://github.com/Exios66/llm-mailroom
+    about: Work scoped to a single Exios66/* package tracks in that package's own repository — file it there, not here.

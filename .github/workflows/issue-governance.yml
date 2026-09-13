@@ -1,0 +1,44 @@
+name: issue-governance
+
+# Keeps the hub's label taxonomy honest. The declarative manifest
+# (.github/labels.json) is the source of truth — labels are never hand-edited
+# on GitHub. Blocking: label-manifest drift audit on every change to .github/.
+# On merge to main, the manifest is pushed to the repo (create/update; extras
+# are reported, never deleted).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/**"
+  pull_request:
+    paths:
+      - ".github/**"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  label-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Label manifest drift audit
+        run: python scripts/labels.py audit --repo ${{ github.repository }}
+
+  label-sync:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Push manifest to repo labels
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/labels.py sync --repo ${{ github.repository }}

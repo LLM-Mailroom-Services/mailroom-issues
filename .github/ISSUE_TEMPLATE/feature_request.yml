@@ -1,0 +1,78 @@
+name: Feature request
+description: Propose a new capability or enhancement spanning repositories, platforms, or org-level infrastructure
+title: "[Feature]: "
+labels: ["enhancement", "status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature request
+
+        This hub accepts enhancements that are **cross-repo**, **org-wide**,
+        or need a **shared decision** (platform integration, agent
+        infrastructure, governance tooling, dataset programs). A feature
+        scoped to a single package belongs in that package's repo.
+
+        Large multi-repo programs should use the **Epic** template instead of
+        this one.
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain (which repos/platforms does this touch?)
+      multiple: true
+      options:
+        - Digital Mailroom
+        - LLM Mailroom
+        - Mailroom Sandbox
+        - Agents
+        - HuggingFace
+        - Modal
+        - Langfuse
+        - Braintrust
+        - Governance
+        - Database
+        - Datasets
+        - Vercel
+    validations:
+      required: true
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - cross-repo program (consider the Epic template)
+        - platform integration (HF / Modal / Langfuse / Braintrust / Vercel)
+        - agent / specialist infrastructure
+        - governance / label / template
+        - dataset / corpus program
+        - other
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: What problem or friction does this remove? Cite issues, run failures, or workflow friction as evidence
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: The concrete plan — which repositories it touches, what ships where, and the shared decision being requested
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches and why they were rejected
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How we know this is done — verifiable criteria, per-repository where applicable
+      placeholder: |
+        - [ ] repository A ships X (issue linked)
+        - [ ] repository B consumes X (issue linked)
+        - [ ] docs/labels updated where behavior changed

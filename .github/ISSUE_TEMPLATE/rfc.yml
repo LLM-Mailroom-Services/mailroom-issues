@@ -1,0 +1,78 @@
+name: RFC (design proposal)
+description: A cross-repo design or architecture proposal for review before any implementation begins
+title: "RFC: "
+labels: ["type/rfc", "status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## RFC — design before implementation
+
+        An RFC is a **proposal**, not a task. It documents a cross-repo
+        design decision — an architecture change, a platform integration, a
+        data contract, a governance mechanism — so the constellation can
+        review it before anything is built. The proposal is accepted,
+        rejected, or amended, and the decision is recorded in this thread.
+
+        Single-repo design changes are reviewed in that repo — not here.
+        Specialists must verify current upstream docs (HF Hub, Langfuse,
+        Modal, vLLM, Braintrust) before asserting a version or an API.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context & motivation
+      description: The problem, the evidence (run failures, drift, platform changes), and why a decision is needed now
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domains touched
+      multiple: true
+      options:
+        - Digital Mailroom
+        - LLM Mailroom
+        - Mailroom Sandbox
+        - Agents
+        - HuggingFace
+        - Modal
+        - Langfuse
+        - Braintrust
+        - Governance
+        - Database
+        - Datasets
+        - Vercel
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed design
+      description: The concrete design — contracts, data flow, repositories touched, migration path, rollback
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other designs, their trade-offs, and why the proposed one wins
+    validations:
+      required: true
+  - type: textarea
+    id: decisions
+    attributes:
+      label: Decisions needed
+      description: The explicit questions the reviewer must answer
+      placeholder: |
+        - [ ] Is the data contract backward compatible?
+        - [ ] Does this replace an existing surface?
+        - [ ] Which repos implement what, and in what order?
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        **Review flow:** the shepherding agent collects comments in this
+        thread, and records the verdict — `accepted` / `rejected` / `amended`
+        — as the closing comment with the reason. Amended proposals fold the
+        changes in and re-enter review.

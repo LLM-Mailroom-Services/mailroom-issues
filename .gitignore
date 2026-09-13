@@ -1,0 +1,20 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python (scripts/labels.py tooling)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+*.env.local
+
+# Local scratch
+scratch/
+*.tmp
