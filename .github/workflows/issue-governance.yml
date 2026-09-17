@@ -11,25 +11,17 @@ on:
     branches: [main]
     paths:
       - ".github/**"
+      - "scripts/labels.py"
   pull_request:
     paths:
       - ".github/**"
+      - "scripts/labels.py"
 
 permissions:
   contents: read
   issues: write
 
 jobs:
-  label-audit:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-python@v7
-        with:
-          python-version: "3.12"
-      - name: Label manifest drift audit
-        run: python scripts/labels.py audit --repo ${{ github.repository }}
-
   label-sync:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
@@ -42,3 +34,21 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: python scripts/labels.py sync --repo ${{ github.repository }}
+
+  label-audit:
+    # On push: audit after sync so we verify the post-sync state.
+    # On PR: label-sync is skipped; audit still runs (needs.result == skipped).
+    needs: [label-sync]
+    if: always() && (needs.label-sync.result == 'success' || needs.label-sync.result == 'skipped')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Label manifest drift audit
+        env:
+          # Required: scripts/labels.py shells out to `gh label list`.
+          # Without GH_TOKEN, audit fails immediately (~8s) even when in sync.
+          GH_TOKEN: ${{ github.token }}
+        run: python scripts/labels.py audit --repo ${{ github.repository }}

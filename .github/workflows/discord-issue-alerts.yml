@@ -29,16 +29,22 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           ACTION: ${{ github.event.action }}
           REPO: ${{ github.repository }}
+          ACTOR: ${{ github.actor }}
+          RUN_ID: ${{ github.run_id }}
+          SERVER_URL: ${{ github.server_url }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
+          ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
+          ISSUE_CLOSED_AT: ${{ github.event.issue.closed_at }}
           DISCUSSION_TITLE: ${{ github.event.discussion.title }}
           DISCUSSION_NUMBER: ${{ github.event.discussion.number }}
           DISCUSSION_URL: ${{ github.event.discussion.html_url }}
           DISCUSSION_CATEGORY: ${{ github.event.discussion.category.name }}
+          DISCUSSION_CREATED_AT: ${{ github.event.discussion.created_at }}
           COMMENT_BODY: ${{ github.event.comment.body }}
           COMMENT_URL: ${{ github.event.comment.html_url }}
-          ACTOR: ${{ github.actor }}
+          COMMENT_CREATED_AT: ${{ github.event.comment.created_at }}
         run: |
           python3 <<'PY'
           import json, os, urllib.error, urllib.request
@@ -55,31 +61,44 @@ jobs:
           action = (os.environ.get("ACTION") or "").strip()
           repo = (os.environ.get("REPO") or "").strip()
           actor = (os.environ.get("ACTOR") or "").strip()
+          run_id = (os.environ.get("RUN_ID") or "").strip()
+          server_url = (os.environ.get("SERVER_URL") or "https://github.com").rstrip("/")
+
+          def pick(*keys: str) -> str:
+              for key in keys:
+                  val = (os.environ.get(key) or "").strip()
+                  if val:
+                      return val
+              return ""
 
           if event == "issues":
-              title = (os.environ.get("ISSUE_TITLE") or "").strip()
-              number = (os.environ.get("ISSUE_NUMBER") or "").strip()
-              url = (os.environ.get("ISSUE_URL") or "").strip()
+              title = pick("ISSUE_TITLE")
+              number = pick("ISSUE_NUMBER")
+              url = pick("ISSUE_URL")
               category = ""
               comment = ""
               event_type = "issue"
+              when_utc = (
+                  pick("ISSUE_CLOSED_AT")
+                  if action == "closed"
+                  else pick("ISSUE_CREATED_AT")
+              )
           elif event == "discussion":
-              title = (os.environ.get("DISCUSSION_TITLE") or "").strip()
-              number = (os.environ.get("DISCUSSION_NUMBER") or "").strip()
-              url = (os.environ.get("DISCUSSION_URL") or "").strip()
-              category = (os.environ.get("DISCUSSION_CATEGORY") or "").strip()
+              title = pick("DISCUSSION_TITLE")
+              number = pick("DISCUSSION_NUMBER")
+              url = pick("DISCUSSION_URL")
+              category = pick("DISCUSSION_CATEGORY")
               comment = ""
               event_type = "discussion"
+              when_utc = pick("DISCUSSION_CREATED_AT")
           elif event == "discussion_comment":
-              title = (os.environ.get("DISCUSSION_TITLE") or "").strip()
-              number = (os.environ.get("DISCUSSION_NUMBER") or "").strip()
-              url = (
-                  (os.environ.get("COMMENT_URL") or "").strip()
-                  or (os.environ.get("DISCUSSION_URL") or "").strip()
-              )
-              category = (os.environ.get("DISCUSSION_CATEGORY") or "").strip()
-              comment = (os.environ.get("COMMENT_BODY") or "").strip()
+              title = pick("DISCUSSION_TITLE")
+              number = pick("DISCUSSION_NUMBER")
+              url = pick("COMMENT_URL") or pick("DISCUSSION_URL")
+              category = pick("DISCUSSION_CATEGORY")
+              comment = pick("COMMENT_BODY")
               event_type = "discussion_comment"
+              when_utc = pick("COMMENT_CREATED_AT")
           else:
               raise SystemExit(f"Unexpected event: {event}/{action}")
 
@@ -99,37 +118,56 @@ jobs:
           embed_title = titles.get((event_type, action), "🔔 Notification")
           color = colors.get((event_type, action), 0xCCCCCC)
 
-          if comment:
-              if len(comment) > 1500:
-                  comment = comment[:1500] + "…"
-              body_block = f"{comment}\n\n"
-          else:
-              body_block = ""
-
-          desc = (
-              f"**{repo}** · #{number}\n"
-              f"**{title}**\n\n"
-              f"{body_block}"
-              f"Action: `{action}` · Event: `{event}`\n"
-              f"👤 By: {actor}\n"
-              f"🔗 [View on GitHub]({url})"
-          )
+          # Description: markdown-friendly summary (title + optional comment)
+          desc_parts = [f"**#{number}** — {title}" if number else title]
           if category:
-              desc += f"\n🏷️ Category: {category}"
+              desc_parts.append(f"Category: `{category}`")
+          if comment:
+              if len(comment) > 1200:
+                  comment = comment[:1200] + "…"
+              desc_parts.append(comment)
+          description = "\n\n".join(p for p in desc_parts if p)[:4096]
+
+          when_display = when_utc if when_utc else "—"
+          run_url = f"{server_url}/{repo}/actions/runs/{run_id}" if run_id else ""
+
+          fields = [
+              {"name": "Repo", "value": f"`{repo}`", "inline": True},
+              {"name": "Event", "value": f"`{event}` / `{action}`", "inline": True},
+              {"name": "Actor", "value": f"`{actor}`" if actor else "—", "inline": True},
+              {"name": "When (UTC)", "value": f"`{when_display}`", "inline": True},
+              {
+                  "name": "Link",
+                  "value": f"[Open on GitHub]({url})" if url else "—",
+                  "inline": True,
+              },
+          ]
+          if run_url:
+              fields.append(
+                  {
+                      "name": "Workflow run",
+                      "value": f"[run `{run_id}`]({run_url})",
+                      "inline": True,
+                  }
+              )
+
+          embed = {
+              "title": embed_title[:256],
+              "description": description,
+              "color": color,
+              "fields": fields,
+          }
+          if url:
+              embed["url"] = url
+          # Discord footer clock uses embed.timestamp (ISO-8601)
+          if when_utc:
+              embed["timestamp"] = when_utc
 
           payload = {
               "username": "mailroom-ops-bot",
               "avatar_url": "https://i.imgur.com/CsZ3mRy.png",
-              "embeds": [
-                  {
-                      "title": embed_title[:256],
-                      "description": desc[:4096],
-                      "color": color,
-                  }
-              ],
+              "embeds": [embed],
           }
-          if url:
-              payload["embeds"][0]["url"] = url
 
           data = json.dumps(payload).encode("utf-8")
           # Cloudflare blocks Python-urllib default UA; DiscordBot UA is allowed.
@@ -147,6 +185,7 @@ jobs:
           )
           try:
               with urllib.request.urlopen(req, timeout=30) as resp:
+                  # Never log webhook URL or secret material
                   print(f"Discord webhook OK status={resp.status}")
           except urllib.error.HTTPError as e:
               err_body = e.read().decode("utf-8", errors="replace")

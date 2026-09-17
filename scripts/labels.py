@@ -16,13 +16,15 @@ Usage:
          (exit 1) and repo labels absent from the manifest (informational)
 
 Commands are read-only unless ``sync`` runs without ``--dry-run``. Requires
-``gh`` authenticated against the target repo. Stdlib only.
+``gh`` authenticated against the target repo (``GH_TOKEN`` / ``GITHUB_TOKEN``).
+Stdlib only.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -64,7 +66,12 @@ def default_repo() -> str:
 def repo_labels(repo: str) -> dict[str, dict]:
     result = run(["gh", "label", "list", "--repo", repo, "--json", "name,color,description", "--limit", "500"])
     if result.returncode != 0:
-        raise SystemExit(f"gh label list failed: {result.stderr.strip()}")
+        err = (result.stderr or result.stdout or "").strip()
+        # Do not echo env/token material — gh errors are usually auth/permission.
+        raise SystemExit(
+            f"gh label list failed (exit {result.returncode}). "
+            f"Ensure GH_TOKEN/GITHUB_TOKEN is set for this job.\n{err}"
+        )
     return {entry["name"]: entry for entry in json.loads(result.stdout or "[]")}
 
 
@@ -94,6 +101,17 @@ def diff_labels(manifest: dict, existing: dict[str, dict]) -> tuple[list[dict], 
     return creates, updates, extras
 
 
+def append_step_summary(markdown: str) -> None:
+    """Append neat markdown to the Actions job summary when available."""
+    path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not path:
+        return
+    with open(path, "a", encoding="utf-8") as fh:
+        fh.write(markdown)
+        if not markdown.endswith("\n"):
+            fh.write("\n")
+
+
 def cmd_sync(args: argparse.Namespace) -> int:
     manifest = load_manifest()
     existing = repo_labels(args.repo)
@@ -104,14 +122,59 @@ def cmd_sync(args: argparse.Namespace) -> int:
                           "update": [u["name"] for u in updates], "extras": extras,
                           "dry_run": args.dry_run}, indent=2))
     else:
-        for entry in creates:
-            print(f"create  {entry['name']}  #{entry['color']}")
-        for entry in updates:
-            print(f"update  {entry['name']}  #{entry['color']}")
-        for name in extras:
-            print(f"extra   {name}  (in repo, not in manifest — informational)")
+        print(f"### Label sync — `{args.repo}`")
+        print()
+        if creates:
+            print("**Create**")
+            for entry in creates:
+                print(f"- `{entry['name']}` `#{entry['color']}`")
+            print()
+        if updates:
+            print("**Update**")
+            for entry in updates:
+                print(f"- `{entry['name']}` `#{entry['color']}`")
+            print()
+        if extras:
+            print("**Extras** (in repo, not in manifest — informational)")
+            for name in extras:
+                print(f"- `{name}`")
+            print()
         if not creates and not updates:
-            print(f"in sync: {len(manifest['labels'])} labels match {args.repo}")
+            print(f"✅ In sync: **{len(manifest['labels'])}** labels match `{args.repo}`")
+
+    summary_lines = [
+        f"## Label sync — `{args.repo}`",
+        "",
+        f"| Metric | Count |",
+        f"| --- | ---: |",
+        f"| Create | {len(creates)} |",
+        f"| Update | {len(updates)} |",
+        f"| Extras (informational) | {len(extras)} |",
+        f"| Manifest total | {len(manifest['labels'])} |",
+        "",
+    ]
+    if creates:
+        summary_lines.append("### Create")
+        for entry in creates:
+            summary_lines.append(f"- `{entry['name']}`")
+        summary_lines.append("")
+    if updates:
+        summary_lines.append("### Update")
+        for entry in updates:
+            summary_lines.append(f"- `{entry['name']}`")
+        summary_lines.append("")
+    if extras:
+        summary_lines.append("### Extras (informational)")
+        for name in extras:
+            summary_lines.append(f"- `{name}`")
+        summary_lines.append("")
+    if not creates and not updates:
+        summary_lines.append(f"✅ In sync with manifest ({len(manifest['labels'])} labels).")
+        summary_lines.append("")
+    if args.dry_run:
+        summary_lines.append("_Dry run — nothing written._")
+        summary_lines.append("")
+    append_step_summary("\n".join(summary_lines))
 
     if args.dry_run:
         print("dry run — nothing written", file=sys.stderr)
@@ -127,7 +190,9 @@ def cmd_sync(args: argparse.Namespace) -> int:
         result = run(cmd)
         if result.returncode != 0:
             failures += 1
-            print(f"FAILED  {entry['name']}: {result.stderr.strip()}", file=sys.stderr)
+            err = (result.stderr or "").strip()
+            print(f"FAILED  {entry['name']}: {err}", file=sys.stderr)
+            print(f"::error title=Label sync failed::{entry['name']}: {err}")
     verb = "created/updated" if (creates or updates) else "no changes to"
     print(f"synced {args.repo}: {len(creates)} created, {len(updates)} updated ({verb})")
     return 1 if failures else 0
@@ -143,18 +208,80 @@ def cmd_audit(args: argparse.Namespace) -> int:
                "extras": extras, "in_sync": not missing}
     if args.json:
         print(json.dumps(payload, indent=2))
+        # Still write a short summary for Actions UI when present
+        status = "✅ in sync" if not missing else f"❌ {len(missing)} missing/drifted"
+        append_step_summary(
+            f"## Label audit — `{args.repo}`\n\n**Result:** {status}\n"
+        )
         return 0 if not missing else 1
 
+    print(f"### Label audit — `{args.repo}`")
+    print()
+
+    summary_lines = [
+        f"## Label audit — `{args.repo}`",
+        "",
+    ]
+
     if missing:
-        print(f"DRIFT  {len(missing)} manifest label(s) missing or drifted in {args.repo}:")
+        print(f"❌ **DRIFT:** {len(missing)} manifest label(s) missing or drifted")
+        print()
+        print("| Status | Label |")
+        print("| --- | --- |")
         for entry in missing:
             kind = "drifted" if entry["name"] in existing else "missing"
-            print(f"  {kind}  {entry['name']}")
-        print("run: python scripts/labels.py sync --repo " + args.repo)
+            print(f"| {kind} | `{entry['name']}` |")
+        print()
+        print(f"**Fix:** `python scripts/labels.py sync --repo {args.repo}`")
+
+        summary_lines.extend(
+            [
+                f"❌ **DRIFT:** {len(missing)} manifest label(s) missing or drifted",
+                "",
+                "| Status | Label |",
+                "| --- | --- |",
+            ]
+        )
+        for entry in missing:
+            kind = "drifted" if entry["name"] in existing else "missing"
+            summary_lines.append(f"| {kind} | `{entry['name']}` |")
+        summary_lines.extend(
+            [
+                "",
+                f"**Fix:** `python scripts/labels.py sync --repo {args.repo}`",
+                "",
+            ]
+        )
+        if extras:
+            summary_lines.append(
+                f"_Also: {len(extras)} repo label(s) not in manifest (informational)._"
+            )
+            summary_lines.append("")
+
+        print(
+            f"::error title=Label manifest drift::"
+            f"{len(missing)} label(s) missing or drifted in {args.repo}"
+        )
+        append_step_summary("\n".join(summary_lines))
         return 1
-    print(f"in sync: {len(manifest['labels'])} manifest labels present in {args.repo}")
+
+    print(f"✅ **In sync:** {len(manifest['labels'])} manifest labels present in `{args.repo}`")
+    summary_lines.append(
+        f"✅ **In sync:** {len(manifest['labels'])} manifest labels present."
+    )
+    summary_lines.append("")
     if extras:
-        print(f"note: {len(extras)} repo label(s) not in manifest (informational): {', '.join(extras)}")
+        print()
+        print(f"ℹ️ **Note:** {len(extras)} repo label(s) not in manifest (informational):")
+        for name in extras:
+            print(f"- `{name}`")
+        summary_lines.append(
+            f"ℹ️ **Note:** {len(extras)} repo label(s) not in manifest (informational):"
+        )
+        for name in extras:
+            summary_lines.append(f"- `{name}`")
+        summary_lines.append("")
+    append_step_summary("\n".join(summary_lines))
     return 0
 
 
