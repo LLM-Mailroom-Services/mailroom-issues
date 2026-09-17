@@ -1,0 +1,16 @@
+name: Trigger Discord Issue/Discussion Notifications
+
+on:
+  issues:
+    types: [opened, closed, reopened]
+  issue_comment:
+    types: [created, edited]
+  discussion:
+    types: [created, updated, pinned, unpinned, locked, unlocked, transferred, category_changed, archived, unarchived]
+  discussion_comment:
+    types: [created, edited]
+
+jobs:
+  notify-discord:
+    uses: LLM-Mailroom-Services/.github/.github/workflows/issues-discussions.yml@main
+    secrets: inherit
