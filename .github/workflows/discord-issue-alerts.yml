@@ -1,16 +1,22 @@
 name: Discord Issue Alerts
 
-# Self-contained: posts to Discord only when issues are opened or closed.
+# Self-contained: Discord alerts for mailroom-issues only.
+# Triggers: issues opened/closed, discussion created, discussion_comment created.
 # Secrets: DISCORD_WEBHOOK_URL (preferred) or DISCORD_ISSUE_WEBHOOK (fallback).
 # No org reusable workflow_call — logic lives entirely in this repo.
 
 on:
   issues:
     types: [opened, closed]
+  discussion:
+    types: [created]
+  discussion_comment:
+    types: [created]
 
 permissions:
   contents: read
   issues: read
+  discussions: read
 
 jobs:
   notify-discord:
@@ -20,11 +26,18 @@ jobs:
         env:
           DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
           DISCORD_ISSUE_WEBHOOK: ${{ secrets.DISCORD_ISSUE_WEBHOOK }}
+          EVENT_NAME: ${{ github.event_name }}
           ACTION: ${{ github.event.action }}
           REPO: ${{ github.repository }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
+          DISCUSSION_TITLE: ${{ github.event.discussion.title }}
+          DISCUSSION_NUMBER: ${{ github.event.discussion.number }}
+          DISCUSSION_URL: ${{ github.event.discussion.html_url }}
+          DISCUSSION_CATEGORY: ${{ github.event.discussion.category.name }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+          COMMENT_URL: ${{ github.event.comment.html_url }}
           ACTOR: ${{ github.actor }}
         run: |
           python3 <<'PY'
@@ -38,31 +51,71 @@ jobs:
                   "Missing secret DISCORD_WEBHOOK_URL (or DISCORD_ISSUE_WEBHOOK)"
               )
 
+          event = (os.environ.get("EVENT_NAME") or "").strip()
           action = (os.environ.get("ACTION") or "").strip()
           repo = (os.environ.get("REPO") or "").strip()
-          title = (os.environ.get("ISSUE_TITLE") or "").strip()
-          number = (os.environ.get("ISSUE_NUMBER") or "").strip()
-          url = (os.environ.get("ISSUE_URL") or "").strip()
           actor = (os.environ.get("ACTOR") or "").strip()
 
+          if event == "issues":
+              title = (os.environ.get("ISSUE_TITLE") or "").strip()
+              number = (os.environ.get("ISSUE_NUMBER") or "").strip()
+              url = (os.environ.get("ISSUE_URL") or "").strip()
+              category = ""
+              comment = ""
+              event_type = "issue"
+          elif event == "discussion":
+              title = (os.environ.get("DISCUSSION_TITLE") or "").strip()
+              number = (os.environ.get("DISCUSSION_NUMBER") or "").strip()
+              url = (os.environ.get("DISCUSSION_URL") or "").strip()
+              category = (os.environ.get("DISCUSSION_CATEGORY") or "").strip()
+              comment = ""
+              event_type = "discussion"
+          elif event == "discussion_comment":
+              title = (os.environ.get("DISCUSSION_TITLE") or "").strip()
+              number = (os.environ.get("DISCUSSION_NUMBER") or "").strip()
+              url = (
+                  (os.environ.get("COMMENT_URL") or "").strip()
+                  or (os.environ.get("DISCUSSION_URL") or "").strip()
+              )
+              category = (os.environ.get("DISCUSSION_CATEGORY") or "").strip()
+              comment = (os.environ.get("COMMENT_BODY") or "").strip()
+              event_type = "discussion_comment"
+          else:
+              raise SystemExit(f"Unexpected event: {event}/{action}")
+
           titles = {
-              "opened": "🆕 New Issue",
-              "closed": "✅ Closed Issue",
+              ("issue", "opened"): "🆕 New Issue",
+              ("issue", "closed"): "✅ Closed Issue",
+              ("discussion", "created"): "💬 New Discussion",
+              ("discussion_comment", "created"): "💬 New Discussion Comment",
           }
+          # Discord requires integer color (not a hex string)
           colors = {
-              "opened": 0x23AF92,
-              "closed": 0x2ECC71,
+              ("issue", "opened"): 0x23AF92,
+              ("issue", "closed"): 0x2ECC71,
+              ("discussion", "created"): 0x3D94F4,
+              ("discussion_comment", "created"): 0x5865F2,
           }
-          embed_title = titles.get(action, "🔔 Issue Notification")
-          color = colors.get(action, 0xCCCCCC)
+          embed_title = titles.get((event_type, action), "🔔 Notification")
+          color = colors.get((event_type, action), 0xCCCCCC)
+
+          if comment:
+              if len(comment) > 1500:
+                  comment = comment[:1500] + "…"
+              body_block = f"{comment}\n\n"
+          else:
+              body_block = ""
 
           desc = (
               f"**{repo}** · #{number}\n"
               f"**{title}**\n\n"
-              f"Action: `{action}`\n"
+              f"{body_block}"
+              f"Action: `{action}` · Event: `{event}`\n"
               f"👤 By: {actor}\n"
               f"🔗 [View on GitHub]({url})"
           )
+          if category:
+              desc += f"\n🏷️ Category: {category}"
 
           payload = {
               "username": "mailroom-ops-bot",
