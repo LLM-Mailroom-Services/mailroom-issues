@@ -1,14 +1,36 @@
 name: Trigger Discord Issue/Discussion Notifications
 
+# Thin caller — event triggers live here; posting logic is the org reusable workflow.
+# Requires repo secret DISCORD_WEBHOOK_URL (or legacy DISCORD_ISSUE_WEBHOOK).
+
 on:
   issues:
     types: [opened, closed, reopened]
   issue_comment:
-    types: [created, edited]
+    types: [created]
   discussion:
-    types: [created, updated, pinned, unpinned, locked, unlocked, transferred, category_changed, archived, unarchived]
+    # Actions-documented types (+ answered). "closed" is not a workflow activity
+    # type for discussions; use answered / locked for close-like signals.
+    types:
+      [
+        created,
+        answered,
+        unanswered,
+        edited,
+        locked,
+        unlocked,
+        pinned,
+        unpinned,
+        transferred,
+        category_changed,
+      ]
   discussion_comment:
-    types: [created, edited]
+    types: [created]
+
+permissions:
+  contents: read
+  issues: read
+  discussions: read
 
 jobs:
   notify-discord:
