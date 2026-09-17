@@ -35,11 +35,15 @@ jobs:
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           ISSUE_URL: ${{ github.event.issue.html_url }}
+          ISSUE_BODY: ${{ github.event.issue.body }}
           ISSUE_CREATED_AT: ${{ github.event.issue.created_at }}
           ISSUE_CLOSED_AT: ${{ github.event.issue.closed_at }}
+          ISSUE_LABELS: ${{ join(github.event.issue.labels.*.name, ', ') }}
+          ISSUE_ASSIGNEES: ${{ join(github.event.issue.assignees.*.login, ', ') }}
           DISCUSSION_TITLE: ${{ github.event.discussion.title }}
           DISCUSSION_NUMBER: ${{ github.event.discussion.number }}
           DISCUSSION_URL: ${{ github.event.discussion.html_url }}
+          DISCUSSION_BODY: ${{ github.event.discussion.body }}
           DISCUSSION_CATEGORY: ${{ github.event.discussion.category.name }}
           DISCUSSION_CREATED_AT: ${{ github.event.discussion.created_at }}
           COMMENT_BODY: ${{ github.event.comment.body }}
@@ -47,7 +51,7 @@ jobs:
           COMMENT_CREATED_AT: ${{ github.event.comment.created_at }}
         run: |
           python3 <<'PY'
-          import json, os, urllib.error, urllib.request
+          import json, os, re, urllib.error, urllib.request
 
           webhook = (os.environ.get("DISCORD_WEBHOOK_URL") or "").strip() or (
               os.environ.get("DISCORD_ISSUE_WEBHOOK") or ""
@@ -64,41 +68,85 @@ jobs:
           run_id = (os.environ.get("RUN_ID") or "").strip()
           server_url = (os.environ.get("SERVER_URL") or "https://github.com").rstrip("/")
 
+          # Discord embed limits (keep headroom under hard caps)
+          DESC_LIMIT = 3500
+          FIELD_VALUE_LIMIT = 1024
+          BODY_SNIPPET = 1400
+
           def pick(*keys: str) -> str:
               for key in keys:
-                  val = (os.environ.get(key) or "").strip()
+                  val = os.environ.get(key)
+                  if val is None:
+                      continue
+                  val = val.strip()
                   if val:
                       return val
               return ""
+
+          def sanitize_discord(text: str, limit: int) -> str:
+              """Make body safe for Discord embed markdown/JSON (stdlib json handles escaping)."""
+              if not text:
+                  return ""
+              # Normalize newlines; strip NUL / other control chars except \\t\\n\\r
+              text = text.replace("\r\n", "\n").replace("\r", "\n")
+              text = "".join(
+                  ch if (ch in "\n\t" or ord(ch) >= 32) else " "
+                  for ch in text
+              )
+              # Soft-break runaway whitespace
+              text = re.sub(r"[ \t]+\n", "\n", text)
+              text = re.sub(r"\n{4,}", "\n\n\n", text)
+              text = text.strip()
+              if len(text) > limit:
+                  text = text[: max(0, limit - 1)].rstrip() + "…"
+              return text
+
+          def field(name: str, value: str, inline: bool = True) -> dict:
+              value = value if value else "—"
+              if len(value) > FIELD_VALUE_LIMIT:
+                  value = value[: FIELD_VALUE_LIMIT - 1].rstrip() + "…"
+              return {"name": name[:256], "value": value, "inline": inline}
 
           if event == "issues":
               title = pick("ISSUE_TITLE")
               number = pick("ISSUE_NUMBER")
               url = pick("ISSUE_URL")
+              body = sanitize_discord(pick("ISSUE_BODY"), BODY_SNIPPET)
               category = ""
-              comment = ""
               event_type = "issue"
               when_utc = (
                   pick("ISSUE_CLOSED_AT")
                   if action == "closed"
                   else pick("ISSUE_CREATED_AT")
               )
+              labels_raw = pick("ISSUE_LABELS")
+              labels = labels_raw if labels_raw else "none"
+              assignees_raw = pick("ISSUE_ASSIGNEES")
+              assignees = (
+                  ", ".join(f"`{a.strip()}`" for a in assignees_raw.split(",") if a.strip())
+                  if assignees_raw
+                  else "**Unassigned**"
+              )
           elif event == "discussion":
               title = pick("DISCUSSION_TITLE")
               number = pick("DISCUSSION_NUMBER")
               url = pick("DISCUSSION_URL")
+              body = sanitize_discord(pick("DISCUSSION_BODY"), BODY_SNIPPET)
               category = pick("DISCUSSION_CATEGORY")
-              comment = ""
               event_type = "discussion"
               when_utc = pick("DISCUSSION_CREATED_AT")
+              labels = "—"
+              assignees = "—"
           elif event == "discussion_comment":
               title = pick("DISCUSSION_TITLE")
               number = pick("DISCUSSION_NUMBER")
               url = pick("COMMENT_URL") or pick("DISCUSSION_URL")
+              body = sanitize_discord(pick("COMMENT_BODY"), BODY_SNIPPET)
               category = pick("DISCUSSION_CATEGORY")
-              comment = pick("COMMENT_BODY")
               event_type = "discussion_comment"
               when_utc = pick("COMMENT_CREATED_AT")
+              labels = "—"
+              assignees = "—"
           else:
               raise SystemExit(f"Unexpected event: {event}/{action}")
 
@@ -108,7 +156,6 @@ jobs:
               ("discussion", "created"): "💬 New Discussion",
               ("discussion_comment", "created"): "💬 New Discussion Comment",
           }
-          # Discord requires integer color (not a hex string)
           colors = {
               ("issue", "opened"): 0x23AF92,
               ("issue", "closed"): 0x2ECC71,
@@ -118,48 +165,45 @@ jobs:
           embed_title = titles.get((event_type, action), "🔔 Notification")
           color = colors.get((event_type, action), 0xCCCCCC)
 
-          # Description: markdown-friendly summary (title + optional comment)
-          desc_parts = [f"**#{number}** — {title}" if number else title]
-          if category:
-              desc_parts.append(f"Category: `{category}`")
-          if comment:
-              if len(comment) > 1200:
-                  comment = comment[:1200] + "…"
-              desc_parts.append(comment)
-          description = "\n\n".join(p for p in desc_parts if p)[:4096]
+          # Description: title+number+link, then body snippet
+          head = f"**[#{number} — {title}]({url})**" if (number and url) else (
+              f"**#{number} — {title}**" if number else f"**{title}**"
+          )
+          desc_parts = [head]
+          if body:
+              desc_parts.append(body)
+          description = "\n\n".join(desc_parts)[:DESC_LIMIT]
 
-          when_display = when_utc if when_utc else "—"
+          when_display = f"`{when_utc}` (UTC)" if when_utc else "—"
           run_url = f"{server_url}/{repo}/actions/runs/{run_id}" if run_id else ""
 
           fields = [
-              {"name": "Repo", "value": f"`{repo}`", "inline": True},
-              {"name": "Event", "value": f"`{event}` / `{action}`", "inline": True},
-              {"name": "Actor", "value": f"`{actor}`" if actor else "—", "inline": True},
-              {"name": "When (UTC)", "value": f"`{when_display}`", "inline": True},
-              {
-                  "name": "Link",
-                  "value": f"[Open on GitHub]({url})" if url else "—",
-                  "inline": True,
-              },
+              field("Repo", f"`{repo}`"),
+              field("Event", f"`{event}` / `{action}`"),
+              field("Actor", f"`{actor}`" if actor else "—"),
+              field("When (UTC)", when_display),
           ]
+          if event_type == "issue":
+              # Labels may be long — allow full-width field
+              label_value = ", ".join(
+                  f"`{n.strip()}`" for n in labels.split(",") if n.strip()
+              ) if labels != "none" else "_none_"
+              fields.append(field("Labels", label_value or "_none_", inline=False))
+              fields.append(field("Assignees", assignees, inline=False))
+          if category:
+              fields.append(field("Category", f"`{category}`"))
+          fields.append(field("Link", f"[Open on GitHub]({url})" if url else "—"))
           if run_url:
-              fields.append(
-                  {
-                      "name": "Workflow run",
-                      "value": f"[run `{run_id}`]({run_url})",
-                      "inline": True,
-                  }
-              )
+              fields.append(field("Workflow run", f"[run `{run_id}`]({run_url})"))
 
           embed = {
               "title": embed_title[:256],
               "description": description,
               "color": color,
-              "fields": fields,
+              "fields": fields[:25],
           }
           if url:
               embed["url"] = url
-          # Discord footer clock uses embed.timestamp (ISO-8601)
           if when_utc:
               embed["timestamp"] = when_utc
 
@@ -170,7 +214,6 @@ jobs:
           }
 
           data = json.dumps(payload).encode("utf-8")
-          # Cloudflare blocks Python-urllib default UA; DiscordBot UA is allowed.
           req = urllib.request.Request(
               webhook,
               data=data,
