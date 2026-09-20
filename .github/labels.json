@@ -43,6 +43,11 @@
       "description": "Core llm-mailroom repository/package related issue, task, or discussion."
     },
     {
+      "name": "Mailroom ML",
+      "color": "1D76DB",
+      "description": "The mailroom-ml package (LLM-Mailroom-Services/mailroom-ml): ModernBERT training/inference/calibration, the intake-handoff contract, and fast-path serving."
+    },
+    {
       "name": "Mailroom Sandbox",
       "color": "56093C",
       "description": "Local-Mailroom-Sandbox / Mailroom Sandbox related issue or task."

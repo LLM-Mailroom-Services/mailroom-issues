@@ -13,10 +13,11 @@ Does the issue name one package/repo and nothing else?
 │   ├─ Yes (Digital-Mailroom scope: board, sync driver, hub tooling,
 │   │   root docs, the monorepo itself)
 │   │       → file in LLM-Mailroom-Services/Digital-Mailroom
-│   └─ No (a single Exios66/* package: llm-mailroom, llm-entity-extraction,
-│       llm-dojo-scoring, The-Mailroom, agent-mailroom,
-│       local-mailroom-sandbox, Enron-Evaluation-Environment,
-│       claims-data-eda, llm-mailroom-graph, Mailroom-Corpus-EDA)
+│   └─ No (a single package: Exios66/* or the org-owned ml package —
+│       llm-mailroom, llm-entity-extraction, llm-dojo-scoring, The-Mailroom,
+│       agent-mailroom, local-mailroom-sandbox, Enron-Evaluation-Environment,
+│       claims-data-eda, llm-mailroom-graph, Mailroom-Corpus-EDA,
+│       LLM-Mailroom-Services/mailroom-ml)
 │           → file in that package's repo
 │
 └─ NO — does it touch two or more repositories, the org, or a shared decision?

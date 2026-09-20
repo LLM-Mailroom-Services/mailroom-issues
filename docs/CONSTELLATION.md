@@ -44,6 +44,7 @@ file exists so an issue can be routed to the right repo from the first write.
 | **Prompt experiments** | [`Exios66/llm-entity-extraction`](https://github.com/Exios66/llm-entity-extraction) | [exios66.github.io/llm-entity-extraction](https://exios66.github.io/llm-entity-extraction/) |
 | **Scoring engine** | [`Exios66/llm-dojo-scoring`](https://github.com/Exios66/llm-dojo-scoring) | — |
 | **LangGraph pipeline** | [`Exios66/llm-mailroom`](https://github.com/Exios66/llm-mailroom) | — |
+| **ML training / intake contract** | [`LLM-Mailroom-Services/mailroom-ml`](https://github.com/LLM-Mailroom-Services/mailroom-ml) | ModernBERT classifier, calibration, eval harness, `intake_handoff` contract |
 | **Pixel visualizer** | [`Exios66/The-Mailroom`](https://github.com/Exios66/The-Mailroom) | [exios66.github.io/The-Mailroom](https://exios66.github.io/The-Mailroom/) |
 | **Walking floor** | [`Exios66/agent-mailroom`](https://github.com/Exios66/agent-mailroom) | — |
 | **Local sandbox** | [`Exios66/local-mailroom-sandbox`](https://github.com/Exios66/local-mailroom-sandbox) | — |
