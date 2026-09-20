@@ -45,7 +45,7 @@
     {
       "name": "Mailroom ML",
       "color": "1D76DB",
-      "description": "The mailroom-ml package (LLM-Mailroom-Services/mailroom-ml): ModernBERT training/inference/calibration, the intake-handoff contract, and fast-path serving."
+      "description": "mailroom-ml package (LLM-Mailroom-Services): ModernBERT train/infer/calibrate + intake-handoff contract."
     },
     {
       "name": "Mailroom Sandbox",
