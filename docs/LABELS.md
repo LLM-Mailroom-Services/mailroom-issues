@@ -26,7 +26,7 @@ from **each applicable family** — a bug filed about the visualizer gets
 |---|---|
 | `Digital Mailroom` | The hub monorepo |
 | `LLM Mailroom` | The `llm-mailroom` LangGraph pipeline |
-| `Mailroom ML` | `LLM-Mailroom-Services/mailroom-ml` — ModernBERT train/infer/calibrate + intake-handoff contract |
+| `Mailroom ML` | `LLM-Mailroom-Services/mailroom-ml` — ModernBERT train/infer/calibrate + intake-handoff contract. |
 | `Mailroom Sandbox` | `local-mailroom-sandbox` |
 | `Agents` | Agent infrastructure, specialists, harnesses |
 | `HuggingFace` | HF Hub org, datasets, models, Hub APIs |
