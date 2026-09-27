@@ -1,0 +1,34 @@
+{
+  "dataset": "Lucius-Morningstar/mailroom-dataset",
+  "revision": "ed7576b676343e0b402ec5412cded301e629bdee",
+  "previous_revision": "46a4d3c240a36671cde0182fff4960f6b8b73aca",
+  "tag_note": "HF Hub tag v9.1 currently points at 70b94127faef6bfdac31d6adc426d2d09cb1c122, not ed7576b676343e0b402ec5412cded301e629bdee. Train parquet sizes match tip; this manifest pins ed7576b… explicitly.",
+  "configs": ["default", "ground_truth"],
+  "files": [
+    {
+      "path": "corpus/Lucius-Morningstar__mailroom-dataset_default_train_5179a73a1020bcddceb859be.bin",
+      "config": "default",
+      "split": "train",
+      "bytes": 38640568,
+      "sha256": "008165a2e66da9a8f0df9b800493746e68823458845104378e36991b55fb86f7",
+      "source_commit_path": "parquet/default/train/train-00000-of-00001.parquet"
+    },
+    {
+      "path": "corpus/Lucius-Morningstar__mailroom-dataset_ground_truth_train_062c7c5a2c8a34050bf391fc.bin",
+      "config": "ground_truth",
+      "split": "train",
+      "bytes": 3098900,
+      "sha256": "256404bfb3ff07a6d0cc37f0f37193bdb5048c11025267401fa58657af3d0740",
+      "source_commit_path": "parquet/ground_truth/train/train-00000-of-00001.parquet"
+    }
+  ],
+  "loader_compat": {
+    "MAILROOM_HF_CACHE_DIR": "Directory passed to hf_corpus_loader; default {MAILROOM_BASE_DIR}/hf_cache/corpus",
+    "cache_key_scheme": "{repo_id_with_slash_as_double_underscore}_{config}_{split}_{sha256(resolve_url_hex)[:24]}.bin",
+    "resolve_url_keys": [
+      "https://huggingface.co/datasets/Lucius-Morningstar/mailroom-dataset/resolve/refs%2Fconvert%2Fparquet/default/train/0000.parquet",
+      "https://huggingface.co/datasets/Lucius-Morningstar/mailroom-dataset/resolve/refs%2Fconvert%2Fparquet/ground_truth/train/0000.parquet"
+    ],
+    "implementation": "packages/llm-mailroom/src/pipeline/hf_corpus_loader.py (_cached_get_bytes)"
+  }
+}

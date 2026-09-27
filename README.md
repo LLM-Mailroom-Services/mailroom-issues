@@ -76,6 +76,8 @@ mailroom-issues/
 │       └── issue-governance.yml   # label-manifest drift gate (CI)
 ├── scripts/
 │   └── labels.py          # sync/audit .github/labels.json against the repo
+├── data/
+│   └── hf_cache/          # colocated HF parquet cache (pin + MANIFEST — see data/hf_cache/README.md)
 └── docs/
     ├── CONSTELLATION.md   # the ecosystem map: repos, roles, layers
     ├── ROUTING.md         # which issue belongs in which repository
