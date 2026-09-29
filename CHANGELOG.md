@@ -6,6 +6,16 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Changed — headline spend covers every experiment
+
+- The top tile, the GPU report summary, the cost comparison §5 and the master
+  status now quote spend across every experiment ($18.93: Modal GPU for SAND-032
+  and the earlier sandbox runs, plus every real hosted-API run in the
+  eval-environment log and the sandbox api-evals ledger), with the breakdown.
+  The earlier ledger's API legs are part of the eval-environment log and are
+  not counted twice. ModernBERT run-3 training is listed separately: only its
+  pre-run budget estimate ($4.11) is recorded.
+
 ### Added — presentation PNGs; dark, high-contrast figures; every API model covered
 
 - `reports/viz/**/*.png` + `reports/viz/MANIFEST.json` — every report figure as a
