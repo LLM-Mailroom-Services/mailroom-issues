@@ -14,8 +14,9 @@ design-proposal (RFC) track, and the declarative label taxonomy that routes
 work to the right repository. Implementation always lands in a sibling repo.
 
 > **Canonical entry points:** [Agent instructions](AGENTS.md) ·
-> [Constellation map](docs/CONSTELLATION.md) · [Issue routing](docs/ROUTING.md) ·
-> [Label taxonomy](docs/LABELS.md) · [Issue lifecycle](docs/LIFECYCLE.md)
+> [Constellation map](docs/CONSTELLATION.md) · [Prompt lineage & frozen v1](docs/PROMPTS.md) ·
+> [Issue routing](docs/ROUTING.md) · [Label taxonomy](docs/LABELS.md) ·
+> [Issue lifecycle](docs/LIFECYCLE.md)
 
 ## What belongs here
 
@@ -84,10 +85,27 @@ mailroom-issues/
 │   └── figures/           # cost/ (drawn for these reports) · sources/<repo>/ (verbatim source charts)
 └── docs/
     ├── CONSTELLATION.md   # the ecosystem map: repos, roles, layers
+    ├── PROMPTS.md         # sorter + specialist lineage; pointers to current mutations
     ├── ROUTING.md         # which issue belongs in which repository
     ├── LABELS.md          # the four label families and their vocabulary
-    └── LIFECYCLE.md       # triage flow: file → triage → schedule → do → close
+    ├── LIFECYCLE.md       # triage flow: file → triage → schedule → do → close
+    └── prompts/           # frozen v1 reference copies (sha256-locked; see prompts/README.md)
+        └── frozen-v1/     # sorter_v1 + five specialist_v1 stems from sandbox / eval-environment
 ```
+
+## Prompt reference (frozen v1)
+
+Cross-repo evals share a **frozen v1** baseline (`mailroom-dataset-v1`). This hub
+stores read-only copies so every repo can cite the same bytes without cloning
+sandbox + eval-environment:
+
+- [docs/PROMPTS.md](docs/PROMPTS.md) — resolution layers, **current** GEPA mutation
+  heads, production pins, and where implementation lives.
+- [docs/prompts/frozen-v1/](docs/prompts/frozen-v1/) — `sorter_v1` plus the five
+  specialist `*_v1` stems (from
+  [`local-mailroom-sandbox`](https://github.com/Exios66/local-mailroom-sandbox)
+  simplified pins). Do not hand-edit; refresh via
+  [docs/prompts/README.md](docs/prompts/README.md).
 
 ## Reports
 
