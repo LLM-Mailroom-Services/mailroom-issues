@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 768 292" width="768" height="292" role="img" aria-label="Idle gap between batches on 2×L4: stay warm or scale to zero">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="768" height="292" rx="8"/>
+<text class="title" x="16" y="24">Idle gap between batches on 2×L4: stay warm or scale to zero</text>
+<text class="sub" x="16" y="42">GPU $ for the gap · scale to zero pays the scale-down tail, then a cold boot</text>
+<circle class="s1" cx="22" cy="58" r="5"/><text class="lbl" x="32" y="62">stay warm</text>
+<circle class="s2" cx="122" cy="58" r="5"/><text class="lbl" x="132" y="62">scale to zero</text>
+<line class="grid" x1="140.0" y1="74" x2="140.0" y2="258"/>
+<text class="tick" x="140.0" y="274" text-anchor="middle">0</text>
+<line class="grid" x1="232.5" y1="74" x2="232.5" y2="258"/>
+<text class="tick" x="232.5" y="274" text-anchor="middle">0.5</text>
+<line class="grid" x1="325.0" y1="74" x2="325.0" y2="258"/>
+<text class="tick" x="325.0" y="274" text-anchor="middle">1</text>
+<line class="grid" x1="417.5" y1="74" x2="417.5" y2="258"/>
+<text class="tick" x="417.5" y="274" text-anchor="middle">1.5</text>
+<line class="grid" x1="510.0" y1="74" x2="510.0" y2="258"/>
+<text class="tick" x="510.0" y="274" text-anchor="middle">2</text>
+<text class="lbl" x="132" y="97.0" text-anchor="end">1 min gap</text>
+<line class="conn" x1="144.9" y1="93.0" x2="144.9" y2="93.0"/>
+<circle class="s1 ring" cx="144.9" cy="93.0" r="5"><title>1 min gap · stay warm: $0.027</title></circle>
+<circle class="s2 ring" cx="144.9" cy="93.0" r="5"><title>1 min gap · scale to zero: $0.027</title></circle>
+<text class="val" x="154.9" y="97.0">warm $0.027 · scale-to-zero $0.027</text>
+<text class="lbl" x="132" y="127.0" text-anchor="end">2 min gap</text>
+<line class="conn" x1="149.9" y1="123.0" x2="149.9" y2="123.0"/>
+<circle class="s1 ring" cx="149.9" cy="123.0" r="5"><title>2 min gap · stay warm: $0.053</title></circle>
+<circle class="s2 ring" cx="149.9" cy="123.0" r="5"><title>2 min gap · scale to zero: $0.053</title></circle>
+<text class="val" x="159.9" y="127.0">warm $0.053 · scale-to-zero $0.053</text>
+<text class="lbl" x="132" y="157.0" text-anchor="end">5 min gap</text>
+<line class="conn" x1="164.7" y1="153.0" x2="167.6" y2="153.0"/>
+<circle class="s1 ring" cx="164.7" cy="153.0" r="5"><title>5 min gap · stay warm: $0.133</title></circle>
+<circle class="s2 ring" cx="167.6" cy="153.0" r="5"><title>5 min gap · scale to zero: $0.149</title></circle>
+<text class="val" x="177.6" y="157.0">warm $0.133 · scale-to-zero $0.149</text>
+<text class="lbl" x="132" y="187.0" text-anchor="end">10 min gap</text>
+<line class="conn" x1="189.3" y1="183.0" x2="167.6" y2="183.0"/>
+<circle class="s1 ring" cx="189.3" cy="183.0" r="5"><title>10 min gap · stay warm: $0.267</title></circle>
+<circle class="s2 ring" cx="167.6" cy="183.0" r="5"><title>10 min gap · scale to zero: $0.149</title></circle>
+<text class="val" x="199.3" y="187.0">warm $0.267 · scale-to-zero $0.149</text>
+<text class="lbl" x="132" y="217.0" text-anchor="end">30 min gap</text>
+<line class="conn" x1="288.0" y1="213.0" x2="167.6" y2="213.0"/>
+<circle class="s1 ring" cx="288.0" cy="213.0" r="5"><title>30 min gap · stay warm: $0.800</title></circle>
+<circle class="s2 ring" cx="167.6" cy="213.0" r="5"><title>30 min gap · scale to zero: $0.149</title></circle>
+<text class="val" x="298.0" y="217.0">warm $0.800 · scale-to-zero $0.149</text>
+<text class="lbl" x="132" y="247.0" text-anchor="end">60 min gap</text>
+<line class="conn" x1="436.0" y1="243.0" x2="167.6" y2="243.0"/>
+<circle class="s1 ring" cx="436.0" cy="243.0" r="5"><title>60 min gap · stay warm: $1.600</title></circle>
+<circle class="s2 ring" cx="167.6" cy="243.0" r="5"><title>60 min gap · scale to zero: $0.149</title></circle>
+<text class="val" x="446.0" y="247.0">warm $1.600 · scale-to-zero $0.149</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 742 292" width="742" height="292" role="img" aria-label="Cost per 1M tokens: warm fleet vs one cold batch">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="742" height="292" rx="8"/>
+<text class="title" x="16" y="24">Cost per 1M tokens: warm fleet vs one cold batch</text>
+<text class="sub" x="16" y="42">same measured batch · cold adds boot + the 120 s scale-down tail on every replica</text>
+<circle class="s1" cx="22" cy="58" r="5"/><text class="lbl" x="32" y="62">warm fleet</text>
+<circle class="s2" cx="126" cy="58" r="5"/><text class="lbl" x="136" y="62">one cold batch</text>
+<line class="grid" x1="200.0" y1="74" x2="200.0" y2="258"/>
+<text class="tick" x="200.0" y="274" text-anchor="middle">0</text>
+<line class="grid" x1="323.3" y1="74" x2="323.3" y2="258"/>
+<text class="tick" x="323.3" y="274" text-anchor="middle">0.5</text>
+<line class="grid" x1="446.7" y1="74" x2="446.7" y2="258"/>
+<text class="tick" x="446.7" y="274" text-anchor="middle">1</text>
+<line class="grid" x1="570.0" y1="74" x2="570.0" y2="258"/>
+<text class="tick" x="570.0" y="274" text-anchor="middle">1.5</text>
+<text class="lbl" x="192" y="97.0" text-anchor="end">Correspondence (S3)</text>
+<line class="conn" x1="214.8" y1="93.0" x2="525.7" y2="93.0"/>
+<circle class="s1 ring" cx="214.8" cy="93.0" r="5"><title>Correspondence (S3) · warm fleet: $0.060</title></circle>
+<circle class="s2 ring" cx="525.7" cy="93.0" r="5"><title>Correspondence (S3) · one cold batch: $1.320</title></circle>
+<text class="val" x="535.7" y="97.0">$0.060 → $1.320 (22.0×)</text>
+<text class="lbl" x="192" y="127.0" text-anchor="end">Insurance claims (S10)</text>
+<line class="conn" x1="229.0" y1="123.0" x2="295.8" y2="123.0"/>
+<circle class="s1 ring" cx="229.0" cy="123.0" r="5"><title>Insurance claims (S10) · warm fleet: $0.117</title></circle>
+<circle class="s2 ring" cx="295.8" cy="123.0" r="5"><title>Insurance claims (S10) · one cold batch: $0.388</title></circle>
+<text class="val" x="305.8" y="127.0">$0.117 → $0.388 (3.3×)</text>
+<text class="lbl" x="192" y="157.0" text-anchor="end">Corporate records (S10)</text>
+<line class="conn" x1="219.1" y1="153.0" x2="267.5" y2="153.0"/>
+<circle class="s1 ring" cx="219.1" cy="153.0" r="5"><title>Corporate records (S10) · warm fleet: $0.077</title></circle>
+<circle class="s2 ring" cx="267.5" cy="153.0" r="5"><title>Corporate records (S10) · one cold batch: $0.274</title></circle>
+<text class="val" x="277.5" y="157.0">$0.077 → $0.274 (3.5×)</text>
+<text class="lbl" x="192" y="187.0" text-anchor="end">Contracts (S3)</text>
+<line class="conn" x1="267.8" y1="183.0" x2="365.1" y2="183.0"/>
+<circle class="s1 ring" cx="267.8" cy="183.0" r="5"><title>Contracts (S3) · warm fleet: $0.275</title></circle>
+<circle class="s2 ring" cx="365.1" cy="183.0" r="5"><title>Contracts (S3) · one cold batch: $0.669</title></circle>
+<text class="val" x="375.1" y="187.0">$0.275 → $0.669 (2.4×)</text>
+<text class="lbl" x="192" y="217.0" text-anchor="end">Merger agreements (S3)</text>
+<line class="conn" x1="274.2" y1="213.0" x2="347.0" y2="213.0"/>
+<circle class="s1 ring" cx="274.2" cy="213.0" r="5"><title>Merger agreements (S3) · warm fleet: $0.301</title></circle>
+<circle class="s2 ring" cx="347.0" cy="213.0" r="5"><title>Merger agreements (S3) · one cold batch: $0.596</title></circle>
+<text class="val" x="357.0" y="217.0">$0.301 → $0.596 (2.0×)</text>
+<text class="lbl" x="192" y="247.0" text-anchor="end">Sorter (S6)</text>
+<line class="conn" x1="212.9" y1="243.0" x2="214.8" y2="243.0"/>
+<circle class="s1 ring" cx="212.9" cy="243.0" r="5"><title>Sorter (S6) · warm fleet: $0.052</title></circle>
+<circle class="s2 ring" cx="214.8" cy="243.0" r="5"><title>Sorter (S6) · one cold batch: $0.060</title></circle>
+<text class="val" x="224.8" y="247.0">$0.052 → $0.060 (1.1×)</text>
+</svg>

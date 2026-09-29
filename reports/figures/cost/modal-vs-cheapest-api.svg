@@ -41,26 +41,26 @@
 <text class="tick" x="406.7" y="244" text-anchor="middle">0.004</text>
 <line class="grid" x1="530.0" y1="74" x2="530.0" y2="228"/>
 <text class="tick" x="530.0" y="244" text-anchor="middle">0.006</text>
-<text class="lbl" x="152" y="97.0" text-anchor="end">Correspondence</text>
-<line class="conn" x1="168.8" y1="93.0" x2="187.7" y2="93.0"/>
-<circle class="s1 ring" cx="168.8" cy="93.0" r="5"><title>Correspondence · Modal L4: $0.00014</title></circle>
-<circle class="s2 ring" cx="187.7" cy="93.0" r="5"><title>Correspondence · cheapest API: $0.00045</title></circle>
-<text class="val" x="197.7" y="97.0">Modal $0.00014 · Qwen3.7-Flash $0.00045</text>
-<text class="lbl" x="152" y="127.0" text-anchor="end">Insurance claims</text>
-<line class="conn" x1="193.2" y1="123.0" x2="191.2" y2="123.0"/>
-<circle class="s1 ring" cx="193.2" cy="123.0" r="5"><title>Insurance claims · Modal L4: $0.00054</title></circle>
-<circle class="s2 ring" cx="191.2" cy="123.0" r="5"><title>Insurance claims · cheapest API: $0.00051</title></circle>
-<text class="val" x="203.2" y="127.0">Modal $0.00054 · Qwen3.7-Flash $0.00051</text>
-<text class="lbl" x="152" y="157.0" text-anchor="end">Corporate records</text>
-<line class="conn" x1="190.8" y1="153.0" x2="208.5" y2="153.0"/>
-<circle class="s1 ring" cx="190.8" cy="153.0" r="5"><title>Corporate records · Modal L4: $0.00050</title></circle>
-<circle class="s2 ring" cx="208.5" cy="153.0" r="5"><title>Corporate records · cheapest API: $0.00079</title></circle>
-<text class="val" x="218.5" y="157.0">Modal $0.00050 · Qwen3.7-Flash $0.00079</text>
-<text class="lbl" x="152" y="187.0" text-anchor="end">Contracts</text>
-<line class="conn" x1="296.7" y1="183.0" x2="251.1" y2="183.0"/>
-<circle class="s1 ring" cx="296.7" cy="183.0" r="5"><title>Contracts · Modal L4: $0.0022</title></circle>
-<circle class="s2 ring" cx="251.1" cy="183.0" r="5"><title>Contracts · cheapest API: $0.0015</title></circle>
-<text class="val" x="306.7" y="187.0">Modal $0.0022 · Qwen3.7-Flash $0.0015</text>
+<text class="lbl" x="152" y="97.0" text-anchor="end">Contracts</text>
+<line class="conn" x1="296.7" y1="93.0" x2="251.1" y2="93.0"/>
+<circle class="s1 ring" cx="296.7" cy="93.0" r="5"><title>Contracts · Modal L4: $0.0022</title></circle>
+<circle class="s2 ring" cx="251.1" cy="93.0" r="5"><title>Contracts · cheapest API: $0.0015</title></circle>
+<text class="val" x="306.7" y="97.0">Modal $0.0022 · Qwen3.7-Flash $0.0015</text>
+<text class="lbl" x="152" y="127.0" text-anchor="end">Corporate records</text>
+<line class="conn" x1="190.8" y1="123.0" x2="208.5" y2="123.0"/>
+<circle class="s1 ring" cx="190.8" cy="123.0" r="5"><title>Corporate records · Modal L4: $0.00050</title></circle>
+<circle class="s2 ring" cx="208.5" cy="123.0" r="5"><title>Corporate records · cheapest API: $0.00079</title></circle>
+<text class="val" x="218.5" y="127.0">Modal $0.00050 · Qwen3.7-Flash $0.00079</text>
+<text class="lbl" x="152" y="157.0" text-anchor="end">Correspondence</text>
+<line class="conn" x1="168.8" y1="153.0" x2="187.7" y2="153.0"/>
+<circle class="s1 ring" cx="168.8" cy="153.0" r="5"><title>Correspondence · Modal L4: $0.00014</title></circle>
+<circle class="s2 ring" cx="187.7" cy="153.0" r="5"><title>Correspondence · cheapest API: $0.00045</title></circle>
+<text class="val" x="197.7" y="157.0">Modal $0.00014 · Qwen3.7-Flash $0.00045</text>
+<text class="lbl" x="152" y="187.0" text-anchor="end">Insurance claims</text>
+<line class="conn" x1="193.2" y1="183.0" x2="191.2" y2="183.0"/>
+<circle class="s1 ring" cx="193.2" cy="183.0" r="5"><title>Insurance claims · Modal L4: $0.00054</title></circle>
+<circle class="s2 ring" cx="191.2" cy="183.0" r="5"><title>Insurance claims · cheapest API: $0.00051</title></circle>
+<text class="val" x="203.2" y="187.0">Modal $0.00054 · Qwen3.7-Flash $0.00051</text>
 <text class="lbl" x="152" y="217.0" text-anchor="end">Merger agreements</text>
 <line class="conn" x1="423.6" y1="213.0" x2="337.4" y2="213.0"/>
 <circle class="s1 ring" cx="423.6" cy="213.0" r="5"><title>Merger agreements · Modal L4: $0.0043</title></circle>
