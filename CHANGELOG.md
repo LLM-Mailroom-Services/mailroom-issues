@@ -6,6 +6,17 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added — DeepSeek-V4.1-Flash Modal planning runbook (#225)
+
+- `reports/DEEPSEEK-V41-FLASH-MODAL-PLAN.md` — **SPEND-GATED** planning-only runbook:
+  open-weight checkpoint (`deepseek-ai/DeepSeek-V4.1-Flash`, MIT), why L4 / SAND-032
+  topology does not transfer (~614 GB vLLM VRAM floor), draft vLLM + Modal posture
+  (4×B200 primary, 8×H200 fallback), API baselines from `MASTER-REPORT.md`, and
+  **PLANNED** Modal cells mapped to
+  [`reports/NEXT-GPU-TIER-PROTOCOL.md`](reports/NEXT-GPU-TIER-PROTOCOL.md) (issue #224 /
+  PR #226) without invented Modal quality or $/doc figures.
+- `reports/README.md` — index row for the DeepSeek plan (cross-links protocol path #224 / PR #226).
+
 ### Added — presentation PNGs; dark, high-contrast figures; every API model covered
 
 - `reports/viz/**/*.png` + `reports/viz/MANIFEST.json` — every report figure as a
