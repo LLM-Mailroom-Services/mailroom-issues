@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 760 212" width="760" height="212" role="img" aria-label="Sorter routes: document-type accuracy">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="760" height="212" rx="8"/>
+<text class="title" x="16" y="24">Sorter routes: document-type accuracy</text>
+<text class="sub" x="16" y="42">every way the mailroom can sort · cost per document in each bar&#x27;s hover and the table</text>
+<line class="grid" x1="230.0" y1="54" x2="230.0" y2="178"/>
+<text class="tick" x="230.0" y="194" text-anchor="middle">0</text>
+<line class="grid" x1="345.0" y1="54" x2="345.0" y2="178"/>
+<text class="tick" x="345.0" y="194" text-anchor="middle">0.25</text>
+<line class="grid" x1="460.0" y1="54" x2="460.0" y2="178"/>
+<text class="tick" x="460.0" y="194" text-anchor="middle">0.5</text>
+<line class="grid" x1="575.0" y1="54" x2="575.0" y2="178"/>
+<text class="tick" x="575.0" y="194" text-anchor="middle">0.75</text>
+<line class="grid" x1="690.0" y1="54" x2="690.0" y2="178"/>
+<text class="tick" x="690.0" y="194" text-anchor="middle">1</text>
+<line class="axis" x1="230" y1="54" x2="230" y2="178"/>
+<text class="lbl" x="222" y="74.0" text-anchor="end">Modal L4 · Qwen3-8B-AWQ (S6)</text>
+<path class="deemph" d="M230.0,63.0 H637.7 Q641.7,63.0 641.7,67.0 V73.0 Q641.7,77.0 637.7,77.0 H230.0 Z"><title>Modal L4 · Qwen3-8B-AWQ (S6): 89.5% — $0.0019 per document · n = 457</title></path>
+<text class="val" x="647.7" y="74.0">89.5%</text>
+<text class="lbl" x="222" y="98.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
+<path class="deemph" d="M230.0,87.0 H663.0 Q667.0,87.0 667.0,91.0 V97.0 Q667.0,101.0 663.0,101.0 H230.0 Z"><title>API · DeepSeek-V4.1-Flash: 95.0% — $0.0010 per document · n = 100</title></path>
+<text class="val" x="673.0" y="98.0">95.0%</text>
+<text class="lbl" x="222" y="122.0" text-anchor="end">API · Granite-4.2-8B</text>
+<path class="deemph" d="M230.0,111.0 H658.4 Q662.4,111.0 662.4,115.0 V121.0 Q662.4,125.0 658.4,125.0 H230.0 Z"><title>API · Granite-4.2-8B: 94.0% — $0.0015 per document · n = 100</title></path>
+<text class="val" x="668.4" y="122.0">94.0%</text>
+<text class="lbl" x="222" y="146.0" text-anchor="end">API · Qwen3.7-Flash</text>
+<path class="deemph" d="M230.0,135.0 H644.6 Q648.6,135.0 648.6,139.0 V145.0 Q648.6,149.0 644.6,149.0 H230.0 Z"><title>API · Qwen3.7-Flash: 91.0% — $0.00085 per document · n = 100</title></path>
+<text class="val" x="654.6" y="146.0">91.0%</text>
+<text class="lbl" x="222" y="170.0" text-anchor="end">ModernBERT · Arm B (local)</text>
+<path class="s1" d="M230.0,159.0 H663.2 Q667.2,159.0 667.2,163.0 V169.0 Q667.2,173.0 663.2,173.0 H230.0 Z"><title>ModernBERT · Arm B (local): 95.0% — $0.0000010 per document · n = 323</title></path>
+<text class="val" x="673.2" y="170.0">95.0%</text>
+</svg>
