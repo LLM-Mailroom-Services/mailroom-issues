@@ -16,6 +16,10 @@ refer to this repo's issues.
   optimal scenario: verdict per class, every measured Modal configuration against
   the cheapest hosted model, warm 1×L4 / 2×L4 and cold-batch break-even volumes,
   and the deployment where Modal wins on both cost and quality.
+- Every break-even verdict names the model on each route: Qwen3-8B-AWQ is the only
+  model self-hosted on Modal, and Qwen3.7-Flash and the other hosted models ran through
+  the API only. §3.2 compares the same model on both routes (Qwen3-8B-AWQ on Modal vs
+  Qwen3-8B via the API).
 - `reports/MODAL-VLLM-GPU-REPORT.md` — cost per 1M tokens on three bases and at
   falling utilization, and a warm vs cold GPU section (boot measurements, warm
   vs cold per workload, batch size to amortize a cold start, keep warm vs scale

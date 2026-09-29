@@ -104,8 +104,10 @@ next to the reports hub that cross-checks every number against its source file.
   findings from the API leg (eval-environment), the Modal + vLLM leg (sandbox,
   SAND-032) and the ModernBERT intake classifier (mailroom-ml).
 - [Cost comparison, Modal L4 vs hosted API](reports/COST-COMPARISON-MODAL-VS-API.md):
-  cost per document and per unit of quality for every route and model, the
-  warm-fleet and cold-batch break-even volumes, the optimal Modal deployment,
+  cost per document and per unit of quality for every route and model (Modal
+  self-hosts Qwen3-8B-AWQ only; every other model ran via the API), the same
+  model on both routes, the warm-fleet and cold-batch break-even volumes, the
+  optimal Modal deployment,
   sorter routes and spend.
 - [Modal + vLLM GPU economics](reports/MODAL-VLLM-GPU-REPORT.md): the SAND-032
   leg's cost per 1M tokens (warm, cold and at real utilization), warm vs cold
