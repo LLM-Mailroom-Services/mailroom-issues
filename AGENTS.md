@@ -24,6 +24,10 @@ in a sibling repo and is tracked back here by issue link.
 1. **No code.** No packages, no pipelines, no implementation. If a task
    requires writing application code, it belongs in the sibling repo where the
    code lives — open (or move) the issue there and link it.
+   `reports/`, `docs/index.html` and `docs/reports/` are generated outputs
+   (markdown, SVG and static HTML with no JavaScript), not code: regenerate
+   them from `Exios66/local-mailroom-sandbox`
+   (`reports/dashboard/export_hub_reports.py`), never hand-edit them.
 2. **Search before filing.** Never duplicate an open issue, epic, or RFC.
    Update the existing one instead (update, don't duplicate). If a closed issue
    already settled the question, reference it and reopen only if the decision

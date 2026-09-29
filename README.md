@@ -81,9 +81,13 @@ mailroom-issues/
 │   └── hf_cache/          # colocated HF parquet cache (pin + MANIFEST — see data/hf_cache/README.md)
 ├── reports/               # generated cross-repo evaluation reports (markdown + SVG; see reports/README.md)
 │   ├── MASTER-REPORT.md   # status + research findings: API leg, Modal + vLLM leg, ModernBERT
-│   ├── COST-COMPARISON-MODAL-VS-API.md   # cost per doc / per quality, break-even, sorter routes, spend
-│   └── figures/           # cost/ (drawn for these reports) · sources/<repo>/ (verbatim source charts)
+│   ├── COST-COMPARISON-MODAL-VS-API.md   # cost per doc / per quality, break-even + optimal Modal scenario, sorter routes, spend
+│   ├── MODAL-VLLM-GPU-REPORT.md          # Modal + vLLM: cost per token, GPU spend, utilization, second L4
+│   └── figures/           # cost/ + gpu/ (drawn for these reports) · sources/<repo>/ (verbatim source charts)
 └── docs/
+    ├── index.html         # generated Pages site: landing page (static HTML, no JS; see Reports)
+    ├── reports/           # generated Pages site: one page per report, figures inlined
+    ├── .nojekyll          # serve the generated HTML as is
     ├── CONSTELLATION.md   # the ecosystem map: repos, roles, layers
     ├── PROMPTS.md         # sorter + specialist lineage; pointers to current mutations
     ├── ROUTING.md         # which issue belongs in which repository
@@ -118,11 +122,26 @@ next to the reports hub that cross-checks every number against its source file.
   findings from the API leg (eval-environment), the Modal + vLLM leg (sandbox,
   SAND-032) and the ModernBERT intake classifier (mailroom-ml).
 - [Cost comparison, Modal L4 vs hosted API](reports/COST-COMPARISON-MODAL-VS-API.md):
-  cost per document and per unit of quality for every route and model, batch
-  break-even for the Modal fleet, sorter routes and spend.
+  cost per document and per unit of quality for every route and model (Modal
+  self-hosts Qwen3-8B-AWQ only; every other model ran via the API), the same
+  model on both routes, the warm-fleet and cold-batch break-even volumes, the
+  optimal Modal deployment,
+  sorter routes and spend.
+- [Modal + vLLM GPU economics](reports/MODAL-VLLM-GPU-REPORT.md): the SAND-032
+  leg's cost per 1M tokens (warm, cold and at real utilization), warm vs cold
+  GPUs, where the GPU spend went, how busy the GPUs were, and what adding the
+  second L4 did.
 
-Regenerate from the sandbox with `--out ../mailroom-issues/reports`; `--check`
-exits 1 when this folder is stale. Don't hand-edit the files.
+**Reports site:** <https://llm-mailroom-services.github.io/mailroom-issues/>.
+The same three reports, rendered as static pages in `docs/index.html` and
+`docs/reports/` (inline SVG figures, no JavaScript, no external requests).
+GitHub Pages serves them by deploying from a branch, so no workflow is involved.
+One-time setup by an org admin: **Settings → Pages → Build and deployment →
+Deploy from a branch → `main` / `/docs`**.
+
+Regenerate both from the sandbox with `--out ../mailroom-issues/reports` (the
+site goes to `docs/` alongside); `--check` exits 1 when either is stale. Don't
+hand-edit the files.
 
 ## Governance tooling
 

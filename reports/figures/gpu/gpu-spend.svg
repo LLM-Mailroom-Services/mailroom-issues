@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 760 212" width="760" height="212" role="img" aria-label="Where the SAND-032 GPU spend went">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="760" height="212" rx="8"/>
+<text class="title" x="16" y="24">Where the SAND-032 GPU spend went</text>
+<text class="sub" x="16" y="42">fleet-window ledger $2.80 at close · the five parts sum to the ledger</text>
+<line class="grid" x1="230.0" y1="54" x2="230.0" y2="178"/>
+<text class="tick" x="230.0" y="194" text-anchor="middle">0</text>
+<line class="grid" x1="383.3" y1="54" x2="383.3" y2="178"/>
+<text class="tick" x="383.3" y="194" text-anchor="middle">0.5</text>
+<line class="grid" x1="536.7" y1="54" x2="536.7" y2="178"/>
+<text class="tick" x="536.7" y="194" text-anchor="middle">1</text>
+<line class="grid" x1="690.0" y1="54" x2="690.0" y2="178"/>
+<text class="tick" x="690.0" y="194" text-anchor="middle">1.5</text>
+<line class="axis" x1="230" y1="54" x2="230" y2="178"/>
+<text class="lbl" x="222" y="74.0" text-anchor="end">Slots with a request in flight</text>
+<path class="s1" d="M230.0,63.0 H585.4 Q589.4,63.0 589.4,67.0 V73.0 Q589.4,77.0 585.4,77.0 H230.0 Z"><title>Slots with a request in flight: $1.17 — 42% of the ledger</title></path>
+<text class="val" x="595.4" y="74.0">$1.17</text>
+<text class="lbl" x="222" y="98.0" text-anchor="end">Idle slots inside runs</text>
+<path class="deemph" d="M230.0,87.0 H395.0 Q399.0,87.0 399.0,91.0 V97.0 Q399.0,101.0 395.0,101.0 H230.0 Z"><title>Idle slots inside runs: $0.55 — 20% of the ledger</title></path>
+<text class="val" x="405.0" y="98.0">$0.55</text>
+<text class="lbl" x="222" y="122.0" text-anchor="end">Cold boots</text>
+<path class="deemph" d="M230.0,111.0 H367.1 Q371.1,111.0 371.1,115.0 V121.0 Q371.1,125.0 367.1,125.0 H230.0 Z"><title>Cold boots: $0.46 — 16% of the ledger</title></path>
+<text class="val" x="377.1" y="122.0">$0.46</text>
+<text class="lbl" x="222" y="146.0" text-anchor="end">Aborted sorter run (incident)</text>
+<path class="deemph" d="M230.0,135.0 H251.5 Q255.5,135.0 255.5,139.0 V145.0 Q255.5,149.0 251.5,149.0 H230.0 Z"><title>Aborted sorter run (incident): $0.08 — 3% of the ledger</title></path>
+<text class="val" x="261.5" y="146.0">$0.08</text>
+<text class="lbl" x="222" y="170.0" text-anchor="end">Fleet time outside any run</text>
+<path class="deemph" d="M230.0,159.0 H389.6 Q393.6,159.0 393.6,163.0 V169.0 Q393.6,173.0 389.6,173.0 H230.0 Z"><title>Fleet time outside any run: $0.53 — 19% of the ledger</title></path>
+<text class="val" x="399.6" y="170.0">$0.53</text>
+</svg>

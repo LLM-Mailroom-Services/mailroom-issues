@@ -1,0 +1,247 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 1256 444" width="1256" height="444" role="img" aria-label="Adding the second L4 · correspondence n = 100, same documents (grey = one L4 or one replica doing the work)">
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect class="bg" width="1256" height="444" rx="8"/><text class="title" x="16" y="24">Adding the second L4 · correspondence n = 100, same documents (grey = one L4 or one replica doing the work)</text><g transform="translate(0,36)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 620 188" width="620" height="188" role="img" aria-label="Wall time">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="620" height="188" rx="8"/>
+<text class="title" x="16" y="24">Wall time</text>
+<text class="sub" x="16" y="42">seconds for the batch · lower is better</text>
+<line class="grid" x1="250.0" y1="54" x2="250.0" y2="154"/>
+<text class="tick" x="250.0" y="170" text-anchor="middle">0</text>
+<line class="grid" x1="350.0" y1="54" x2="350.0" y2="154"/>
+<text class="tick" x="350.0" y="170" text-anchor="middle">50</text>
+<line class="grid" x1="450.0" y1="54" x2="450.0" y2="154"/>
+<text class="tick" x="450.0" y="170" text-anchor="middle">100</text>
+<line class="grid" x1="550.0" y1="54" x2="550.0" y2="154"/>
+<text class="tick" x="550.0" y="170" text-anchor="middle">150</text>
+<line class="axis" x1="250" y1="54" x2="250" y2="154"/>
+<text class="lbl" x="242" y="74.0" text-anchor="end">S2a · 1×L4, c8</text>
+<path class="deemph" d="M250.0,63.0 H436.0 Q440.0,63.0 440.0,67.0 V73.0 Q440.0,77.0 436.0,77.0 H250.0 Z"><title>S2a · 1×L4, c8: 95.0 s — 1×L4 · c8 · seqs 16 · max_inputs 32</title></path>
+<text class="val" x="446.0" y="74.0">95.0 s</text>
+<text class="lbl" x="242" y="98.0" text-anchor="end">S2b · 2×L4, c16</text>
+<path class="s1" d="M250.0,87.0 H338.3 Q342.3,87.0 342.3,91.0 V97.0 Q342.3,101.0 338.3,101.0 H250.0 Z"><title>S2b · 2×L4, c16: 46.1 s — 2×L4 · c16 · seqs 16 · max_inputs 32</title></path>
+<text class="val" x="348.3" y="98.0">46.1 s</text>
+<text class="lbl" x="242" y="122.0" text-anchor="end">S7 · 2×L4, c64, max_inputs 64</text>
+<path class="deemph" d="M250.0,111.0 H544.7 Q548.7,111.0 548.7,115.0 V121.0 Q548.7,125.0 544.7,125.0 H250.0 Z"><title>S7 · 2×L4, c64, max_inputs 64: 149.4 s — 2×L4 · c64 · seqs 32 · max_inputs 64</title></path>
+<text class="val" x="554.7" y="122.0">149.4 s</text>
+<text class="lbl" x="242" y="146.0" text-anchor="end">S9 · 2×L4, c64, max_inputs 32</text>
+<path class="s1" d="M250.0,135.0 H323.9 Q327.9,135.0 327.9,139.0 V145.0 Q327.9,149.0 323.9,149.0 H250.0 Z"><title>S9 · 2×L4, c64, max_inputs 32: 39.0 s — 2×L4 · c64 · seqs 32 · max_inputs 32</title></path>
+<text class="val" x="333.9" y="146.0">39.0 s</text>
+</svg></g><g transform="translate(636,36)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 620 188" width="620" height="188" role="img" aria-label="Throughput per L4">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="620" height="188" rx="8"/>
+<text class="title" x="16" y="24">Throughput per L4</text>
+<text class="sub" x="16" y="42">tokens per second per GPU · higher is better</text>
+<line class="grid" x1="250.0" y1="54" x2="250.0" y2="154"/>
+<text class="tick" x="250.0" y="170" text-anchor="middle">0</text>
+<line class="grid" x1="325.0" y1="54" x2="325.0" y2="154"/>
+<text class="tick" x="325.0" y="170" text-anchor="middle">1,000</text>
+<line class="grid" x1="400.0" y1="54" x2="400.0" y2="154"/>
+<text class="tick" x="400.0" y="170" text-anchor="middle">2,000</text>
+<line class="grid" x1="475.0" y1="54" x2="475.0" y2="154"/>
+<text class="tick" x="475.0" y="170" text-anchor="middle">3,000</text>
+<line class="grid" x1="550.0" y1="54" x2="550.0" y2="154"/>
+<text class="tick" x="550.0" y="170" text-anchor="middle">4,000</text>
+<line class="axis" x1="250" y1="54" x2="250" y2="154"/>
+<text class="lbl" x="242" y="74.0" text-anchor="end">S2a · 1×L4, c8</text>
+<path class="deemph" d="M250.0,63.0 H439.4 Q443.4,63.0 443.4,67.0 V73.0 Q443.4,77.0 439.4,77.0 H250.0 Z"><title>S2a · 1×L4, c8: 2,579 — 1×L4 · c8 · seqs 16 · max_inputs 32</title></path>
+<text class="val" x="449.4" y="74.0">2,579</text>
+<text class="lbl" x="242" y="98.0" text-anchor="end">S2b · 2×L4, c16</text>
+<path class="s1" d="M250.0,87.0 H445.1 Q449.1,87.0 449.1,91.0 V97.0 Q449.1,101.0 445.1,101.0 H250.0 Z"><title>S2b · 2×L4, c16: 2,654 — 2×L4 · c16 · seqs 16 · max_inputs 32</title></path>
+<text class="val" x="455.1" y="98.0">2,654</text>
+<text class="lbl" x="242" y="122.0" text-anchor="end">S7 · 2×L4, c64, max_inputs 64</text>
+<path class="deemph" d="M250.0,111.0 H307.5 Q311.5,111.0 311.5,115.0 V121.0 Q311.5,125.0 307.5,125.0 H250.0 Z"><title>S7 · 2×L4, c64, max_inputs 64: 820 — 2×L4 · c64 · seqs 32 · max_inputs 64</title></path>
+<text class="val" x="317.5" y="122.0">820</text>
+<text class="lbl" x="242" y="146.0" text-anchor="end">S9 · 2×L4, c64, max_inputs 32</text>
+<path class="s1" d="M250.0,135.0 H481.6 Q485.6,135.0 485.6,139.0 V145.0 Q485.6,149.0 481.6,149.0 H250.0 Z"><title>S9 · 2×L4, c64, max_inputs 32: 3,141 — 2×L4 · c64 · seqs 32 · max_inputs 32</title></path>
+<text class="val" x="491.6" y="146.0">3,141</text>
+</svg></g><g transform="translate(0,240)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 620 188" width="620" height="188" role="img" aria-label="Cost per 1M tokens">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="620" height="188" rx="8"/>
+<text class="title" x="16" y="24">Cost per 1M tokens</text>
+<text class="sub" x="16" y="42">busy-window GPU $ · lower is better</text>
+<line class="grid" x1="250.0" y1="54" x2="250.0" y2="154"/>
+<text class="tick" x="250.0" y="170" text-anchor="middle">0</text>
+<line class="grid" x1="350.0" y1="54" x2="350.0" y2="154"/>
+<text class="tick" x="350.0" y="170" text-anchor="middle">0.1</text>
+<line class="grid" x1="450.0" y1="54" x2="450.0" y2="154"/>
+<text class="tick" x="450.0" y="170" text-anchor="middle">0.2</text>
+<line class="grid" x1="550.0" y1="54" x2="550.0" y2="154"/>
+<text class="tick" x="550.0" y="170" text-anchor="middle">0.3</text>
+<line class="axis" x1="250" y1="54" x2="250" y2="154"/>
+<text class="lbl" x="242" y="74.0" text-anchor="end">S2a · 1×L4, c8</text>
+<path class="deemph" d="M250.0,63.0 H332.2 Q336.2,63.0 336.2,67.0 V73.0 Q336.2,77.0 332.2,77.0 H250.0 Z"><title>S2a · 1×L4, c8: $0.086 — 1×L4 · c8 · seqs 16 · max_inputs 32</title></path>
+<text class="val" x="342.2" y="74.0">$0.086</text>
+<text class="lbl" x="242" y="98.0" text-anchor="end">S2b · 2×L4, c16</text>
+<path class="s1" d="M250.0,87.0 H329.7 Q333.7,87.0 333.7,91.0 V97.0 Q333.7,101.0 329.7,101.0 H250.0 Z"><title>S2b · 2×L4, c16: $0.084 — 2×L4 · c16 · seqs 16 · max_inputs 32</title></path>
+<text class="val" x="339.7" y="98.0">$0.084</text>
+<text class="lbl" x="242" y="122.0" text-anchor="end">S7 · 2×L4, c64, max_inputs 64</text>
+<path class="deemph" d="M250.0,111.0 H516.9 Q520.9,111.0 520.9,115.0 V121.0 Q520.9,125.0 516.9,125.0 H250.0 Z"><title>S7 · 2×L4, c64, max_inputs 64: $0.271 — 2×L4 · c64 · seqs 32 · max_inputs 64</title></path>
+<text class="val" x="526.9" y="122.0">$0.271</text>
+<text class="lbl" x="242" y="146.0" text-anchor="end">S9 · 2×L4, c64, max_inputs 32</text>
+<path class="s1" d="M250.0,135.0 H316.7 Q320.7,135.0 320.7,139.0 V145.0 Q320.7,149.0 316.7,149.0 H250.0 Z"><title>S9 · 2×L4, c64, max_inputs 32: $0.071 — 2×L4 · c64 · seqs 32 · max_inputs 32</title></path>
+<text class="val" x="326.7" y="146.0">$0.071</text>
+</svg></g><g transform="translate(636,240)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 620 188" width="620" height="188" role="img" aria-label="p95 request latency">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="620" height="188" rx="8"/>
+<text class="title" x="16" y="24">p95 request latency</text>
+<text class="sub" x="16" y="42">seconds · lower is better</text>
+<line class="grid" x1="250.0" y1="54" x2="250.0" y2="154"/>
+<text class="tick" x="250.0" y="170" text-anchor="middle">0</text>
+<line class="grid" x1="350.0" y1="54" x2="350.0" y2="154"/>
+<text class="tick" x="350.0" y="170" text-anchor="middle">20</text>
+<line class="grid" x1="450.0" y1="54" x2="450.0" y2="154"/>
+<text class="tick" x="450.0" y="170" text-anchor="middle">40</text>
+<line class="grid" x1="550.0" y1="54" x2="550.0" y2="154"/>
+<text class="tick" x="550.0" y="170" text-anchor="middle">60</text>
+<line class="axis" x1="250" y1="54" x2="250" y2="154"/>
+<text class="lbl" x="242" y="74.0" text-anchor="end">S2a · 1×L4, c8</text>
+<path class="deemph" d="M250.0,63.0 H304.0 Q308.0,63.0 308.0,67.0 V73.0 Q308.0,77.0 304.0,77.0 H250.0 Z"><title>S2a · 1×L4, c8: 11.6 s — 1×L4 · c8 · seqs 16 · max_inputs 32</title></path>
+<text class="val" x="314.0" y="74.0">11.6 s</text>
+<text class="lbl" x="242" y="98.0" text-anchor="end">S2b · 2×L4, c16</text>
+<path class="s1" d="M250.0,87.0 H318.0 Q322.0,87.0 322.0,91.0 V97.0 Q322.0,101.0 318.0,101.0 H250.0 Z"><title>S2b · 2×L4, c16: 14.4 s — 2×L4 · c16 · seqs 16 · max_inputs 32</title></path>
+<text class="val" x="328.0" y="98.0">14.4 s</text>
+<text class="lbl" x="242" y="122.0" text-anchor="end">S7 · 2×L4, c64, max_inputs 64</text>
+<path class="deemph" d="M250.0,111.0 H503.5 Q507.5,111.0 507.5,115.0 V121.0 Q507.5,125.0 503.5,125.0 H250.0 Z"><title>S7 · 2×L4, c64, max_inputs 64: 51.5 s — 2×L4 · c64 · seqs 32 · max_inputs 64</title></path>
+<text class="val" x="513.5" y="122.0">51.5 s</text>
+<text class="lbl" x="242" y="146.0" text-anchor="end">S9 · 2×L4, c64, max_inputs 32</text>
+<path class="s1" d="M250.0,135.0 H397.8 Q401.8,135.0 401.8,139.0 V145.0 Q401.8,149.0 397.8,149.0 H250.0 Z"><title>S9 · 2×L4, c64, max_inputs 32: 30.4 s — 2×L4 · c64 · seqs 32 · max_inputs 32</title></path>
+<text class="val" x="407.8" y="146.0">30.4 s</text>
+</svg></g></svg>
