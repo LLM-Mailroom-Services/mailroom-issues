@@ -83,7 +83,8 @@ mailroom-issues/
 │   ├── MASTER-REPORT.md   # status + research findings: API leg, Modal + vLLM leg, ModernBERT
 │   ├── COST-COMPARISON-MODAL-VS-API.md   # cost per doc / per quality, break-even + optimal Modal scenario, sorter routes, spend
 │   ├── MODAL-VLLM-GPU-REPORT.md          # Modal + vLLM: cost per token, GPU spend, utilization, second L4
-│   └── figures/           # cost/ + gpu/ (drawn for these reports) · sources/<repo>/ (verbatim source charts)
+│   ├── figures/           # every report figure as SVG (dark, high-contrast cards)
+│   └── viz/               # the same figures as 2× PNGs for slides (+ MANIFEST.json of source SVG hashes)
 └── docs/
     ├── index.html         # generated Pages site: landing page (static HTML, no JS; see Reports)
     ├── reports/           # generated Pages site: one page per report, figures inlined
@@ -138,6 +139,10 @@ The same three reports, rendered as static pages in `docs/index.html` and
 GitHub Pages serves them by deploying from a branch, so no workflow is involved.
 One-time setup by an org admin: **Settings → Pages → Build and deployment →
 Deploy from a branch → `main` / `/docs`**.
+
+**Slides:** every figure is also exported as a presentation-ready PNG (2× resolution,
+dark background included) under [`reports/viz/`](reports/viz/), mirroring
+`reports/figures/`.
 
 Regenerate both from the sandbox with `--out ../mailroom-issues/reports` (the
 site goes to `docs/` alongside); `--check` exits 1 when either is stale. Don't

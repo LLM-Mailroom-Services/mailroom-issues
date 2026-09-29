@@ -1,60 +1,67 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 760 212" width="760" height="212" role="img" aria-label="Sorter routes: document-type accuracy">
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 991 258" width="991" height="258" role="img" aria-label="Sorter routes: document-type accuracy">
 
 <style>
-  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
-    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color-scheme: dark;
+    --surface:#1a1a19; --ink:#ffffff; --ink2:#d6d5cc; --muted:#a9a89f;
+    --grid:#2c2c2a; --axis:#4a4a46; --deemph:#76756f;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
     --good:#0ca30c; --critical:#d03b3b; }
-  @media (prefers-color-scheme: dark) {
-    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
-      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
-  }
   .viz .bg { fill: var(--surface); }
   .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
   .viz .sub { fill: var(--ink2); font-size: 12px; }
   .viz .lbl { fill: var(--ink2); font-size: 12px; }
   .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
     paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
-  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
   .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
   .viz .grid { stroke: var(--grid); stroke-width: 1; }
   .viz .axis { stroke: var(--axis); stroke-width: 1; }
-  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
-  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
-  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
-  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; stroke-dasharray: 4 3; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); } .viz .s3 { fill: var(--s3); }
+  .viz .s4 { fill: var(--s4); } .viz .s5 { fill: var(--s5); } .viz .s6 { fill: var(--s6); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); } .viz .ln3 { stroke: var(--s3); }
+  .viz .ln4 { stroke: var(--s4); } .viz .ln5 { stroke: var(--s5); } .viz .ln6 { stroke: var(--s6); }
   .viz .deemph { fill: var(--deemph); }
   .viz .conn { stroke: var(--axis); stroke-width: 2; }
   .viz .ring { stroke: var(--surface); stroke-width: 2; }
 </style>
 
-<rect class="bg" width="760" height="212" rx="8"/>
+<rect class="bg" width="991" height="258" rx="8"/>
 <text class="title" x="16" y="24">Sorter routes: document-type accuracy</text>
-<text class="sub" x="16" y="42">every way the mailroom can sort · cost per document in each bar&#x27;s hover and the table</text>
-<line class="grid" x1="230.0" y1="54" x2="230.0" y2="178"/>
-<text class="tick" x="230.0" y="194" text-anchor="middle">0</text>
-<line class="grid" x1="345.0" y1="54" x2="345.0" y2="178"/>
-<text class="tick" x="345.0" y="194" text-anchor="middle">0.25</text>
-<line class="grid" x1="460.0" y1="54" x2="460.0" y2="178"/>
-<text class="tick" x="460.0" y="194" text-anchor="middle">0.5</text>
-<line class="grid" x1="575.0" y1="54" x2="575.0" y2="178"/>
-<text class="tick" x="575.0" y="194" text-anchor="middle">0.75</text>
-<line class="grid" x1="690.0" y1="54" x2="690.0" y2="178"/>
-<text class="tick" x="690.0" y="194" text-anchor="middle">1</text>
-<line class="axis" x1="230" y1="54" x2="230" y2="178"/>
-<text class="lbl" x="222" y="74.0" text-anchor="end">Modal L4 · Qwen3-8B-AWQ (S6)</text>
-<path class="deemph" d="M230.0,63.0 H637.7 Q641.7,63.0 641.7,67.0 V73.0 Q641.7,77.0 637.7,77.0 H230.0 Z"><title>Modal L4 · Qwen3-8B-AWQ (S6): 89.5% — $0.0017 per document · n = 457</title></path>
-<text class="val" x="647.7" y="74.0">89.5%</text>
-<text class="lbl" x="222" y="98.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
-<path class="deemph" d="M230.0,87.0 H663.0 Q667.0,87.0 667.0,91.0 V97.0 Q667.0,101.0 663.0,101.0 H230.0 Z"><title>API · DeepSeek-V4.1-Flash: 95.0% — $0.0010 per document · n = 100</title></path>
-<text class="val" x="673.0" y="98.0">95.0%</text>
-<text class="lbl" x="222" y="122.0" text-anchor="end">API · Granite-4.2-8B</text>
-<path class="deemph" d="M230.0,111.0 H658.4 Q662.4,111.0 662.4,115.0 V121.0 Q662.4,125.0 658.4,125.0 H230.0 Z"><title>API · Granite-4.2-8B: 94.0% — $0.0015 per document · n = 100</title></path>
-<text class="val" x="668.4" y="122.0">94.0%</text>
-<text class="lbl" x="222" y="146.0" text-anchor="end">API · Qwen3.7-Flash</text>
-<path class="deemph" d="M230.0,135.0 H644.6 Q648.6,135.0 648.6,139.0 V145.0 Q648.6,149.0 644.6,149.0 H230.0 Z"><title>API · Qwen3.7-Flash: 91.0% — $0.00085 per document · n = 100</title></path>
-<text class="val" x="654.6" y="146.0">91.0%</text>
-<text class="lbl" x="222" y="170.0" text-anchor="end">ModernBERT · Arm B (local)</text>
-<path class="s1" d="M230.0,159.0 H663.2 Q667.2,159.0 667.2,163.0 V169.0 Q667.2,173.0 663.2,173.0 H230.0 Z"><title>ModernBERT · Arm B (local): 95.0% — $0.0000010 per document · n = 323</title></path>
-<text class="val" x="673.2" y="170.0">95.0%</text>
+<text class="sub" x="16" y="42">Every way the mailroom can sort · cost per document in each bar&#x27;s hover and the table</text>
+<rect class="s1" x="16" y="53" width="10" height="10" rx="2"/><text class="lbl" x="31" y="62">Modal · Qwen3-8B-AWQ</text>
+<rect class="s2" x="188.60000000000002" y="53" width="10" height="10" rx="2"/><text class="lbl" x="203.60000000000002" y="62">API · Qwen3.7-Flash</text>
+<rect class="s3" x="344.52" y="53" width="10" height="10" rx="2"/><text class="lbl" x="359.52" y="62">API · DeepSeek-V4.1-Flash</text>
+<rect class="s4" x="543.28" y="53" width="10" height="10" rx="2"/><text class="lbl" x="558.28" y="62">API · Granite-4.2-8B</text>
+<rect class="s5" x="703.16" y="53" width="10" height="10" rx="2"/><text class="lbl" x="718.16" y="62">API · Qwen3-8B</text>
+<rect class="s6" x="828.96" y="53" width="10" height="10" rx="2"/><text class="lbl" x="843.96" y="62">ModernBERT (local)</text>
+<line class="grid" x1="230.0" y1="76" x2="230.0" y2="224"/>
+<text class="tick" x="230.0" y="240" text-anchor="middle">0</text>
+<line class="grid" x1="402.8" y1="76" x2="402.8" y2="224"/>
+<text class="tick" x="402.8" y="240" text-anchor="middle">0.25</text>
+<line class="grid" x1="575.5" y1="76" x2="575.5" y2="224"/>
+<text class="tick" x="575.5" y="240" text-anchor="middle">0.5</text>
+<line class="grid" x1="748.2" y1="76" x2="748.2" y2="224"/>
+<text class="tick" x="748.2" y="240" text-anchor="middle">0.75</text>
+<line class="grid" x1="921.0" y1="76" x2="921.0" y2="224"/>
+<text class="tick" x="921.0" y="240" text-anchor="middle">1</text>
+<line class="axis" x1="230" y1="76" x2="230" y2="224"/>
+<text class="lbl" x="222" y="96.0" text-anchor="end">Modal L4 · Qwen3-8B-AWQ (S6)</text>
+<path class="s1" d="M230.0,85.0 H844.4 Q848.4,85.0 848.4,89.0 V95.0 Q848.4,99.0 844.4,99.0 H230.0 Z"><title>Modal L4 · Qwen3-8B-AWQ (S6): 89.5% — $0.0017 per document · n = 457</title></path>
+<text class="val" x="854.4" y="96.0">89.5%</text>
+<text class="lbl" x="222" y="120.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
+<path class="s3" d="M230.0,109.0 H882.4 Q886.4,109.0 886.4,113.0 V119.0 Q886.4,123.0 882.4,123.0 H230.0 Z"><title>API · DeepSeek-V4.1-Flash: 95.0% — $0.0010 per document · n = 100</title></path>
+<text class="val" x="892.4" y="120.0">95.0%</text>
+<text class="lbl" x="222" y="144.0" text-anchor="end">API · Granite-4.2-8B</text>
+<path class="s4" d="M230.0,133.0 H875.5 Q879.5,133.0 879.5,137.0 V143.0 Q879.5,147.0 875.5,147.0 H230.0 Z"><title>API · Granite-4.2-8B: 94.0% — $0.0015 per document · n = 100</title></path>
+<text class="val" x="885.5" y="144.0">94.0%</text>
+<text class="lbl" x="222" y="168.0" text-anchor="end">API · Qwen3.7-Flash</text>
+<path class="s2" d="M230.0,157.0 H854.8 Q858.8,157.0 858.8,161.0 V167.0 Q858.8,171.0 854.8,171.0 H230.0 Z"><title>API · Qwen3.7-Flash: 91.0% — $0.00085 per document · n = 100</title></path>
+<text class="val" x="864.8" y="168.0">91.0%</text>
+<text class="lbl" x="222" y="192.0" text-anchor="end">API · Qwen3-8B (n = 20)</text>
+<path class="s5" d="M230.0,181.0 H709.7 Q713.7,181.0 713.7,185.0 V191.0 Q713.7,195.0 709.7,195.0 H230.0 Z"><title>API · Qwen3-8B (n = 20): 70.0% — $0.0075 per document · n = 20</title></path>
+<text class="val" x="719.7" y="192.0">70.0%</text>
+<text class="lbl" x="222" y="216.0" text-anchor="end">ModernBERT · Arm B (local)</text>
+<path class="s6" d="M230.0,205.0 H882.8 Q886.8,205.0 886.8,209.0 V215.0 Q886.8,219.0 882.8,219.0 H230.0 Z"><title>ModernBERT · Arm B (local): 95.0% — $0.0000010 per document · n = 323</title></path>
+<text class="val" x="892.8" y="216.0">95.0%</text>
 </svg>

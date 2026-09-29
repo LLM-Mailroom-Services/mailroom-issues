@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 720 654" width="720" height="654" role="img" aria-label="LLM sorter subclass accuracy by class">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color-scheme: dark;
+    --surface:#1a1a19; --ink:#ffffff; --ink2:#d6d5cc; --muted:#a9a89f;
+    --grid:#2c2c2a; --axis:#4a4a46; --deemph:#76756f;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+    --good:#0ca30c; --critical:#d03b3b; }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; stroke-dasharray: 4 3; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); } .viz .s3 { fill: var(--s3); }
+  .viz .s4 { fill: var(--s4); } .viz .s5 { fill: var(--s5); } .viz .s6 { fill: var(--s6); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); } .viz .ln3 { stroke: var(--s3); }
+  .viz .ln4 { stroke: var(--s4); } .viz .ln5 { stroke: var(--s5); } .viz .ln6 { stroke: var(--s6); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+
+<style>
+  .viz .grp { fill: var(--ink); font-size: 12px; font-weight: 600; }
+  .viz .axt { fill: var(--ink2); font-size: 11px; }
+  .viz .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .viz .lndeemph { stroke: var(--deemph); }
+  .viz .lead { stroke: var(--ink2); stroke-width: 1; }
+  .viz .hit { fill: transparent; }
+</style>
+
+<rect class="bg" width="720" height="654" rx="8"/>
+<text class="title" x="16" y="24">LLM sorter subclass accuracy by class</text>
+<text class="sub" x="16" y="42">Share of correctly classed documents that also got the right subclass, n = 100 documents per model</text>
+<rect class="s3" x="16" y="53" width="10" height="10" rx="2"/><text class="lbl" x="31" y="62">DeepSeek-V4.1-Flash</text>
+<rect class="s4" x="176.59999999999997" y="53" width="10" height="10" rx="2"/><text class="lbl" x="191.59999999999997" y="62">Granite-4.2-8B</text>
+<rect class="s2" x="298.31999999999994" y="53" width="10" height="10" rx="2"/><text class="lbl" x="313.31999999999994" y="62">Qwen3.7-Flash</text>
+<line class="grid" x1="167.0" y1="106" x2="167.0" y2="620"/>
+<text class="tick" x="167.0" y="636" text-anchor="middle">0%</text>
+<line class="grid" x1="279.0" y1="106" x2="279.0" y2="620"/>
+<text class="tick" x="279.0" y="636" text-anchor="middle">25%</text>
+<line class="grid" x1="391.0" y1="106" x2="391.0" y2="620"/>
+<text class="tick" x="391.0" y="636" text-anchor="middle">50%</text>
+<line class="grid" x1="503.0" y1="106" x2="503.0" y2="620"/>
+<text class="tick" x="503.0" y="636" text-anchor="middle">75%</text>
+<line class="grid" x1="615.0" y1="106" x2="615.0" y2="620"/>
+<text class="tick" x="615.0" y="636" text-anchor="middle">100%</text>
+<line class="axis" x1="167" y1="106" x2="167" y2="620"/>
+<line class="ref" x1="503.0" y1="84" x2="503.0" y2="620"/>
+<text class="reflbl" x="507.0" y="92">P0 subclass gate 75%</text>
+<text class="grp" x="16" y="125">Correspondence</text>
+<text class="lbl" x="159" y="148.0" text-anchor="end">DeepSeek-V4.1-Flash</text>
+<path class="s3" d="M167.0,137.0 H342.2 Q346.2,137.0 346.2,141.0 V147.0 Q346.2,151.0 342.2,151.0 H167.0 Z"><title>Correspondence · DeepSeek-V4.1-Flash: 40% (14/35) — 14 of 35 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="349.2" y="136.0" width="82.7" height="16"/>
+<text class="val" x="352.2" y="148.0">40% (14/35)</text>
+<text class="lbl" x="159" y="172.0" text-anchor="end">Granite-4.2-8B</text>
+<path class="s4" d="M167.0,161.0 H227.0 Q231.0,161.0 231.0,165.0 V171.0 Q231.0,175.0 227.0,175.0 H167.0 Z"><title>Correspondence · Granite-4.2-8B: 14% (5/35) — 5 of 35 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="234.0" y="160.0" width="75.0" height="16"/>
+<text class="val" x="237.0" y="172.0">14% (5/35)</text>
+<text class="lbl" x="159" y="196.0" text-anchor="end">Qwen3.7-Flash</text>
+<path class="s2" d="M167.0,185.0 H366.6 Q370.6,185.0 370.6,189.0 V195.0 Q370.6,199.0 366.6,199.0 H167.0 Z"><title>Correspondence · Qwen3.7-Flash: 45% (15/33) — 15 of 33 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="373.6" y="184.0" width="82.7" height="16"/>
+<text class="val" x="376.6" y="196.0">45% (15/33)</text>
+<text class="grp" x="16" y="229">Insurance claims</text>
+<text class="lbl" x="159" y="252.0" text-anchor="end">DeepSeek-V4.1-Flash</text>
+<path class="s3" d="M167.0,241.0 H611.0 Q615.0,241.0 615.0,245.0 V251.0 Q615.0,255.0 611.0,255.0 H167.0 Z"><title>Insurance claims · DeepSeek-V4.1-Flash: 100% (33/33) — 33 of 33 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="618.0" y="240.0" width="90.4" height="16"/>
+<text class="val" x="621.0" y="252.0">100% (33/33)</text>
+<text class="lbl" x="159" y="276.0" text-anchor="end">Granite-4.2-8B</text>
+<path class="s4" d="M167.0,265.0 H543.1 Q547.1,265.0 547.1,269.0 V275.0 Q547.1,279.0 543.1,279.0 H167.0 Z"><title>Insurance claims · Granite-4.2-8B: 85% (28/33) — 28 of 33 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="550.1" y="264.0" width="82.7" height="16"/>
+<text class="val" x="553.1" y="276.0">85% (28/33)</text>
+<text class="lbl" x="159" y="300.0" text-anchor="end">Qwen3.7-Flash</text>
+<path class="s2" d="M167.0,289.0 H516.0 Q520.0,289.0 520.0,293.0 V299.0 Q520.0,303.0 516.0,303.0 H167.0 Z"><title>Insurance claims · Qwen3.7-Flash: 79% (26/33) — 26 of 33 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="523.0" y="288.0" width="82.7" height="16"/>
+<text class="val" x="526.0" y="300.0">79% (26/33)</text>
+<text class="grp" x="16" y="333">Corporate records</text>
+<text class="lbl" x="159" y="356.0" text-anchor="end">DeepSeek-V4.1-Flash</text>
+<path class="s3" d="M167.0,345.0 H499.0 Q503.0,345.0 503.0,349.0 V355.0 Q503.0,359.0 499.0,359.0 H167.0 Z"><title>Corporate records · DeepSeek-V4.1-Flash: 75% (6/8) — 6 of 8 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="506.0" y="344.0" width="67.3" height="16"/>
+<text class="val" x="509.0" y="356.0">75% (6/8)</text>
+<text class="lbl" x="159" y="380.0" text-anchor="end">Granite-4.2-8B</text>
+<path class="s4" d="M167.0,369.0 H431.8 Q435.8,369.0 435.8,373.0 V379.0 Q435.8,383.0 431.8,383.0 H167.0 Z"><title>Corporate records · Granite-4.2-8B: 60% (6/10) — 6 of 10 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="438.8" y="368.0" width="75.0" height="16"/>
+<text class="val" x="441.8" y="380.0">60% (6/10)</text>
+<text class="lbl" x="159" y="404.0" text-anchor="end">Qwen3.7-Flash</text>
+<path class="s2" d="M167.0,393.0 H387.0 Q391.0,393.0 391.0,397.0 V403.0 Q391.0,407.0 387.0,407.0 H167.0 Z"><title>Corporate records · Qwen3.7-Flash: 50% (3/6) — 3 of 6 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="394.0" y="392.0" width="67.3" height="16"/>
+<text class="val" x="397.0" y="404.0">50% (3/6)</text>
+<text class="grp" x="16" y="437">Contracts</text>
+<text class="lbl" x="159" y="460.0" text-anchor="end">DeepSeek-V4.1-Flash</text>
+<path class="s3" d="M167.0,449.0 H451.0 Q455.0,449.0 455.0,453.0 V459.0 Q455.0,463.0 451.0,463.0 H167.0 Z"><title>Contracts · DeepSeek-V4.1-Flash: 64% (9/14) — 9 of 14 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="458.0" y="448.0" width="75.0" height="16"/>
+<text class="val" x="461.0" y="460.0">64% (9/14)</text>
+<text class="lbl" x="159" y="484.0" text-anchor="end">Granite-4.2-8B</text>
+<path class="s4" d="M167.0,473.0 H473.2 Q477.2,473.0 477.2,477.0 V483.0 Q477.2,487.0 473.2,487.0 H167.0 Z"><title>Contracts · Granite-4.2-8B: 69% (9/13) — 9 of 13 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="480.2" y="472.0" width="75.0" height="16"/>
+<text class="val" x="483.2" y="484.0">69% (9/13)</text>
+<text class="lbl" x="159" y="508.0" text-anchor="end">Qwen3.7-Flash</text>
+<path class="s2" d="M167.0,497.0 H451.0 Q455.0,497.0 455.0,501.0 V507.0 Q455.0,511.0 451.0,511.0 H167.0 Z"><title>Contracts · Qwen3.7-Flash: 64% (9/14) — 9 of 14 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="458.0" y="496.0" width="75.0" height="16"/>
+<text class="val" x="461.0" y="508.0">64% (9/14)</text>
+<text class="grp" x="16" y="541">Merger agreements</text>
+<text class="lbl" x="159" y="564.0" text-anchor="end">DeepSeek-V4.1-Flash</text>
+<path class="s3" d="M167.0,553.0 H342.2 Q346.2,553.0 346.2,557.0 V563.0 Q346.2,567.0 342.2,567.0 H167.0 Z"><title>Merger agreements · DeepSeek-V4.1-Flash: 40% (2/5) — 2 of 5 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="349.2" y="552.0" width="67.3" height="16"/>
+<text class="val" x="352.2" y="564.0">40% (2/5)</text>
+<text class="lbl" x="159" y="588.0" text-anchor="end">Granite-4.2-8B</text>
+<path class="s4" d="M167.0,577.0 H312.3 Q316.3,577.0 316.3,581.0 V587.0 Q316.3,591.0 312.3,591.0 H167.0 Z"><title>Merger agreements · Granite-4.2-8B: 33% (1/3) — 1 of 3 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="319.3" y="576.0" width="67.3" height="16"/>
+<text class="val" x="322.3" y="588.0">33% (1/3)</text>
+<text class="lbl" x="159" y="612.0" text-anchor="end">Qwen3.7-Flash</text>
+<path class="s2" d="M167.0,601.0 H431.8 Q435.8,601.0 435.8,605.0 V611.0 Q435.8,615.0 431.8,615.0 H167.0 Z"><title>Merger agreements · Qwen3.7-Flash: 60% (3/5) — 3 of 5 correctly classed documents got the right subclass</title></path>
+<rect class="bg" x="438.8" y="600.0" width="67.3" height="16"/>
+<text class="val" x="441.8" y="612.0">60% (3/5)</text>
+</svg>

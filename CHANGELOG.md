@@ -6,6 +6,16 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added — presentation PNGs; dark, high-contrast figures; every API model covered
+
+- `reports/viz/**/*.png` + `reports/viz/MANIFEST.json` — every report figure as a
+  presentation-ready 2× PNG, with the SHA-256 of the SVG each was rendered from.
+- All figures redrawn as dark, high-contrast cards on one /dataviz-validated palette;
+  each model keeps one color across every chart (Qwen3-8B-AWQ on Modal, Qwen3.7-Flash,
+  DeepSeek-V4.1-Flash, Granite-4.2-8B and Qwen3-8B via the API). The site is dark.
+- The per-token comparison and the sorter table now include every API model the
+  eval-environment measured (Qwen3.7-Flash n = 50 token counts; Qwen3-8B sorter n = 20).
+
 ### Added — reports site on GitHub Pages; warm vs cold, $/1M tokens and Modal vs API break-even
 
 - `docs/index.html`, `docs/reports/{master,cost-comparison,gpu-economics}.html`,
