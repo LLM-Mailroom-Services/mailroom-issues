@@ -1,0 +1,135 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 720 758" width="720" height="758" role="img" aria-label="ModernBERT document-type recall by class">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color-scheme: dark;
+    --surface:#1a1a19; --ink:#ffffff; --ink2:#d6d5cc; --muted:#a9a89f;
+    --grid:#2c2c2a; --axis:#4a4a46; --deemph:#76756f;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+    --good:#0ca30c; --critical:#d03b3b; }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; stroke-dasharray: 4 3; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); } .viz .s3 { fill: var(--s3); }
+  .viz .s4 { fill: var(--s4); } .viz .s5 { fill: var(--s5); } .viz .s6 { fill: var(--s6); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); } .viz .ln3 { stroke: var(--s3); }
+  .viz .ln4 { stroke: var(--s4); } .viz .ln5 { stroke: var(--s5); } .viz .ln6 { stroke: var(--s6); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+
+<style>
+  .viz .grp { fill: var(--ink); font-size: 12px; font-weight: 600; }
+  .viz .axt { fill: var(--ink2); font-size: 11px; }
+  .viz .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .viz .lndeemph { stroke: var(--deemph); }
+  .viz .lead { stroke: var(--ink2); stroke-width: 1; }
+  .viz .hit { fill: transparent; }
+</style>
+
+<rect class="bg" width="720" height="758" rx="8"/>
+<text class="title" x="16" y="24">ModernBERT document-type recall by class</text>
+<text class="sub" x="16" y="42">Share of each true class routed to it, n = 323 test documents per checkpoint</text>
+<rect class="s6" x="16" y="53" width="10" height="10" rx="2"/><text class="lbl" x="31" y="62">Arm B · 3 epochs</text>
+<rect class="deemph" x="145.64" y="53" width="10" height="10" rx="2"/><text class="lbl" x="160.64" y="62">Earlier checkpoints</text>
+<line class="grid" x1="199.0" y1="106" x2="199.0" y2="724"/>
+<text class="tick" x="199.0" y="740" text-anchor="middle">0%</text>
+<line class="grid" x1="312.8" y1="106" x2="312.8" y2="724"/>
+<text class="tick" x="312.8" y="740" text-anchor="middle">25%</text>
+<line class="grid" x1="426.5" y1="106" x2="426.5" y2="724"/>
+<text class="tick" x="426.5" y="740" text-anchor="middle">50%</text>
+<line class="grid" x1="540.2" y1="106" x2="540.2" y2="724"/>
+<text class="tick" x="540.2" y="740" text-anchor="middle">75%</text>
+<line class="grid" x1="654.0" y1="106" x2="654.0" y2="724"/>
+<text class="tick" x="654.0" y="740" text-anchor="middle">100%</text>
+<line class="axis" x1="199" y1="106" x2="199" y2="724"/>
+<line class="ref" x1="631.2" y1="84" x2="631.2" y2="724"/>
+<text class="reflbl" x="403.4" y="92">P0 doc-type gate 95% (all documents)</text>
+<text class="grp" x="16" y="125">All documents (accuracy)</text>
+<text class="lbl" x="191" y="148.0" text-anchor="end">Run 3</text>
+<path class="deemph" d="M199.0,137.0 H602.1 Q606.1,137.0 606.1,141.0 V147.0 Q606.1,151.0 602.1,151.0 H199.0 Z"><title>All documents (accuracy) · Run 3: 89.5% — n = 323 documents</title></path>
+<rect class="bg" x="609.1" y="136.0" width="44.2" height="16"/>
+<text class="val" x="612.1" y="148.0">89.5%</text>
+<text class="lbl" x="191" y="172.0" text-anchor="end">Arm A · 1 epoch</text>
+<path class="deemph" d="M199.0,161.0 H588.0 Q592.0,161.0 592.0,165.0 V171.0 Q592.0,175.0 588.0,175.0 H199.0 Z"><title>All documents (accuracy) · Arm A · 1 epoch: 86.4% — n = 323 documents</title></path>
+<rect class="bg" x="595.0" y="160.0" width="44.2" height="16"/>
+<text class="val" x="598.0" y="172.0">86.4%</text>
+<text class="lbl" x="191" y="196.0" text-anchor="end">Arm B · 3 epochs</text>
+<path class="s6" d="M199.0,185.0 H627.5 Q631.5,185.0 631.5,189.0 V195.0 Q631.5,199.0 627.5,199.0 H199.0 Z"><title>All documents (accuracy) · Arm B · 3 epochs: 95.0% — n = 323 documents</title></path>
+<rect class="bg" x="634.5" y="184.0" width="44.2" height="16"/>
+<text class="val" x="637.5" y="196.0">95.0%</text>
+<text class="grp" x="16" y="229">Correspondence</text>
+<text class="lbl" x="191" y="252.0" text-anchor="end">Run 3</text>
+<path class="deemph" d="M199.0,241.0 H628.6 Q632.6,241.0 632.6,245.0 V251.0 Q632.6,255.0 628.6,255.0 H199.0 Z"><title>Correspondence · Run 3: 95.3% — 81 of 85 routed to their true class</title></path>
+<rect class="bg" x="635.6" y="240.0" width="44.2" height="16"/>
+<text class="val" x="638.6" y="252.0">95.3%</text>
+<text class="lbl" x="191" y="276.0" text-anchor="end">Arm A · 1 epoch</text>
+<path class="deemph" d="M199.0,265.0 H596.5 Q600.5,265.0 600.5,269.0 V275.0 Q600.5,279.0 596.5,279.0 H199.0 Z"><title>Correspondence · Arm A · 1 epoch: 88.2% — 75 of 85 routed to their true class</title></path>
+<rect class="bg" x="603.5" y="264.0" width="44.2" height="16"/>
+<text class="val" x="606.5" y="276.0">88.2%</text>
+<text class="lbl" x="191" y="300.0" text-anchor="end">Arm B · 3 epochs</text>
+<path class="s6" d="M199.0,289.0 H628.6 Q632.6,289.0 632.6,293.0 V299.0 Q632.6,303.0 628.6,303.0 H199.0 Z"><title>Correspondence · Arm B · 3 epochs: 95.3% — 81 of 85 routed to their true class</title></path>
+<rect class="bg" x="635.6" y="288.0" width="44.2" height="16"/>
+<text class="val" x="638.6" y="300.0">95.3%</text>
+<text class="grp" x="16" y="333">Insurance claims</text>
+<text class="lbl" x="191" y="356.0" text-anchor="end">Run 3</text>
+<path class="deemph" d="M199.0,345.0 H650.0 Q654.0,345.0 654.0,349.0 V355.0 Q654.0,359.0 650.0,359.0 H199.0 Z"><title>Insurance claims · Run 3: 100.0% — 114 of 114 routed to their true class</title></path>
+<rect class="bg" x="657.0" y="344.0" width="51.8" height="16"/>
+<text class="val" x="660.0" y="356.0">100.0%</text>
+<text class="lbl" x="191" y="380.0" text-anchor="end">Arm A · 1 epoch</text>
+<path class="deemph" d="M199.0,369.0 H626.1 Q630.1,369.0 630.1,373.0 V379.0 Q630.1,383.0 626.1,383.0 H199.0 Z"><title>Insurance claims · Arm A · 1 epoch: 94.7% — 108 of 114 routed to their true class</title></path>
+<rect class="bg" x="633.1" y="368.0" width="44.2" height="16"/>
+<text class="val" x="636.1" y="380.0">94.7%</text>
+<text class="lbl" x="191" y="404.0" text-anchor="end">Arm B · 3 epochs</text>
+<path class="s6" d="M199.0,393.0 H650.0 Q654.0,393.0 654.0,397.0 V403.0 Q654.0,407.0 650.0,407.0 H199.0 Z"><title>Insurance claims · Arm B · 3 epochs: 100.0% — 114 of 114 routed to their true class</title></path>
+<rect class="bg" x="657.0" y="392.0" width="51.8" height="16"/>
+<text class="val" x="660.0" y="404.0">100.0%</text>
+<text class="grp" x="16" y="437">Corporate records</text>
+<text class="lbl" x="191" y="460.0" text-anchor="end">Run 3</text>
+<path class="deemph" d="M199.0,449.0 H456.4 Q460.4,449.0 460.4,453.0 V459.0 Q460.4,463.0 456.4,463.0 H199.0 Z"><title>Corporate records · Run 3: 57.4% — 27 of 47 routed to their true class</title></path>
+<rect class="bg" x="463.4" y="448.0" width="44.2" height="16"/>
+<text class="val" x="466.4" y="460.0">57.4%</text>
+<text class="lbl" x="191" y="484.0" text-anchor="end">Arm A · 1 epoch</text>
+<path class="deemph" d="M199.0,473.0 H562.9 Q566.9,473.0 566.9,477.0 V483.0 Q566.9,487.0 562.9,487.0 H199.0 Z"><title>Corporate records · Arm A · 1 epoch: 80.9% — 38 of 47 routed to their true class</title></path>
+<rect class="bg" x="569.9" y="472.0" width="44.2" height="16"/>
+<text class="val" x="572.9" y="484.0">80.9%</text>
+<text class="lbl" x="191" y="508.0" text-anchor="end">Arm B · 3 epochs</text>
+<path class="s6" d="M199.0,497.0 H601.6 Q605.6,497.0 605.6,501.0 V507.0 Q605.6,511.0 601.6,511.0 H199.0 Z"><title>Corporate records · Arm B · 3 epochs: 89.4% — 42 of 47 routed to their true class</title></path>
+<rect class="bg" x="608.6" y="496.0" width="44.2" height="16"/>
+<text class="val" x="611.6" y="508.0">89.4%</text>
+<text class="grp" x="16" y="541">Contracts</text>
+<text class="lbl" x="191" y="564.0" text-anchor="end">Run 3</text>
+<path class="deemph" d="M199.0,553.0 H574.2 Q578.2,553.0 578.2,557.0 V563.0 Q578.2,567.0 574.2,567.0 H199.0 Z"><title>Contracts · Run 3: 83.3% — 50 of 60 routed to their true class</title></path>
+<rect class="bg" x="581.2" y="552.0" width="44.2" height="16"/>
+<text class="val" x="584.2" y="564.0">83.3%</text>
+<text class="lbl" x="191" y="588.0" text-anchor="end">Arm A · 1 epoch</text>
+<path class="deemph" d="M199.0,577.0 H505.9 Q509.9,577.0 509.9,581.0 V587.0 Q509.9,591.0 505.9,591.0 H199.0 Z"><title>Contracts · Arm A · 1 epoch: 68.3% — 41 of 60 routed to their true class</title></path>
+<rect class="bg" x="512.9" y="576.0" width="44.2" height="16"/>
+<text class="val" x="515.9" y="588.0">68.3%</text>
+<text class="lbl" x="191" y="612.0" text-anchor="end">Arm B · 3 epochs</text>
+<path class="s6" d="M199.0,601.0 H596.9 Q600.9,601.0 600.9,605.0 V611.0 Q600.9,615.0 596.9,615.0 H199.0 Z"><title>Contracts · Arm B · 3 epochs: 88.3% — 53 of 60 routed to their true class</title></path>
+<rect class="bg" x="603.9" y="600.0" width="44.2" height="16"/>
+<text class="val" x="606.9" y="612.0">88.3%</text>
+<text class="grp" x="16" y="645">Merger agreements</text>
+<text class="lbl" x="191" y="668.0" text-anchor="end">Run 3</text>
+<path class="deemph" d="M199.0,657.0 H650.0 Q654.0,657.0 654.0,661.0 V667.0 Q654.0,671.0 650.0,671.0 H199.0 Z"><title>Merger agreements · Run 3: 100.0% — 17 of 17 routed to their true class</title></path>
+<rect class="bg" x="657.0" y="656.0" width="51.8" height="16"/>
+<text class="val" x="660.0" y="668.0">100.0%</text>
+<text class="lbl" x="191" y="692.0" text-anchor="end">Arm A · 1 epoch</text>
+<path class="deemph" d="M199.0,681.0 H650.0 Q654.0,681.0 654.0,685.0 V691.0 Q654.0,695.0 650.0,695.0 H199.0 Z"><title>Merger agreements · Arm A · 1 epoch: 100.0% — 17 of 17 routed to their true class</title></path>
+<rect class="bg" x="657.0" y="680.0" width="51.8" height="16"/>
+<text class="val" x="660.0" y="692.0">100.0%</text>
+<text class="lbl" x="191" y="716.0" text-anchor="end">Arm B · 3 epochs</text>
+<path class="s6" d="M199.0,705.0 H650.0 Q654.0,705.0 654.0,709.0 V715.0 Q654.0,719.0 650.0,719.0 H199.0 Z"><title>Merger agreements · Arm B · 3 epochs: 100.0% — 17 of 17 routed to their true class</title></path>
+<rect class="bg" x="657.0" y="704.0" width="51.8" height="16"/>
+<text class="val" x="660.0" y="716.0">100.0%</text>
+</svg>

@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 720 456" width="720" height="456" role="img" aria-label="ModernBERT selective prediction, Arm B">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color-scheme: dark;
+    --surface:#1a1a19; --ink:#ffffff; --ink2:#d6d5cc; --muted:#a9a89f;
+    --grid:#2c2c2a; --axis:#4a4a46; --deemph:#76756f;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+    --good:#0ca30c; --critical:#d03b3b; }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; stroke-dasharray: 4 3; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); } .viz .s3 { fill: var(--s3); }
+  .viz .s4 { fill: var(--s4); } .viz .s5 { fill: var(--s5); } .viz .s6 { fill: var(--s6); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); } .viz .ln3 { stroke: var(--s3); }
+  .viz .ln4 { stroke: var(--s4); } .viz .ln5 { stroke: var(--s5); } .viz .ln6 { stroke: var(--s6); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+
+<style>
+  .viz .grp { fill: var(--ink); font-size: 12px; font-weight: 600; }
+  .viz .axt { fill: var(--ink2); font-size: 11px; }
+  .viz .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .viz .lndeemph { stroke: var(--deemph); }
+  .viz .lead { stroke: var(--ink2); stroke-width: 1; }
+  .viz .hit { fill: transparent; }
+</style>
+
+<rect class="bg" width="720" height="456" rx="8"/>
+<text class="title" x="16" y="24">ModernBERT selective prediction, Arm B</text>
+<text class="sub" x="16" y="42">Each step is a confidence threshold, from 0.60 (right) to 0.99 (left); 541 test windows</text>
+<line class="line ln6" x1="16" y1="58" x2="34" y2="58"/>
+<text class="lbl" x="40" y="62">Accuracy of accepted windows</text>
+<line class="line lndeemph" x1="246.75999999999996" y1="58" x2="264.76" y2="58"/>
+<text class="lbl" x="270.76" y="62">Wilson 95% lower bound</text>
+<line class="grid" x1="56" y1="406.0" x2="692" y2="406.0"/>
+<text class="tick" x="50" y="410.0" text-anchor="end">94%</text>
+<line class="grid" x1="56" y1="356.0" x2="692" y2="356.0"/>
+<text class="tick" x="50" y="360.0" text-anchor="end">95%</text>
+<line class="grid" x1="56" y1="306.0" x2="692" y2="306.0"/>
+<text class="tick" x="50" y="310.0" text-anchor="end">96%</text>
+<line class="grid" x1="56" y1="256.0" x2="692" y2="256.0"/>
+<text class="tick" x="50" y="260.0" text-anchor="end">97%</text>
+<line class="grid" x1="56" y1="206.0" x2="692" y2="206.0"/>
+<text class="tick" x="50" y="210.0" text-anchor="end">98%</text>
+<line class="grid" x1="56" y1="156.0" x2="692" y2="156.0"/>
+<text class="tick" x="50" y="160.0" text-anchor="end">99%</text>
+<line class="grid" x1="56" y1="106.0" x2="692" y2="106.0"/>
+<text class="tick" x="50" y="110.0" text-anchor="end">100%</text>
+<line class="grid" x1="56.0" y1="106" x2="56.0" y2="406"/>
+<text class="tick" x="56.0" y="422" text-anchor="middle">30%</text>
+<line class="grid" x1="146.9" y1="106" x2="146.9" y2="406"/>
+<text class="tick" x="146.9" y="422" text-anchor="middle">40%</text>
+<line class="grid" x1="237.7" y1="106" x2="237.7" y2="406"/>
+<text class="tick" x="237.7" y="422" text-anchor="middle">50%</text>
+<line class="grid" x1="328.6" y1="106" x2="328.6" y2="406"/>
+<text class="tick" x="328.6" y="422" text-anchor="middle">60%</text>
+<line class="grid" x1="419.4" y1="106" x2="419.4" y2="406"/>
+<text class="tick" x="419.4" y="422" text-anchor="middle">70%</text>
+<line class="grid" x1="510.3" y1="106" x2="510.3" y2="406"/>
+<text class="tick" x="510.3" y="422" text-anchor="middle">80%</text>
+<line class="grid" x1="601.1" y1="106" x2="601.1" y2="406"/>
+<text class="tick" x="601.1" y="422" text-anchor="middle">90%</text>
+<line class="grid" x1="692.0" y1="106" x2="692.0" y2="406"/>
+<text class="tick" x="692.0" y="422" text-anchor="middle">100%</text>
+<line class="axis" x1="56" y1="406" x2="692" y2="406"/>
+<line class="axis" x1="56" y1="106" x2="56" y2="406"/>
+<text class="axt" x="16" y="90">Accuracy of accepted windows</text>
+<text class="axt" x="374.0" y="442" text-anchor="middle">Share of windows accepted (coverage)</text>
+<path class="line ln6" d="M673.5,266.5 L673.5,266.5 L671.8,257.0 L670.2,257.5 L666.8,248.5 L666.8,248.5 L666.8,248.5 L665.1,239.5 L665.1,239.5 L658.4,231.0 L656.7,231.0 L656.7,231.0 L656.7,231.0 L653.4,222.0 L653.4,222.0 L653.4,222.0 L653.4,222.0 L650.0,212.5 L646.7,213.0 L646.7,213.0 L646.7,213.0 L643.3,213.5 L638.3,204.0 L631.5,195.0 L624.8,166.0 L614.7,146.5 L606.3,147.0 L601.3,147.0 L598.0,147.0 L591.2,137.0 L572.8,138.0 L539.2,139.5 L502.2,141.0 L475.4,130.5 L445.1,131.5 L421.6,132.5 L357.8,135.0 L285.6,122.5 L233.5,124.5 L126.0,130.5"/>
+<path class="line lndeemph" d="M673.5,360.0 L673.5,360.0 L671.8,348.5 L670.2,349.3 L666.8,338.5 L666.8,338.5 L666.8,338.5 L665.1,327.5 L665.1,327.5 L658.4,317.4 L656.7,317.5 L656.7,317.5 L656.7,317.5 L653.4,306.5 L653.4,306.5 L653.4,306.5 L653.4,306.5 L650.0,294.7 L646.7,295.6 L646.7,295.6 L646.7,295.6 L643.3,296.4 L638.3,284.6 L631.5,273.5 L624.8,235.6 L614.7,209.1 L606.3,210.3 L601.3,210.5 L598.0,210.7 L591.2,196.6 L572.8,199.1 L539.2,203.3 L502.2,207.9 L475.4,194.0 L445.1,197.8 L421.6,201.2 L357.8,211.0 L285.6,199.1 L233.5,209.9 L126.0,242.2"/>
+<g><title>Threshold 0.60: 530 windows accepted (98.0%), accuracy 96.79%, Wilson lower bound 94.92%</title><circle class="hit" cx="673.5" cy="266.5" r="12"/></g>
+<g><title>Threshold 0.61: 530 windows accepted (98.0%), accuracy 96.79%, Wilson lower bound 94.92%</title><circle class="hit" cx="673.5" cy="266.5" r="12"/></g>
+<g><title>Threshold 0.62: 529 windows accepted (97.8%), accuracy 96.98%, Wilson lower bound 95.15%</title><circle class="hit" cx="671.8" cy="257.0" r="12"/></g>
+<g><title>Threshold 0.63: 528 windows accepted (97.6%), accuracy 96.97%, Wilson lower bound 95.13%</title><circle class="hit" cx="670.2" cy="257.5" r="12"/></g>
+<g><title>Threshold 0.64: 526 windows accepted (97.2%), accuracy 97.15%, Wilson lower bound 95.35%</title><circle class="hit" cx="666.8" cy="248.5" r="12"/></g>
+<g><title>Threshold 0.65: 526 windows accepted (97.2%), accuracy 97.15%, Wilson lower bound 95.35%</title><circle class="hit" cx="666.8" cy="248.5" r="12"/></g>
+<g><title>Threshold 0.66: 526 windows accepted (97.2%), accuracy 97.15%, Wilson lower bound 95.35%</title><circle class="hit" cx="666.8" cy="248.5" r="12"/></g>
+<g><title>Threshold 0.67: 525 windows accepted (97.0%), accuracy 97.33%, Wilson lower bound 95.57%</title><circle class="hit" cx="665.1" cy="239.5" r="12"/></g>
+<g><title>Threshold 0.68: 525 windows accepted (97.0%), accuracy 97.33%, Wilson lower bound 95.57%</title><circle class="hit" cx="665.1" cy="239.5" r="12"/></g>
+<g><title>Threshold 0.69: 521 windows accepted (96.3%), accuracy 97.50%, Wilson lower bound 95.77%</title><circle class="hit" cx="658.4" cy="231.0" r="12"/></g>
+<g><title>Threshold 0.70: 520 windows accepted (96.1%), accuracy 97.50%, Wilson lower bound 95.77%</title><circle class="hit" cx="656.7" cy="231.0" r="12"/></g>
+<g><title>Threshold 0.71: 520 windows accepted (96.1%), accuracy 97.50%, Wilson lower bound 95.77%</title><circle class="hit" cx="656.7" cy="231.0" r="12"/></g>
+<g><title>Threshold 0.72: 520 windows accepted (96.1%), accuracy 97.50%, Wilson lower bound 95.77%</title><circle class="hit" cx="656.7" cy="231.0" r="12"/></g>
+<g><title>Threshold 0.73: 518 windows accepted (95.7%), accuracy 97.68%, Wilson lower bound 95.99%</title><circle class="hit" cx="653.4" cy="222.0" r="12"/></g>
+<g><title>Threshold 0.74: 518 windows accepted (95.7%), accuracy 97.68%, Wilson lower bound 95.99%</title><circle class="hit" cx="653.4" cy="222.0" r="12"/></g>
+<g><title>Threshold 0.75: 518 windows accepted (95.7%), accuracy 97.68%, Wilson lower bound 95.99%</title><circle class="hit" cx="653.4" cy="222.0" r="12"/></g>
+<g><title>Threshold 0.76: 518 windows accepted (95.7%), accuracy 97.68%, Wilson lower bound 95.99%</title><circle class="hit" cx="653.4" cy="222.0" r="12"/></g>
+<g><title>Threshold 0.77: 516 windows accepted (95.4%), accuracy 97.87%, Wilson lower bound 96.23%</title><circle class="hit" cx="650.0" cy="212.5" r="12"/></g>
+<g><title>Threshold 0.78: 514 windows accepted (95.0%), accuracy 97.86%, Wilson lower bound 96.21%</title><circle class="hit" cx="646.7" cy="213.0" r="12"/></g>
+<g><title>Threshold 0.79: 514 windows accepted (95.0%), accuracy 97.86%, Wilson lower bound 96.21%</title><circle class="hit" cx="646.7" cy="213.0" r="12"/></g>
+<g><title>Threshold 0.80: 514 windows accepted (95.0%), accuracy 97.86%, Wilson lower bound 96.21%</title><circle class="hit" cx="646.7" cy="213.0" r="12"/></g>
+<g><title>Threshold 0.81: 512 windows accepted (94.6%), accuracy 97.85%, Wilson lower bound 96.19%</title><circle class="hit" cx="643.3" cy="213.5" r="12"/></g>
+<g><title>Threshold 0.82: 509 windows accepted (94.1%), accuracy 98.04%, Wilson lower bound 96.43%</title><circle class="hit" cx="638.3" cy="204.0" r="12"/></g>
+<g><title>Threshold 0.83: 505 windows accepted (93.3%), accuracy 98.22%, Wilson lower bound 96.65%</title><circle class="hit" cx="631.5" cy="195.0" r="12"/></g>
+<g><title>Threshold 0.84: 501 windows accepted (92.6%), accuracy 98.80%, Wilson lower bound 97.41%</title><circle class="hit" cx="624.8" cy="166.0" r="12"/></g>
+<g><title>Threshold 0.85: 495 windows accepted (91.5%), accuracy 99.19%, Wilson lower bound 97.94%</title><circle class="hit" cx="614.7" cy="146.5" r="12"/></g>
+<g><title>Threshold 0.86: 490 windows accepted (90.6%), accuracy 99.18%, Wilson lower bound 97.91%</title><circle class="hit" cx="606.3" cy="147.0" r="12"/></g>
+<g><title>Threshold 0.87: 487 windows accepted (90.0%), accuracy 99.18%, Wilson lower bound 97.91%</title><circle class="hit" cx="601.3" cy="147.0" r="12"/></g>
+<g><title>Threshold 0.88: 485 windows accepted (89.6%), accuracy 99.18%, Wilson lower bound 97.91%</title><circle class="hit" cx="598.0" cy="147.0" r="12"/></g>
+<g><title>Threshold 0.89: 481 windows accepted (88.9%), accuracy 99.38%, Wilson lower bound 98.19%</title><circle class="hit" cx="591.2" cy="137.0" r="12"/></g>
+<g><title>Threshold 0.90: 470 windows accepted (86.9%), accuracy 99.36%, Wilson lower bound 98.14%</title><circle class="hit" cx="572.8" cy="138.0" r="12"/></g>
+<g><title>Threshold 0.91: 450 windows accepted (83.2%), accuracy 99.33%, Wilson lower bound 98.05%</title><circle class="hit" cx="539.2" cy="139.5" r="12"/></g>
+<g><title>Threshold 0.92: 428 windows accepted (79.1%), accuracy 99.30%, Wilson lower bound 97.96%</title><circle class="hit" cx="502.2" cy="141.0" r="12"/></g>
+<g><title>Threshold 0.93: 412 windows accepted (76.2%), accuracy 99.51%, Wilson lower bound 98.24%</title><circle class="hit" cx="475.4" cy="130.5" r="12"/></g>
+<g><title>Threshold 0.94: 394 windows accepted (72.8%), accuracy 99.49%, Wilson lower bound 98.16%</title><circle class="hit" cx="445.1" cy="131.5" r="12"/></g>
+<g><title>Threshold 0.95: 380 windows accepted (70.2%), accuracy 99.47%, Wilson lower bound 98.10%</title><circle class="hit" cx="421.6" cy="132.5" r="12"/></g>
+<g><title>Threshold 0.96: 342 windows accepted (63.2%), accuracy 99.42%, Wilson lower bound 97.90%</title><circle class="hit" cx="357.8" cy="135.0" r="12"/></g>
+<g><title>Threshold 0.97: 299 windows accepted (55.3%), accuracy 99.67%, Wilson lower bound 98.14%</title><circle class="hit" cx="285.6" cy="122.5" r="12"/></g>
+<g><title>Threshold 0.98: 268 windows accepted (49.5%), accuracy 99.63%, Wilson lower bound 97.92%</title><circle class="hit" cx="233.5" cy="124.5" r="12"/></g>
+<g><title>Threshold 0.99: 204 windows accepted (37.7%), accuracy 99.51%, Wilson lower bound 97.28%</title><circle class="hit" cx="126.0" cy="130.5" r="12"/></g>
+<g><title>Threshold 0.60: 530 windows accepted (98.0%), accuracy 96.79%, Wilson lower bound 94.92%</title><circle class="hit" cx="673.5" cy="360.0" r="12"/></g>
+<g><title>Threshold 0.61: 530 windows accepted (98.0%), accuracy 96.79%, Wilson lower bound 94.92%</title><circle class="hit" cx="673.5" cy="360.0" r="12"/></g>
+<g><title>Threshold 0.62: 529 windows accepted (97.8%), accuracy 96.98%, Wilson lower bound 95.15%</title><circle class="hit" cx="671.8" cy="348.5" r="12"/></g>
+<g><title>Threshold 0.63: 528 windows accepted (97.6%), accuracy 96.97%, Wilson lower bound 95.13%</title><circle class="hit" cx="670.2" cy="349.3" r="12"/></g>
+<g><title>Threshold 0.64: 526 windows accepted (97.2%), accuracy 97.15%, Wilson lower bound 95.35%</title><circle class="hit" cx="666.8" cy="338.5" r="12"/></g>
+<g><title>Threshold 0.65: 526 windows accepted (97.2%), accuracy 97.15%, Wilson lower bound 95.35%</title><circle class="hit" cx="666.8" cy="338.5" r="12"/></g>
+<g><title>Threshold 0.66: 526 windows accepted (97.2%), accuracy 97.15%, Wilson lower bound 95.35%</title><circle class="hit" cx="666.8" cy="338.5" r="12"/></g>
+<g><title>Threshold 0.67: 525 windows accepted (97.0%), accuracy 97.33%, Wilson lower bound 95.57%</title><circle class="hit" cx="665.1" cy="327.5" r="12"/></g>
+<g><title>Threshold 0.68: 525 windows accepted (97.0%), accuracy 97.33%, Wilson lower bound 95.57%</title><circle class="hit" cx="665.1" cy="327.5" r="12"/></g>
+<g><title>Threshold 0.69: 521 windows accepted (96.3%), accuracy 97.50%, Wilson lower bound 95.77%</title><circle class="hit" cx="658.4" cy="317.4" r="12"/></g>
+<g><title>Threshold 0.70: 520 windows accepted (96.1%), accuracy 97.50%, Wilson lower bound 95.77%</title><circle class="hit" cx="656.7" cy="317.5" r="12"/></g>
+<g><title>Threshold 0.71: 520 windows accepted (96.1%), accuracy 97.50%, Wilson lower bound 95.77%</title><circle class="hit" cx="656.7" cy="317.5" r="12"/></g>
+<g><title>Threshold 0.72: 520 windows accepted (96.1%), accuracy 97.50%, Wilson lower bound 95.77%</title><circle class="hit" cx="656.7" cy="317.5" r="12"/></g>
+<g><title>Threshold 0.73: 518 windows accepted (95.7%), accuracy 97.68%, Wilson lower bound 95.99%</title><circle class="hit" cx="653.4" cy="306.5" r="12"/></g>
+<g><title>Threshold 0.74: 518 windows accepted (95.7%), accuracy 97.68%, Wilson lower bound 95.99%</title><circle class="hit" cx="653.4" cy="306.5" r="12"/></g>
+<g><title>Threshold 0.75: 518 windows accepted (95.7%), accuracy 97.68%, Wilson lower bound 95.99%</title><circle class="hit" cx="653.4" cy="306.5" r="12"/></g>
+<g><title>Threshold 0.76: 518 windows accepted (95.7%), accuracy 97.68%, Wilson lower bound 95.99%</title><circle class="hit" cx="653.4" cy="306.5" r="12"/></g>
+<g><title>Threshold 0.77: 516 windows accepted (95.4%), accuracy 97.87%, Wilson lower bound 96.23%</title><circle class="hit" cx="650.0" cy="294.7" r="12"/></g>
+<g><title>Threshold 0.78: 514 windows accepted (95.0%), accuracy 97.86%, Wilson lower bound 96.21%</title><circle class="hit" cx="646.7" cy="295.6" r="12"/></g>
+<g><title>Threshold 0.79: 514 windows accepted (95.0%), accuracy 97.86%, Wilson lower bound 96.21%</title><circle class="hit" cx="646.7" cy="295.6" r="12"/></g>
+<g><title>Threshold 0.80: 514 windows accepted (95.0%), accuracy 97.86%, Wilson lower bound 96.21%</title><circle class="hit" cx="646.7" cy="295.6" r="12"/></g>
+<g><title>Threshold 0.81: 512 windows accepted (94.6%), accuracy 97.85%, Wilson lower bound 96.19%</title><circle class="hit" cx="643.3" cy="296.4" r="12"/></g>
+<g><title>Threshold 0.82: 509 windows accepted (94.1%), accuracy 98.04%, Wilson lower bound 96.43%</title><circle class="hit" cx="638.3" cy="284.6" r="12"/></g>
+<g><title>Threshold 0.83: 505 windows accepted (93.3%), accuracy 98.22%, Wilson lower bound 96.65%</title><circle class="hit" cx="631.5" cy="273.5" r="12"/></g>
+<g><title>Threshold 0.84: 501 windows accepted (92.6%), accuracy 98.80%, Wilson lower bound 97.41%</title><circle class="hit" cx="624.8" cy="235.6" r="12"/></g>
+<g><title>Threshold 0.85: 495 windows accepted (91.5%), accuracy 99.19%, Wilson lower bound 97.94%</title><circle class="hit" cx="614.7" cy="209.1" r="12"/></g>
+<g><title>Threshold 0.86: 490 windows accepted (90.6%), accuracy 99.18%, Wilson lower bound 97.91%</title><circle class="hit" cx="606.3" cy="210.3" r="12"/></g>
+<g><title>Threshold 0.87: 487 windows accepted (90.0%), accuracy 99.18%, Wilson lower bound 97.91%</title><circle class="hit" cx="601.3" cy="210.5" r="12"/></g>
+<g><title>Threshold 0.88: 485 windows accepted (89.6%), accuracy 99.18%, Wilson lower bound 97.91%</title><circle class="hit" cx="598.0" cy="210.7" r="12"/></g>
+<g><title>Threshold 0.89: 481 windows accepted (88.9%), accuracy 99.38%, Wilson lower bound 98.19%</title><circle class="hit" cx="591.2" cy="196.6" r="12"/></g>
+<g><title>Threshold 0.90: 470 windows accepted (86.9%), accuracy 99.36%, Wilson lower bound 98.14%</title><circle class="hit" cx="572.8" cy="199.1" r="12"/></g>
+<g><title>Threshold 0.91: 450 windows accepted (83.2%), accuracy 99.33%, Wilson lower bound 98.05%</title><circle class="hit" cx="539.2" cy="203.3" r="12"/></g>
+<g><title>Threshold 0.92: 428 windows accepted (79.1%), accuracy 99.30%, Wilson lower bound 97.96%</title><circle class="hit" cx="502.2" cy="207.9" r="12"/></g>
+<g><title>Threshold 0.93: 412 windows accepted (76.2%), accuracy 99.51%, Wilson lower bound 98.24%</title><circle class="hit" cx="475.4" cy="194.0" r="12"/></g>
+<g><title>Threshold 0.94: 394 windows accepted (72.8%), accuracy 99.49%, Wilson lower bound 98.16%</title><circle class="hit" cx="445.1" cy="197.8" r="12"/></g>
+<g><title>Threshold 0.95: 380 windows accepted (70.2%), accuracy 99.47%, Wilson lower bound 98.10%</title><circle class="hit" cx="421.6" cy="201.2" r="12"/></g>
+<g><title>Threshold 0.96: 342 windows accepted (63.2%), accuracy 99.42%, Wilson lower bound 97.90%</title><circle class="hit" cx="357.8" cy="211.0" r="12"/></g>
+<g><title>Threshold 0.97: 299 windows accepted (55.3%), accuracy 99.67%, Wilson lower bound 98.14%</title><circle class="hit" cx="285.6" cy="199.1" r="12"/></g>
+<g><title>Threshold 0.98: 268 windows accepted (49.5%), accuracy 99.63%, Wilson lower bound 97.92%</title><circle class="hit" cx="233.5" cy="209.9" r="12"/></g>
+<g><title>Threshold 0.99: 204 windows accepted (37.7%), accuracy 99.51%, Wilson lower bound 97.28%</title><circle class="hit" cx="126.0" cy="242.2" r="12"/></g>
+<line class="lead" x1="572.8" y1="138.0" x2="536.8" y2="172.0"/>
+<circle class="s6 ring" cx="572.8" cy="138.0" r="5"/>
+<text class="reflbl" x="532.8" y="176.0" text-anchor="end">Threshold 0.90: 87% accepted at 99.4% accuracy</text>
+</svg>

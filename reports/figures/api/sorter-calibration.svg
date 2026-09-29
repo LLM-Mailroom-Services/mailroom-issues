@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 720 456" width="720" height="456" role="img" aria-label="LLM sorter calibration">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color-scheme: dark;
+    --surface:#1a1a19; --ink:#ffffff; --ink2:#d6d5cc; --muted:#a9a89f;
+    --grid:#2c2c2a; --axis:#4a4a46; --deemph:#76756f;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+    --good:#0ca30c; --critical:#d03b3b; }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; stroke-dasharray: 4 3; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); } .viz .s3 { fill: var(--s3); }
+  .viz .s4 { fill: var(--s4); } .viz .s5 { fill: var(--s5); } .viz .s6 { fill: var(--s6); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); } .viz .ln3 { stroke: var(--s3); }
+  .viz .ln4 { stroke: var(--s4); } .viz .ln5 { stroke: var(--s5); } .viz .ln6 { stroke: var(--s6); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+
+<style>
+  .viz .grp { fill: var(--ink); font-size: 12px; font-weight: 600; }
+  .viz .axt { fill: var(--ink2); font-size: 11px; }
+  .viz .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .viz .lndeemph { stroke: var(--deemph); }
+  .viz .lead { stroke: var(--ink2); stroke-width: 1; }
+  .viz .hit { fill: transparent; }
+</style>
+
+<rect class="bg" width="720" height="456" rx="8"/>
+<text class="title" x="16" y="24">LLM sorter calibration</text>
+<text class="sub" x="16" y="42">Stated confidence against observed class accuracy per confidence bin, n = 100 documents per model</text>
+<line class="line ln3" x1="16" y1="58" x2="34" y2="58"/>
+<circle class="s3 ring" cx="25.0" cy="58.0" r="5"/>
+<text class="lbl" x="40" y="62">DeepSeek-V4.1-Flash · ECE 0.062</text>
+<line class="line ln4" x1="261.64000000000004" y1="58" x2="279.64000000000004" y2="58"/>
+<rect class="s4 ring" x="266.1" y="53.5" width="9" height="9" rx="1.5"/>
+<text class="lbl" x="285.64000000000004" y="62">Granite-4.2-8B · ECE 0.034</text>
+<line class="line ln2" x1="468.4000000000001" y1="58" x2="486.4000000000001" y2="58"/>
+<path class="s2 ring" d="M477.4,52.0 L483.4,58.0 L477.4,64.0 L471.4,58.0 Z"/>
+<text class="lbl" x="492.4000000000001" y="62">Qwen3.7-Flash · ECE 0.019</text>
+<line class="grid" x1="56" y1="406.0" x2="692" y2="406.0"/>
+<text class="tick" x="50" y="410.0" text-anchor="end">50%</text>
+<line class="grid" x1="56" y1="346.0" x2="692" y2="346.0"/>
+<text class="tick" x="50" y="350.0" text-anchor="end">60%</text>
+<line class="grid" x1="56" y1="286.0" x2="692" y2="286.0"/>
+<text class="tick" x="50" y="290.0" text-anchor="end">70%</text>
+<line class="grid" x1="56" y1="226.0" x2="692" y2="226.0"/>
+<text class="tick" x="50" y="230.0" text-anchor="end">80%</text>
+<line class="grid" x1="56" y1="166.0" x2="692" y2="166.0"/>
+<text class="tick" x="50" y="170.0" text-anchor="end">90%</text>
+<line class="grid" x1="56" y1="106.0" x2="692" y2="106.0"/>
+<text class="tick" x="50" y="110.0" text-anchor="end">100%</text>
+<line class="grid" x1="56.0" y1="106" x2="56.0" y2="406"/>
+<text class="tick" x="56.0" y="422" text-anchor="middle">50%</text>
+<line class="grid" x1="183.2" y1="106" x2="183.2" y2="406"/>
+<text class="tick" x="183.2" y="422" text-anchor="middle">60%</text>
+<line class="grid" x1="310.4" y1="106" x2="310.4" y2="406"/>
+<text class="tick" x="310.4" y="422" text-anchor="middle">70%</text>
+<line class="grid" x1="437.6" y1="106" x2="437.6" y2="406"/>
+<text class="tick" x="437.6" y="422" text-anchor="middle">80%</text>
+<line class="grid" x1="564.8" y1="106" x2="564.8" y2="406"/>
+<text class="tick" x="564.8" y="422" text-anchor="middle">90%</text>
+<line class="grid" x1="692.0" y1="106" x2="692.0" y2="406"/>
+<text class="tick" x="692.0" y="422" text-anchor="middle">100%</text>
+<line class="axis" x1="56" y1="406" x2="692" y2="406"/>
+<line class="axis" x1="56" y1="106" x2="56" y2="406"/>
+<text class="axt" x="16" y="90">Observed class accuracy</text>
+<text class="axt" x="374.0" y="442" text-anchor="middle">Stated confidence (bin mean)</text>
+<line class="ref" x1="56.0" y1="406.0" x2="692.0" y2="106.0"/>
+<text class="reflbl" x="66" y="223.6">Perfect calibration: points below the line are overconfident</text>
+<path class="line ln3" d="M303.8,372.6 L510.5,106.0 L598.6,106.0 L640.0,106.0"/>
+<path class="line ln4" d="M590.9,215.1 L656.8,106.0 L679.3,106.0"/>
+<path class="line ln2" d="M631.5,150.8 L692.0,106.0"/>
+<g><title>DeepSeek-V4.1-Flash: 9 documents, stated 69.5%, observed 55.6%</title><circle class="hit" cx="303.8" cy="372.6" r="12"/><circle class="s3 ring" cx="303.8" cy="372.6" r="5"/></g>
+<g><title>DeepSeek-V4.1-Flash: 7 documents, stated 85.7%, observed 100.0%</title><circle class="hit" cx="510.5" cy="106.0" r="12"/><circle class="s3 ring" cx="510.5" cy="106.0" r="5"/></g>
+<g><title>DeepSeek-V4.1-Flash: 16 documents, stated 92.7%, observed 100.0%</title><circle class="hit" cx="598.6" cy="106.0" r="12"/><circle class="s3 ring" cx="598.6" cy="106.0" r="5"/></g>
+<g><title>DeepSeek-V4.1-Flash: 67 documents, stated 95.9%, observed 100.0%</title><circle class="hit" cx="640.0" cy="106.0" r="12"/><circle class="s3 ring" cx="640.0" cy="106.0" r="5"/></g>
+<g><title>Granite-4.2-8B: 11 documents, stated 92.0%, observed 81.8%</title><circle class="hit" cx="590.9" cy="215.1" r="12"/><rect class="s4 ring" x="586.4" y="210.6" width="9" height="9" rx="1.5"/></g>
+<g><title>Granite-4.2-8B: 65 documents, stated 97.2%, observed 100.0%</title><circle class="hit" cx="656.8" cy="106.0" r="12"/><rect class="s4 ring" x="652.3" y="101.5" width="9" height="9" rx="1.5"/></g>
+<g><title>Granite-4.2-8B: 16 documents, stated 99.0%, observed 100.0%</title><circle class="hit" cx="679.3" cy="106.0" r="12"/><rect class="s4 ring" x="674.8" y="101.5" width="9" height="9" rx="1.5"/></g>
+<g><title>Qwen3.7-Flash: 67 documents, stated 95.2%, observed 92.5%</title><circle class="hit" cx="631.5" cy="150.8" r="12"/><path class="s2 ring" d="M631.5,144.8 L637.5,150.8 L631.5,156.8 L625.5,150.8 Z"/></g>
+<g><title>Qwen3.7-Flash: 28 documents, stated 100.0%, observed 100.0%</title><circle class="hit" cx="692.0" cy="106.0" r="12"/><path class="s2 ring" d="M692.0,100.0 L698.0,106.0 L692.0,112.0 L686.0,106.0 Z"/></g>
+<text class="lbl" x="293.8" y="376.6" text-anchor="end">DeepSeek-V4.1-Flash</text>
+<text class="lbl" x="580.9" y="219.1" text-anchor="end">Granite-4.2-8B</text>
+<line class="lead" x1="631.5" y1="150.8" x2="631.5" y2="231.8"/>
+<text class="lbl" x="631.5" y="244.8" text-anchor="middle">Qwen3.7-Flash</text>
+</svg>

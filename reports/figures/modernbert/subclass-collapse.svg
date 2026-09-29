@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 746 654" width="746" height="654" role="img" aria-label="ModernBERT subclass accuracy and collapse, Arm B">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color-scheme: dark;
+    --surface:#1a1a19; --ink:#ffffff; --ink2:#d6d5cc; --muted:#a9a89f;
+    --grid:#2c2c2a; --axis:#4a4a46; --deemph:#76756f;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#9085e9;
+    --good:#0ca30c; --critical:#d03b3b; }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; stroke-dasharray: 4 3; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); } .viz .s3 { fill: var(--s3); }
+  .viz .s4 { fill: var(--s4); } .viz .s5 { fill: var(--s5); } .viz .s6 { fill: var(--s6); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); } .viz .ln3 { stroke: var(--s3); }
+  .viz .ln4 { stroke: var(--s4); } .viz .ln5 { stroke: var(--s5); } .viz .ln6 { stroke: var(--s6); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+
+<style>
+  .viz .grp { fill: var(--ink); font-size: 12px; font-weight: 600; }
+  .viz .axt { fill: var(--ink2); font-size: 11px; }
+  .viz .line { fill: none; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+  .viz .lndeemph { stroke: var(--deemph); }
+  .viz .lead { stroke: var(--ink2); stroke-width: 1; }
+  .viz .hit { fill: transparent; }
+</style>
+
+<rect class="bg" width="746" height="654" rx="8"/>
+<text class="title" x="16" y="24">ModernBERT subclass accuracy and collapse, Arm B</text>
+<text class="sub" x="16" y="42">Documents whose type was right. A top predicted share far above the top true share means collapse</text>
+<rect class="s6" x="16" y="53" width="10" height="10" rx="2"/><text class="lbl" x="31" y="62">Subclass accuracy</text>
+<rect class="deemph" x="157.28" y="53" width="10" height="10" rx="2"/><text class="lbl" x="172.28" y="62">Share on the single most common subclass</text>
+<line class="grid" x1="178.0" y1="106" x2="178.0" y2="620"/>
+<text class="tick" x="178.0" y="636" text-anchor="middle">0%</text>
+<line class="grid" x1="273.0" y1="106" x2="273.0" y2="620"/>
+<text class="tick" x="273.0" y="636" text-anchor="middle">25%</text>
+<line class="grid" x1="368.0" y1="106" x2="368.0" y2="620"/>
+<text class="tick" x="368.0" y="636" text-anchor="middle">50%</text>
+<line class="grid" x1="463.0" y1="106" x2="463.0" y2="620"/>
+<text class="tick" x="463.0" y="636" text-anchor="middle">75%</text>
+<line class="grid" x1="558.0" y1="106" x2="558.0" y2="620"/>
+<text class="tick" x="558.0" y="636" text-anchor="middle">100%</text>
+<line class="axis" x1="178" y1="106" x2="178" y2="620"/>
+<line class="ref" x1="463.0" y1="84" x2="463.0" y2="620"/>
+<text class="reflbl" x="467.0" y="92">P0 subclass gate 75%</text>
+<text class="grp" x="16" y="125">Correspondence</text>
+<text class="lbl" x="170" y="148.0" text-anchor="end">Subclass accuracy</text>
+<path class="s6" d="M178.0,137.0 H342.9 Q346.9,137.0 346.9,141.0 V147.0 Q346.9,151.0 342.9,151.0 H178.0 Z"><title>Correspondence · Subclass accuracy: 44% — 36 of 81 documents with the right type</title></path>
+<rect class="bg" x="349.9" y="136.0" width="32.4" height="16"/>
+<text class="val" x="352.9" y="148.0">44%</text>
+<text class="lbl" x="170" y="172.0" text-anchor="end">Top predicted subclass</text>
+<path class="deemph" d="M178.0,161.0 H474.2 Q478.2,161.0 478.2,165.0 V171.0 Q478.2,175.0 474.2,175.0 H178.0 Z"><title>Correspondence · Top predicted subclass: 79% · email — 64 of 81 predictions</title></path>
+<rect class="bg" x="481.2" y="160.0" width="78.5" height="16"/>
+<text class="val" x="484.2" y="172.0">79% · email</text>
+<text class="lbl" x="170" y="196.0" text-anchor="end">Top true subclass</text>
+<path class="deemph" d="M178.0,185.0 H352.3 Q356.3,185.0 356.3,189.0 V195.0 Q356.3,199.0 352.3,199.0 H178.0 Z"><title>Correspondence · Top true subclass: 47% · email — 38 of 81 documents</title></path>
+<rect class="bg" x="359.3" y="184.0" width="78.5" height="16"/>
+<text class="val" x="362.3" y="196.0">47% · email</text>
+<text class="grp" x="16" y="229">Insurance claims</text>
+<text class="lbl" x="170" y="252.0" text-anchor="end">Subclass accuracy</text>
+<path class="s6" d="M178.0,241.0 H550.7 Q554.7,241.0 554.7,245.0 V251.0 Q554.7,255.0 550.7,255.0 H178.0 Z"><title>Insurance claims · Subclass accuracy: 99% — 113 of 114 documents with the right type</title></path>
+<rect class="bg" x="557.7" y="240.0" width="32.4" height="16"/>
+<text class="val" x="560.7" y="252.0">99%</text>
+<text class="lbl" x="170" y="276.0" text-anchor="end">Top predicted subclass</text>
+<path class="deemph" d="M178.0,265.0 H287.3 Q291.3,265.0 291.3,269.0 V275.0 Q291.3,279.0 287.3,279.0 H178.0 Z"><title>Insurance claims · Top predicted subclass: 30% · auto — 34 of 114 predictions</title></path>
+<rect class="bg" x="294.3" y="264.0" width="73.9" height="16"/>
+<text class="val" x="297.3" y="276.0">30% · auto</text>
+<text class="lbl" x="170" y="300.0" text-anchor="end">Top true subclass</text>
+<path class="deemph" d="M178.0,289.0 H287.3 Q291.3,289.0 291.3,293.0 V299.0 Q291.3,303.0 287.3,303.0 H178.0 Z"><title>Insurance claims · Top true subclass: 30% · auto — 34 of 114 documents</title></path>
+<rect class="bg" x="294.3" y="288.0" width="73.9" height="16"/>
+<text class="val" x="297.3" y="300.0">30% · auto</text>
+<text class="grp" x="16" y="333">Corporate records</text>
+<text class="lbl" x="170" y="356.0" text-anchor="end">Subclass accuracy</text>
+<path class="s6" d="M178.0,345.0 H345.9 Q349.9,345.0 349.9,349.0 V355.0 Q349.9,359.0 345.9,359.0 H178.0 Z"><title>Corporate records · Subclass accuracy: 45% — 19 of 42 documents with the right type</title></path>
+<rect class="bg" x="352.9" y="344.0" width="32.4" height="16"/>
+<text class="val" x="355.9" y="356.0">45%</text>
+<text class="lbl" x="170" y="380.0" text-anchor="end">Top predicted subclass</text>
+<path class="deemph" d="M178.0,369.0 H318.8 Q322.8,369.0 322.8,373.0 V379.0 Q322.8,383.0 318.8,383.0 H178.0 Z"><title>Corporate records · Top predicted subclass: 38% · charter amendment — 16 of 42 predictions</title></path>
+<rect class="bg" x="325.8" y="368.0" width="173.3" height="16"/>
+<text class="val" x="328.8" y="380.0">38% · charter amendment</text>
+<text class="lbl" x="170" y="404.0" text-anchor="end">Top true subclass</text>
+<path class="deemph" d="M178.0,393.0 H255.4 Q259.4,393.0 259.4,397.0 V403.0 Q259.4,407.0 255.4,407.0 H178.0 Z"><title>Corporate records · Top true subclass: 21% · charter amendment — 9 of 42 documents</title></path>
+<rect class="bg" x="262.4" y="392.0" width="173.3" height="16"/>
+<text class="val" x="265.4" y="404.0">21% · charter amendment</text>
+<text class="grp" x="16" y="437">Contracts</text>
+<text class="lbl" x="170" y="460.0" text-anchor="end">Subclass accuracy</text>
+<path class="s6" d="M178.0,449.0 H188.3 Q192.3,449.0 192.3,453.0 V459.0 Q192.3,463.0 188.3,463.0 H178.0 Z"><title>Contracts · Subclass accuracy: 4% — 2 of 53 documents with the right type</title></path>
+<rect class="bg" x="195.3" y="448.0" width="24.7" height="16"/>
+<text class="val" x="198.3" y="460.0">4%</text>
+<text class="lbl" x="170" y="484.0" text-anchor="end">Top predicted subclass</text>
+<path class="deemph" d="M178.0,473.0 H389.1 Q393.1,473.0 393.1,477.0 V483.0 Q393.1,487.0 389.1,487.0 H178.0 Z"><title>Contracts · Top predicted subclass: 57% · collaboration — 30 of 53 predictions</title></path>
+<rect class="bg" x="396.1" y="472.0" width="130.1" height="16"/>
+<text class="val" x="399.1" y="484.0">57% · collaboration</text>
+<text class="lbl" x="170" y="508.0" text-anchor="end">Top true subclass</text>
+<path class="deemph" d="M178.0,497.0 H224.2 Q228.2,497.0 228.2,501.0 V507.0 Q228.2,511.0 224.2,511.0 H178.0 Z"><title>Contracts · Top true subclass: 13% · service — 7 of 53 documents</title></path>
+<rect class="bg" x="231.2" y="496.0" width="92.6" height="16"/>
+<text class="val" x="234.2" y="508.0">13% · service</text>
+<text class="grp" x="16" y="541">Merger agreements</text>
+<text class="lbl" x="170" y="564.0" text-anchor="end">Subclass accuracy</text>
+<path class="s6" d="M178.0,553.0 H375.2 Q379.2,553.0 379.2,557.0 V563.0 Q379.2,567.0 375.2,567.0 H178.0 Z"><title>Merger agreements · Subclass accuracy: 53% — 9 of 17 documents with the right type</title></path>
+<rect class="bg" x="382.2" y="552.0" width="32.4" height="16"/>
+<text class="val" x="385.2" y="564.0">53%</text>
+<text class="lbl" x="170" y="588.0" text-anchor="end">Top predicted subclass</text>
+<path class="deemph" d="M178.0,577.0 H531.6 Q535.6,577.0 535.6,581.0 V587.0 Q535.6,591.0 531.6,591.0 H178.0 Z"><title>Merger agreements · Top predicted subclass: 94% · other — 16 of 17 predictions</title></path>
+<rect class="bg" x="538.6" y="576.0" width="81.2" height="16"/>
+<text class="val" x="541.6" y="588.0">94% · other</text>
+<text class="lbl" x="170" y="612.0" text-anchor="end">Top true subclass</text>
+<path class="deemph" d="M178.0,601.0 H352.8 Q356.8,601.0 356.8,605.0 V611.0 Q356.8,615.0 352.8,615.0 H178.0 Z"><title>Merger agreements · Top true subclass: 47% · other — 8 of 17 documents</title></path>
+<rect class="bg" x="359.8" y="600.0" width="81.2" height="16"/>
+<text class="val" x="362.8" y="612.0">47% · other</text>
+</svg>

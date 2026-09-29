@@ -1,0 +1,32 @@
+{
+ "figures": {
+  "viz/api/cost-per-document.png": "7ea1b16c1f92e52c85691a63c991d50c39a26d0dbe19c8c65a1ce2e5b8abf7a0",
+  "viz/api/extraction-score-by-type.png": "9630594b1ac4cc5215028e38f2b1756be95f21d46125a09073a406cfcf850967",
+  "viz/api/sorter-calibration.png": "e8a3530e08e9eb36f2239a9832880eab40309614390e4bceddd3c71a5d90ad55",
+  "viz/api/sorter-subclass-accuracy.png": "bc870676ea6fd2a6bf1acdea2d7a88437175d17554a6ae54f79639e4097c6cab",
+  "viz/cost/cost-per-doc.png": "c2147ecc3d27e05116108fc902d4f5be20f3e2571ae660f90e8fdb3c494acf49",
+  "viz/cost/modal-vs-api-breakeven.png": "58431cf964d27c9f388b305bb3e573d0ee9c8da21732e5c8ca32dcc60ed2c7da",
+  "viz/cost/modal-vs-cheapest-api.png": "6d0c9052ad3882459d557d401b6333851519490e9642eab0f80b1aa705b09020",
+  "viz/cost/score-by-route.png": "525473908770263a31627a0ca6aee732826493a31085ac925167d5e669a49bac",
+  "viz/cost/sorter-routes.png": "27d47b4590a6bc270ccd5d9f25d95c2d82260445a8ad654b7fe18495b9f0e9c5",
+  "viz/gpu/cost-per-mtok.png": "3d89e0146bc05ad38cb45371f39304bc1751fd4d21cfaa686cadff96a1d53c9e",
+  "viz/gpu/gpu-spend.png": "69006182cb71604eb90fb430532cef75cac69c58e473625de12b983f094e7781",
+  "viz/gpu/keep-warm-vs-scale-to-zero.png": "d4aaeb473f2c1131a25de302d1c8e8a4baf67f330834a43a58cdf18bb0dd0084",
+  "viz/gpu/modal-vs-api-per-token.png": "2720888bd438a5153abead7536285945c70e6dff9afebbf8c2dcd1de5e36288d",
+  "viz/gpu/replica-split.png": "91279f6b152059b12f0c854c500c541c9458828522db7c02d511697cee644a2d",
+  "viz/gpu/second-l4.png": "81fbc469a03e6f36ad17acc3b02a761743413fb60469f039556c8479b4f8f78f",
+  "viz/gpu/slot-occupancy.png": "9af200fc89f857302a91dae232a5a285208382c5e9bb251bc8dde3e70428d6f2",
+  "viz/gpu/utilization-cost-per-mtok.png": "3ef35e533303cc943d0c8e7041c4f9fc0ee5ad2afe517afc61c383150f8756bf",
+  "viz/gpu/warm-vs-cold.png": "b4685d9cc9b6ac14c45b426243e4be9203732cbfe67375b93b5d366f399db98c",
+  "viz/modernbert/doc-type-recall.png": "9f9727e142b285f162c76a2eab67510eb2a67f16c5ea04248bfb4285ba944b84",
+  "viz/modernbert/selective-risk.png": "cd1650fed843659c3ae504a31e2eaa8fbe1f569fcc08cbc273c671fafa004019",
+  "viz/modernbert/subclass-collapse.png": "a09f32f7db19e1fef82a75c85a37adb612fa6ffe9462d2f92eff450f3dd8c1a4",
+  "viz/sources/local-mailroom-sandbox/sand032-admission.png": "8dee014e5077cb446e57c3653a8539b88972d3ee702d62a326be2598db75a6b8",
+  "viz/sources/local-mailroom-sandbox/sand032-ladder.png": "ce5f63801627eb80549c0a9ea0f29ea1a8dbbd2b452548d417d4ddd4b4f8a5b3",
+  "viz/sources/local-mailroom-sandbox/sand032-routing.png": "03ae1d74ee90a368fc2d5a0a5398fefa7aad91c69b419a221a4125e150114a91",
+  "viz/sources/local-mailroom-sandbox/sand032-s6-sorter1000-per-class-f1.png": "61278c7fe243410686f671f8803fbc8749643c0406fc0cb493fbbf8c071f6c46",
+  "viz/sources/local-mailroom-sandbox/sand032-v2-prompts.png": "3e3672d006c9fce6c71804e2112a4b5efba5ef236417c4cec3ebdce1ec4cd3d4"
+ },
+ "generator": "local-mailroom-sandbox reports/dashboard/export_pngs.py",
+ "scale": 2
+}
