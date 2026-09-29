@@ -1,0 +1,72 @@
+{
+  "lineage_id": "mailroom-dataset-v1",
+  "frozen_version": 1,
+  "frozen_at": "2026-09-26T05:09:29+00:00",
+  "hub_role": "constellation reference copy \u2014 do not edit in place",
+  "source_repos": {
+    "eval-environment": {
+      "repo": "LLM-Mailroom-Services/eval-environment",
+      "commit": "48aab48c77ea349abed3b0779e319bf8cd75beee",
+      "path": "prompts/manifest.json"
+    },
+    "local-mailroom-sandbox": {
+      "repo": "Exios66/local-mailroom-sandbox",
+      "commit": "52c9239237456888c192d49f7cf18f3c819f1c5e",
+      "path": "config/prompts/eval_environment_lineage.json"
+    }
+  },
+  "versions": {
+    "sorter_v1": {
+      "source_kind": "production",
+      "source_key": "sorter",
+      "sha256": "2b1e69b2c0530bd967bac6f0d3097818b65858f65687a826005cd495f04be788",
+      "chars": 17201,
+      "hub_path": "sorter/sorter_v1.txt"
+    },
+    "contracts_specialist_v1": {
+      "source_kind": "sandbox",
+      "source_key": "contracts_specialist_v33_simplified@303e7f0bb05d",
+      "sha256": "d91de3967cc3b12cbd222cc5a4ae167b39578125abc83be7422498dc5024fd24",
+      "chars": 9882,
+      "hub_path": "specialists/contracts_specialist_v1.txt",
+      "sandbox_stem": "contracts_specialist_v33_simplified",
+      "agent": "contracts_specialist"
+    },
+    "corporate_records_specialist_v1": {
+      "source_kind": "sandbox",
+      "source_key": "corporate_records_specialist_simplified@303e7f0bb05d",
+      "sha256": "484e64dd847b7bb35afebca74edc1fb6c381f0f7d5e9367ad8673bec0b8af45c",
+      "chars": 5801,
+      "hub_path": "specialists/corporate_records_specialist_v1.txt",
+      "sandbox_stem": "corporate_records_specialist_simplified",
+      "agent": "corporate_records_specialist"
+    },
+    "correspondence_specialist_v1": {
+      "source_kind": "sandbox",
+      "source_key": "correspondence_specialist_simplified@303e7f0bb05d",
+      "sha256": "eab63b5afd29906b1ad3aca2d7698bf5c15d4b7f4ce9ade3b744be535d18d4f3",
+      "chars": 6061,
+      "hub_path": "specialists/correspondence_specialist_v1.txt",
+      "sandbox_stem": "correspondence_specialist_simplified",
+      "agent": "correspondence_specialist"
+    },
+    "insurance_claims_specialist_v1": {
+      "source_kind": "sandbox",
+      "source_key": "insurance_claims_specialist_simplified@303e7f0bb05d",
+      "sha256": "6c2776bcbe00091200aecbcfd21c99f197398d929143dd0c7c722811fa100034",
+      "chars": 6277,
+      "hub_path": "specialists/insurance_claims_specialist_v1.txt",
+      "sandbox_stem": "insurance_claims_specialist_simplified",
+      "agent": "insurance_claims_specialist"
+    },
+    "merger_agreement_specialist_v1": {
+      "source_kind": "sandbox",
+      "source_key": "merger_agreement_specialist_simplified@303e7f0bb05d",
+      "sha256": "003232584d6890054d956398135f439b86692a1123683f58914c0393b5e1a00b",
+      "chars": 6116,
+      "hub_path": "specialists/merger_agreement_specialist_v1.txt",
+      "sandbox_stem": "merger_agreement_specialist_simplified",
+      "agent": "merger_agreement_specialist"
+    }
+  }
+}

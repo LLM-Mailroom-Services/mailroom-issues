@@ -2,6 +2,10 @@
 
 Cross-repository evaluation reports for the LLM-Mailroom constellation. These are generated outputs: no code lives here (see [AGENTS.md](../AGENTS.md)).
 
+Prompt baselines cited in the reports: frozen v1 reference copies in
+[`docs/prompts/frozen-v1/`](../docs/prompts/frozen-v1/) and lineage notes in
+[`docs/PROMPTS.md`](../docs/PROMPTS.md).
+
 | Report | What it answers |
 | --- | --- |
 | [MASTER-REPORT.md](MASTER-REPORT.md) | Where every front stands, the findings from the API leg (eval-environment), the Modal + vLLM leg (local-mailroom-sandbox, SAND-032) and the ModernBERT intake classifier (mailroom-ml), the cross-leg verdict, and this sweep's report audit |

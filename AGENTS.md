@@ -16,6 +16,8 @@ in a sibling repo and is tracked back here by issue link.
   the routing mechanism; a mislabeled issue is a misrouted issue.
 - `docs/LIFECYCLE.md` — the triage flow an issue moves through.
 - `docs/CONSTELLATION.md` — the ecosystem map (which repo owns which concern).
+- `docs/PROMPTS.md` — frozen v1 vs mutation heads vs production; frozen bytes
+  under `docs/prompts/frozen-v1/`.
 
 ## Laws
 

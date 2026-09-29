@@ -67,8 +67,14 @@ Issues also touch external platforms, each with its own domain label:
 
 - **Cross-repo task state** lives on `Digital-Mailroom/governance/TASKS.md`
   and its served board — not here.
-- **Prompt versions** live in `llm-entity-extraction` (its own GEPA board and
-  `PROMPT_ENGINEER_GEPA_PROVENANCE.md`).
+- **Frozen v1 prompt reference** (sorter + five specialists) lives in this
+  hub: [`docs/prompts/frozen-v1/`](prompts/frozen-v1/) with lineage in
+  [`docs/PROMPTS.md`](PROMPTS.md). **Current** GEPA mutations and eval defaults
+  live in [`eval-environment`](https://github.com/LLM-Mailroom-Services/eval-environment)
+  (`prompts/manifest.json`, `prompts/mutations.json`); sandbox
+  [`config/prompts/`](https://github.com/Exios66/local-mailroom-sandbox/tree/main/config/prompts)
+  sha-locks the same specialist bytes for Modal runs. Historical GEPA boards also
+  live in `llm-entity-extraction` (`PROMPT_ENGINEER_GEPA_PROVENANCE.md`).
 - **The label taxonomy for THIS hub** lives in `.github/labels.json`, mirrored
   by `scripts/labels.py`; the hub's own taxonomy lives in
   `Digital-Mailroom/.github/labels.json`.

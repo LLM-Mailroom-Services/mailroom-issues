@@ -6,6 +6,18 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added — frozen v1 prompt reference & lineage docs
+
+- `docs/PROMPTS.md` — constellation prompt lineage: frozen v1 vs GEPA mutation
+  heads vs production pins, with links to eval-environment and sandbox.
+- `docs/prompts/frozen-v1/` — sha256-locked read-only copies of `sorter_v1` and
+  the five specialist `*_v1` stems (sourced from eval-environment manifest and
+  sandbox `eval_environment_lineage.json` @ sandbox `52c92392`, eval-environment
+  `48aab48c`).
+- `docs/prompts/README.md` — layout, integrity check, refresh procedure.
+- `README.md`, `docs/CONSTELLATION.md`, `AGENTS.md`, `reports/README.md` —
+  cross-links to the prompt reference.
+
 ### Added — cross-repo evaluation reports
 
 - `reports/MASTER-REPORT.md` — current status and research findings for the
