@@ -15,8 +15,14 @@ refer to this repo's issues.
 - `reports/COST-COMPARISON-MODAL-VS-API.md` — Modal L4 vs hosted API cost per
   document and per 0.1 quality, batch and warm-fleet break-even, sorter routes,
   spend and caveats.
-- `reports/figures/` — five cost figures drawn for these reports, plus verbatim
-  copies of the source repos' charts; `reports/README.md` indexes them.
+- `reports/MODAL-VLLM-GPU-REPORT.md` — the Modal + vLLM leg's GPU economics
+  (SAND-032): cost per token for all 24 runs and against the hosted API, the
+  spend ledger broken into busy, idle, boot and out-of-run time, client-slot
+  occupancy and per-replica vLLM metrics, and the effect of the second L4
+  (scale-out, routing, admission, load balance).
+- `reports/figures/` — cost and GPU figures drawn for these reports
+  (`cost/`, `gpu/`), plus verbatim copies of the source repos' charts;
+  `reports/README.md` indexes them.
 - `README.md` — new Reports section and `reports/` in the repository layout.
 
 ### Added — repository scaffold (initial)

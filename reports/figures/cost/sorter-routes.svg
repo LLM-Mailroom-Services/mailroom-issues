@@ -43,7 +43,7 @@
 <text class="tick" x="690.0" y="194" text-anchor="middle">1</text>
 <line class="axis" x1="230" y1="54" x2="230" y2="178"/>
 <text class="lbl" x="222" y="74.0" text-anchor="end">Modal L4 · Qwen3-8B-AWQ (S6)</text>
-<path class="deemph" d="M230.0,63.0 H637.7 Q641.7,63.0 641.7,67.0 V73.0 Q641.7,77.0 637.7,77.0 H230.0 Z"><title>Modal L4 · Qwen3-8B-AWQ (S6): 89.5% — $0.0019 per document · n = 457</title></path>
+<path class="deemph" d="M230.0,63.0 H637.7 Q641.7,63.0 641.7,67.0 V73.0 Q641.7,77.0 637.7,77.0 H230.0 Z"><title>Modal L4 · Qwen3-8B-AWQ (S6): 89.5% — $0.0017 per document · n = 457</title></path>
 <text class="val" x="647.7" y="74.0">89.5%</text>
 <text class="lbl" x="222" y="98.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
 <path class="deemph" d="M230.0,87.0 H663.0 Q667.0,87.0 667.0,91.0 V97.0 Q667.0,101.0 663.0,101.0 H230.0 Z"><title>API · DeepSeek-V4.1-Flash: 95.0% — $0.0010 per document · n = 100</title></path>

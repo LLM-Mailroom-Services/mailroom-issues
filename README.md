@@ -81,7 +81,8 @@ mailroom-issues/
 ├── reports/               # generated cross-repo evaluation reports (markdown + SVG; see reports/README.md)
 │   ├── MASTER-REPORT.md   # status + research findings: API leg, Modal + vLLM leg, ModernBERT
 │   ├── COST-COMPARISON-MODAL-VS-API.md   # cost per doc / per quality, break-even, sorter routes, spend
-│   └── figures/           # cost/ (drawn for these reports) · sources/<repo>/ (verbatim source charts)
+│   ├── MODAL-VLLM-GPU-REPORT.md          # Modal + vLLM: cost per token, GPU spend, utilization, second L4
+│   └── figures/           # cost/ + gpu/ (drawn for these reports) · sources/<repo>/ (verbatim source charts)
 └── docs/
     ├── CONSTELLATION.md   # the ecosystem map: repos, roles, layers
     ├── ROUTING.md         # which issue belongs in which repository
@@ -102,6 +103,9 @@ next to the reports hub that cross-checks every number against its source file.
 - [Cost comparison, Modal L4 vs hosted API](reports/COST-COMPARISON-MODAL-VS-API.md):
   cost per document and per unit of quality for every route and model, batch
   break-even for the Modal fleet, sorter routes and spend.
+- [Modal + vLLM GPU economics](reports/MODAL-VLLM-GPU-REPORT.md): the SAND-032
+  leg's cost per token, where the GPU spend went, how busy the GPUs were, and
+  what adding the second L4 did.
 
 Regenerate from the sandbox with `--out ../mailroom-issues/reports`; `--check`
 exits 1 when this folder is stale. Don't hand-edit the files.

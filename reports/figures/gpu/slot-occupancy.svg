@@ -1,0 +1,365 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 1302 720" width="1302" height="720" role="img" aria-label="How full the fleet was: client-slot occupancy per run (emphasis = 2×L4)">
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect class="bg" width="1302" height="720" rx="8"/><text class="title" x="16" y="24">How full the fleet was: client-slot occupancy per run (emphasis = 2×L4)</text><g transform="translate(0,36)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 600 212" width="600" height="212" role="img" aria-label="1×L4 knob ladder · correspondence n = 20 · c8">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="600" height="212" rx="8"/>
+<text class="title" x="16" y="24">1×L4 knob ladder · correspondence n = 20 · c8</text>
+<text class="sub" x="16" y="42">client-slot occupancy = Σ request latency ÷ (concurrency × wall) · higher is better</text>
+<line class="grid" x1="230.0" y1="54" x2="230.0" y2="178"/>
+<text class="tick" x="230.0" y="194" text-anchor="middle">0</text>
+<line class="grid" x1="305.0" y1="54" x2="305.0" y2="178"/>
+<text class="tick" x="305.0" y="194" text-anchor="middle">0.25</text>
+<line class="grid" x1="380.0" y1="54" x2="380.0" y2="178"/>
+<text class="tick" x="380.0" y="194" text-anchor="middle">0.5</text>
+<line class="grid" x1="455.0" y1="54" x2="455.0" y2="178"/>
+<text class="tick" x="455.0" y="194" text-anchor="middle">0.75</text>
+<line class="grid" x1="530.0" y1="54" x2="530.0" y2="178"/>
+<text class="tick" x="530.0" y="194" text-anchor="middle">1</text>
+<line class="axis" x1="230" y1="54" x2="230" y2="178"/>
+<text class="lbl" x="222" y="74.0" text-anchor="end">L0 · baseline</text>
+<path class="deemph" d="M230.0,63.0 H481.0 Q485.0,63.0 485.0,67.0 V73.0 Q485.0,77.0 481.0,77.0 H230.0 Z"><title>L0 · baseline: 85% — $0.0011 of $0.0071 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="491.0" y="74.0">85%</text>
+<text class="lbl" x="222" y="98.0" text-anchor="end">L1 · + thinking off</text>
+<path class="deemph" d="M230.0,87.0 H473.2 Q477.2,87.0 477.2,91.0 V97.0 Q477.2,101.0 473.2,101.0 H230.0 Z"><title>L1 · + thinking off: 82% — $0.0010 of $0.0059 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="483.2" y="98.0">82%</text>
+<text class="lbl" x="222" y="122.0" text-anchor="end">L2 · + awq_marlin (reverted)</text>
+<path class="deemph" d="M230.0,111.0 H472.7 Q476.7,111.0 476.7,115.0 V121.0 Q476.7,125.0 472.7,125.0 H230.0 Z"><title>L2 · + awq_marlin (reverted): 82% — $0.0010 of $0.0059 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="482.7" y="122.0">82%</text>
+<text class="lbl" x="222" y="146.0" text-anchor="end">L5 · frozen config</text>
+<path class="deemph" d="M230.0,135.0 H497.4 Q501.4,135.0 501.4,139.0 V145.0 Q501.4,149.0 497.4,149.0 H230.0 Z"><title>L5 · frozen config: 90% — $0.00038 of $0.0040 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="507.4" y="146.0">90%</text>
+<text class="lbl" x="222" y="170.0" text-anchor="end">S4 · bf16 Qwen3-8B (quality arm)</text>
+<path class="deemph" d="M230.0,159.0 H475.5 Q479.5,159.0 479.5,163.0 V169.0 Q479.5,173.0 475.5,173.0 H230.0 Z"><title>S4 · bf16 Qwen3-8B (quality arm): 83% — $0.0018 of $0.010 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="485.5" y="170.0">83%</text>
+</svg></g><g transform="translate(659,36)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 579 188" width="579" height="188" role="img" aria-label="Scale-out · correspondence n = 100 · same documents">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="579" height="188" rx="8"/>
+<text class="title" x="16" y="24">Scale-out · correspondence n = 100 · same documents</text>
+<text class="sub" x="16" y="42">client-slot occupancy = Σ request latency ÷ (concurrency × wall) · higher is better</text>
+<line class="grid" x1="209.0" y1="54" x2="209.0" y2="154"/>
+<text class="tick" x="209.0" y="170" text-anchor="middle">0</text>
+<line class="grid" x1="284.0" y1="54" x2="284.0" y2="154"/>
+<text class="tick" x="284.0" y="170" text-anchor="middle">0.25</text>
+<line class="grid" x1="359.0" y1="54" x2="359.0" y2="154"/>
+<text class="tick" x="359.0" y="170" text-anchor="middle">0.5</text>
+<line class="grid" x1="434.0" y1="54" x2="434.0" y2="154"/>
+<text class="tick" x="434.0" y="170" text-anchor="middle">0.75</text>
+<line class="grid" x1="509.0" y1="54" x2="509.0" y2="154"/>
+<text class="tick" x="509.0" y="170" text-anchor="middle">1</text>
+<line class="axis" x1="209" y1="54" x2="209" y2="154"/>
+<text class="lbl" x="201" y="74.0" text-anchor="end">S2a · 1×L4, c8</text>
+<path class="deemph" d="M209.0,63.0 H498.2 Q502.2,63.0 502.2,67.0 V73.0 Q502.2,77.0 498.2,77.0 H209.0 Z"><title>S2a · 1×L4, c8: 98% — $0.00048 of $0.021 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="508.2" y="74.0">98%</text>
+<text class="lbl" x="201" y="98.0" text-anchor="end">S2b · 2×L4, c16</text>
+<path class="s1" d="M209.0,87.0 H491.7 Q495.7,87.0 495.7,91.0 V97.0 Q495.7,101.0 491.7,101.0 H209.0 Z"><title>S2b · 2×L4, c16: 96% — $0.00091 of $0.021 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="501.7" y="98.0">96%</text>
+<text class="lbl" x="201" y="122.0" text-anchor="end">S7 · 2×L4, c64, max_inputs 64</text>
+<path class="s1" d="M209.0,111.0 H308.1 Q312.1,111.0 312.1,115.0 V121.0 Q312.1,125.0 308.1,125.0 H209.0 Z"><title>S7 · 2×L4, c64, max_inputs 64: 34% — $0.044 of $0.066 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="318.1" y="122.0">34%</text>
+<text class="lbl" x="201" y="146.0" text-anchor="end">S9 · 2×L4, c64, max_inputs 32</text>
+<path class="s1" d="M209.0,135.0 H442.1 Q446.1,135.0 446.1,139.0 V145.0 Q446.1,149.0 442.1,149.0 H209.0 Z"><title>S9 · 2×L4, c64, max_inputs 32: 79% — $0.0036 of $0.017 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="452.1" y="146.0">79%</text>
+</svg></g><g transform="translate(0,264)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 643 260" width="643" height="260" role="img" aria-label="Five-class sweep · 2×L4 · c32 · n = 50">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="643" height="260" rx="8"/>
+<text class="title" x="16" y="24">Five-class sweep · 2×L4 · c32 · n = 50</text>
+<text class="sub" x="16" y="42">client-slot occupancy = Σ request latency ÷ (concurrency × wall) · higher is better</text>
+<line class="grid" x1="273.0" y1="54" x2="273.0" y2="226"/>
+<text class="tick" x="273.0" y="242" text-anchor="middle">0</text>
+<line class="grid" x1="348.0" y1="54" x2="348.0" y2="226"/>
+<text class="tick" x="348.0" y="242" text-anchor="middle">0.25</text>
+<line class="grid" x1="423.0" y1="54" x2="423.0" y2="226"/>
+<text class="tick" x="423.0" y="242" text-anchor="middle">0.5</text>
+<line class="grid" x1="498.0" y1="54" x2="498.0" y2="226"/>
+<text class="tick" x="498.0" y="242" text-anchor="middle">0.75</text>
+<line class="grid" x1="573.0" y1="54" x2="573.0" y2="226"/>
+<text class="tick" x="573.0" y="242" text-anchor="middle">1</text>
+<line class="axis" x1="273" y1="54" x2="273" y2="226"/>
+<text class="lbl" x="265" y="74.0" text-anchor="end">S3 · Correspondence</text>
+<path class="s1" d="M273.0,63.0 H483.6 Q487.6,63.0 487.6,67.0 V73.0 Q487.6,77.0 483.6,77.0 H273.0 Z"><title>S3 · Correspondence: 72% — $0.0020 of $0.0071 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="493.6" y="74.0">72%</text>
+<text class="lbl" x="265" y="98.0" text-anchor="end">S3 · Correspondence (repeat)</text>
+<path class="s1" d="M273.0,87.0 H513.9 Q517.9,87.0 517.9,91.0 V97.0 Q517.9,101.0 513.9,101.0 H273.0 Z"><title>S3 · Correspondence (repeat): 82% — $0.0017 of $0.0094 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="523.9" y="98.0">82%</text>
+<text class="lbl" x="265" y="122.0" text-anchor="end">S3 · Insurance claims</text>
+<path class="s1" d="M273.0,111.0 H434.7 Q438.7,111.0 438.7,115.0 V121.0 Q438.7,125.0 434.7,125.0 H273.0 Z"><title>S3 · Insurance claims: 55% — $0.012 of $0.027 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="444.7" y="122.0">55%</text>
+<text class="lbl" x="265" y="146.0" text-anchor="end">S3 · Corporate records</text>
+<path class="s1" d="M273.0,135.0 H510.8 Q514.8,135.0 514.8,139.0 V145.0 Q514.8,149.0 510.8,149.0 H273.0 Z"><title>S3 · Corporate records: 81% — $0.0049 of $0.025 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="520.8" y="146.0">81%</text>
+<text class="lbl" x="265" y="170.0" text-anchor="end">S3 · Contracts</text>
+<path class="s1" d="M273.0,159.0 H445.5 Q449.5,159.0 449.5,163.0 V169.0 Q449.5,173.0 445.5,173.0 H273.0 Z"><title>S3 · Contracts: 59% — $0.043 of $0.104 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="455.5" y="170.0">59%</text>
+<text class="lbl" x="265" y="194.0" text-anchor="end">S3 · Merger agreements</text>
+<path class="s1" d="M273.0,183.0 H409.2 Q413.2,183.0 413.2,187.0 V193.0 Q413.2,197.0 409.2,197.0 H273.0 Z"><title>S3 · Merger agreements: 47% — $0.081 of $0.152 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="419.2" y="194.0">47%</text>
+<text class="lbl" x="265" y="218.0" text-anchor="end">S5 · Merger agreements · MAUD prompt</text>
+<path class="s1" d="M273.0,207.0 H444.2 Q448.2,207.0 448.2,211.0 V217.0 Q448.2,221.0 444.2,221.0 H273.0 Z"><title>S5 · Merger agreements · MAUD prompt: 58% — $0.082 of $0.197 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="454.2" y="218.0">58%</text>
+</svg></g><g transform="translate(659,264)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 587 188" width="587" height="188" role="img" aria-label="Doubled admission · 2×L4 · c64 · n = 50">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="587" height="188" rx="8"/>
+<text class="title" x="16" y="24">Doubled admission · 2×L4 · c64 · n = 50</text>
+<text class="sub" x="16" y="42">client-slot occupancy = Σ request latency ÷ (concurrency × wall) · higher is better</text>
+<line class="grid" x1="217.0" y1="54" x2="217.0" y2="154"/>
+<text class="tick" x="217.0" y="170" text-anchor="middle">0</text>
+<line class="grid" x1="292.0" y1="54" x2="292.0" y2="154"/>
+<text class="tick" x="292.0" y="170" text-anchor="middle">0.25</text>
+<line class="grid" x1="367.0" y1="54" x2="367.0" y2="154"/>
+<text class="tick" x="367.0" y="170" text-anchor="middle">0.5</text>
+<line class="grid" x1="442.0" y1="54" x2="442.0" y2="154"/>
+<text class="tick" x="442.0" y="170" text-anchor="middle">0.75</text>
+<line class="grid" x1="517.0" y1="54" x2="517.0" y2="154"/>
+<text class="tick" x="517.0" y="170" text-anchor="middle">1</text>
+<line class="axis" x1="217" y1="54" x2="217" y2="154"/>
+<text class="lbl" x="209" y="74.0" text-anchor="end">S9 · Insurance claims</text>
+<path class="s1" d="M217.0,63.0 H338.6 Q342.6,63.0 342.6,67.0 V73.0 Q342.6,77.0 338.6,77.0 H217.0 Z"><title>S9 · Insurance claims: 42% — $0.014 of $0.023 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="348.6" y="74.0">42%</text>
+<text class="lbl" x="209" y="98.0" text-anchor="end">S9 · Corporate records</text>
+<path class="s1" d="M217.0,87.0 H408.6 Q412.6,87.0 412.6,91.0 V97.0 Q412.6,101.0 408.6,101.0 H217.0 Z"><title>S9 · Corporate records: 65% — $0.0075 of $0.022 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="418.6" y="98.0">65%</text>
+<text class="lbl" x="209" y="122.0" text-anchor="end">S9 · Contracts</text>
+<path class="s1" d="M217.0,111.0 H321.8 Q325.8,111.0 325.8,115.0 V121.0 Q325.8,125.0 321.8,125.0 H217.0 Z"><title>S9 · Contracts: 36% — $0.062 of $0.098 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="331.8" y="122.0">36%</text>
+<text class="lbl" x="209" y="146.0" text-anchor="end">S7 · Insurance · max_inputs 64</text>
+<path class="s1" d="M217.0,135.0 H335.9 Q339.9,135.0 339.9,139.0 V145.0 Q339.9,149.0 335.9,149.0 H217.0 Z"><title>S7 · Insurance · max_inputs 64: 41% — $0.015 of $0.026 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="345.9" y="146.0">41%</text>
+</svg></g><g transform="translate(0,540)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 570 164" width="570" height="164" role="img" aria-label="v2 prompts · 1×L4 · c8 · n = 75">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="570" height="164" rx="8"/>
+<text class="title" x="16" y="24">v2 prompts · 1×L4 · c8 · n = 75</text>
+<text class="sub" x="16" y="42">client-slot occupancy = Σ request latency ÷ (concurrency × wall) · higher is better</text>
+<line class="grid" x1="200.0" y1="54" x2="200.0" y2="130"/>
+<text class="tick" x="200.0" y="146" text-anchor="middle">0</text>
+<line class="grid" x1="275.0" y1="54" x2="275.0" y2="130"/>
+<text class="tick" x="275.0" y="146" text-anchor="middle">0.25</text>
+<line class="grid" x1="350.0" y1="54" x2="350.0" y2="130"/>
+<text class="tick" x="350.0" y="146" text-anchor="middle">0.5</text>
+<line class="grid" x1="425.0" y1="54" x2="425.0" y2="130"/>
+<text class="tick" x="425.0" y="146" text-anchor="middle">0.75</text>
+<line class="grid" x1="500.0" y1="54" x2="500.0" y2="130"/>
+<text class="tick" x="500.0" y="146" text-anchor="middle">1</text>
+<line class="axis" x1="200" y1="54" x2="200" y2="130"/>
+<text class="lbl" x="192" y="74.0" text-anchor="end">S10 · Correspondence</text>
+<path class="deemph" d="M200.0,63.0 H489.1 Q493.1,63.0 493.1,67.0 V73.0 Q493.1,77.0 489.1,77.0 H200.0 Z"><title>S10 · Correspondence: 98% — $0.00038 of $0.017 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="499.1" y="74.0">98%</text>
+<text class="lbl" x="192" y="98.0" text-anchor="end">S10 · Insurance claims</text>
+<path class="deemph" d="M200.0,87.0 H478.8 Q482.8,87.0 482.8,91.0 V97.0 Q482.8,101.0 478.8,101.0 H200.0 Z"><title>S10 · Insurance claims: 94% — $0.0019 of $0.032 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="488.8" y="98.0">94%</text>
+<text class="lbl" x="192" y="122.0" text-anchor="end">S10 · Corporate records</text>
+<path class="deemph" d="M200.0,111.0 H490.6 Q494.6,111.0 494.6,115.0 V121.0 Q494.6,125.0 490.6,125.0 H200.0 Z"><title>S10 · Corporate records: 98% — $0.00053 of $0.029 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="500.6" y="122.0">98%</text>
+</svg></g><g transform="translate(659,540)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 570 116" width="570" height="116" role="img" aria-label="LLM sorter · 2×L4 · c32">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="570" height="116" rx="8"/>
+<text class="title" x="16" y="24">LLM sorter · 2×L4 · c32</text>
+<text class="sub" x="16" y="42">client-slot occupancy = Σ request latency ÷ (concurrency × wall) · higher is better</text>
+<line class="grid" x1="200.0" y1="54" x2="200.0" y2="82"/>
+<text class="tick" x="200.0" y="98" text-anchor="middle">0</text>
+<line class="grid" x1="275.0" y1="54" x2="275.0" y2="82"/>
+<text class="tick" x="275.0" y="98" text-anchor="middle">0.25</text>
+<line class="grid" x1="350.0" y1="54" x2="350.0" y2="82"/>
+<text class="tick" x="350.0" y="98" text-anchor="middle">0.5</text>
+<line class="grid" x1="425.0" y1="54" x2="425.0" y2="82"/>
+<text class="tick" x="425.0" y="98" text-anchor="middle">0.75</text>
+<line class="grid" x1="500.0" y1="54" x2="500.0" y2="82"/>
+<text class="tick" x="500.0" y="98" text-anchor="middle">1</text>
+<line class="axis" x1="200" y1="54" x2="200" y2="82"/>
+<text class="lbl" x="192" y="74.0" text-anchor="end">S6 · LLM sorter</text>
+<path class="s1" d="M200.0,63.0 H432.2 Q436.2,63.0 436.2,67.0 V73.0 Q436.2,77.0 432.2,77.0 H200.0 Z"><title>S6 · LLM sorter: 79% — $0.169 of $0.796 busy-window GPU $ spent on idle slots</title></path>
+<text class="val" x="442.2" y="74.0">79%</text>
+</svg></g></svg>
