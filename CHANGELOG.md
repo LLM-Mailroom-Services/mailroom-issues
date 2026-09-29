@@ -6,6 +6,11 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added — next GPU tier evaluation protocol (#224)
+
+- `reports/NEXT-GPU-TIER-PROTOCOL.md` — repeatable methodology to compare future Modal GPU SKUs to SAND-032 on L4: corpus pin (`ed7576b6…`, `ground_truth` / `all`, seed 42, nested 20 ⊂ 50 ⊂ 100), metrics dictionary (busy-window $, tok/s per GPU, $/doc, $/1M tokens, quality by class), separate Axis A (replica scale-out) and Axis B (serving-knob ladder) templates, pre-spend checklist, and pointers to hub L4 baselines; links [#225](https://github.com/LLM-Mailroom-Services/mailroom-issues/issues/225) for DeepSeek-class planning.
+- `reports/README.md` — index row for the protocol doc.
+
 ### Added — presentation PNGs; dark, high-contrast figures; every API model covered
 
 - `reports/viz/**/*.png` + `reports/viz/MANIFEST.json` — every report figure as a
