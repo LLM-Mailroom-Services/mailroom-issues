@@ -78,12 +78,33 @@ mailroom-issues/
 │   └── labels.py          # sync/audit .github/labels.json against the repo
 ├── data/
 │   └── hf_cache/          # colocated HF parquet cache (pin + MANIFEST — see data/hf_cache/README.md)
+├── reports/               # generated cross-repo evaluation reports (markdown + SVG; see reports/README.md)
+│   ├── MASTER-REPORT.md   # status + research findings: API leg, Modal + vLLM leg, ModernBERT
+│   ├── COST-COMPARISON-MODAL-VS-API.md   # cost per doc / per quality, break-even, sorter routes, spend
+│   └── figures/           # cost/ (drawn for these reports) · sources/<repo>/ (verbatim source charts)
 └── docs/
     ├── CONSTELLATION.md   # the ecosystem map: repos, roles, layers
     ├── ROUTING.md         # which issue belongs in which repository
     ├── LABELS.md          # the four label families and their vocabulary
     └── LIFECYCLE.md       # triage flow: file → triage → schedule → do → close
 ```
+
+## Reports
+
+[`reports/`](reports/README.md) holds the constellation's cross-repo evaluation
+reports. They are generated outputs, not code (law 1): the generator,
+`reports/dashboard/export_hub_reports.py`, lives in `Exios66/local-mailroom-sandbox`
+next to the reports hub that cross-checks every number against its source file.
+
+- [Master report](reports/MASTER-REPORT.md): where each front stands, and the
+  findings from the API leg (eval-environment), the Modal + vLLM leg (sandbox,
+  SAND-032) and the ModernBERT intake classifier (mailroom-ml).
+- [Cost comparison, Modal L4 vs hosted API](reports/COST-COMPARISON-MODAL-VS-API.md):
+  cost per document and per unit of quality for every route and model, batch
+  break-even for the Modal fleet, sorter routes and spend.
+
+Regenerate from the sandbox with `--out ../mailroom-issues/reports`; `--check`
+exits 1 when this folder is stale. Don't hand-edit the files.
 
 ## Governance tooling
 

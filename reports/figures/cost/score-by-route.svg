@@ -1,0 +1,318 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 1284 720" width="1284" height="720" role="img" aria-label="Extraction quality by route and model — same tasks, same scorer except contracts">
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+<rect class="bg" width="1284" height="720" rx="8"/><text class="title" x="16" y="24">Extraction quality by route and model — same tasks, same scorer except contracts</text><g transform="translate(0,36)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 570 212" width="570" height="212" role="img" aria-label="Correspondence">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="570" height="212" rx="8"/>
+<text class="title" x="16" y="24">Correspondence</text>
+<text class="sub" x="16" y="42">overall extraction score (0–1) · higher is better</text>
+<line class="grid" x1="200.0" y1="54" x2="200.0" y2="178"/>
+<text class="tick" x="200.0" y="194" text-anchor="middle">0</text>
+<line class="grid" x1="300.0" y1="54" x2="300.0" y2="178"/>
+<text class="tick" x="300.0" y="194" text-anchor="middle">0.2</text>
+<line class="grid" x1="400.0" y1="54" x2="400.0" y2="178"/>
+<text class="tick" x="400.0" y="194" text-anchor="middle">0.4</text>
+<line class="grid" x1="500.0" y1="54" x2="500.0" y2="178"/>
+<text class="tick" x="500.0" y="194" text-anchor="middle">0.6</text>
+<line class="axis" x1="200" y1="54" x2="200" y2="178"/>
+<text class="lbl" x="192" y="74.0" text-anchor="end">API · Qwen3-8B</text>
+<path class="deemph" d="M200.0,63.0 H452.5 Q456.5,63.0 456.5,67.0 V73.0 Q456.5,77.0 452.5,77.0 H200.0 Z"><title>API · Qwen3-8B: 0.513 — n = 20 · 20260927T033031Z-eval-correspondence</title></path>
+<text class="val" x="462.5" y="74.0">0.513</text>
+<text class="lbl" x="192" y="98.0" text-anchor="end">API · Qwen3.7-Flash</text>
+<path class="deemph" d="M200.0,87.0 H442.5 Q446.5,87.0 446.5,91.0 V97.0 Q446.5,101.0 442.5,101.0 H200.0 Z"><title>API · Qwen3.7-Flash: 0.493 — n = 50 · 20260928T090253Z-eval-correspondence</title></path>
+<text class="val" x="452.5" y="98.0">0.493</text>
+<text class="lbl" x="192" y="122.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
+<path class="deemph" d="M200.0,111.0 H417.0 Q421.0,111.0 421.0,115.0 V121.0 Q421.0,125.0 417.0,125.0 H200.0 Z"><title>API · DeepSeek-V4.1-Flash: 0.442 — n = 20 · 20260927T105317Z-eval-correspondence</title></path>
+<text class="val" x="427.0" y="122.0">0.442</text>
+<text class="lbl" x="192" y="146.0" text-anchor="end">API · Granite-4.2-8B</text>
+<path class="deemph" d="M200.0,135.0 H399.2 Q403.2,135.0 403.2,139.0 V145.0 Q403.2,149.0 399.2,149.0 H200.0 Z"><title>API · Granite-4.2-8B: 0.406 — n = 20 · 20260927T053647Z-eval-correspondence</title></path>
+<text class="val" x="409.2" y="146.0">0.406</text>
+<text class="lbl" x="192" y="170.0" text-anchor="end">Modal · Qwen3-8B-AWQ</text>
+<path class="s1" d="M200.0,159.0 H346.2 Q350.2,159.0 350.2,163.0 V169.0 Q350.2,173.0 346.2,173.0 H200.0 Z"><title>Modal · Qwen3-8B-AWQ: 0.300 — n = 50 · sand032-s3-corr50</title></path>
+<text class="val" x="356.2" y="170.0">0.300</text>
+</svg></g><g transform="translate(650,36)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 570 212" width="570" height="212" role="img" aria-label="Insurance claims">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="570" height="212" rx="8"/>
+<text class="title" x="16" y="24">Insurance claims</text>
+<text class="sub" x="16" y="42">overall extraction score (0–1) · higher is better</text>
+<line class="grid" x1="200.0" y1="54" x2="200.0" y2="178"/>
+<text class="tick" x="200.0" y="194" text-anchor="middle">0</text>
+<line class="grid" x1="275.0" y1="54" x2="275.0" y2="178"/>
+<text class="tick" x="275.0" y="194" text-anchor="middle">0.2</text>
+<line class="grid" x1="350.0" y1="54" x2="350.0" y2="178"/>
+<text class="tick" x="350.0" y="194" text-anchor="middle">0.4</text>
+<line class="grid" x1="425.0" y1="54" x2="425.0" y2="178"/>
+<text class="tick" x="425.0" y="194" text-anchor="middle">0.6</text>
+<line class="grid" x1="500.0" y1="54" x2="500.0" y2="178"/>
+<text class="tick" x="500.0" y="194" text-anchor="middle">0.8</text>
+<line class="axis" x1="200" y1="54" x2="200" y2="178"/>
+<text class="lbl" x="192" y="74.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
+<path class="deemph" d="M200.0,63.0 H495.0 Q499.0,63.0 499.0,67.0 V73.0 Q499.0,77.0 495.0,77.0 H200.0 Z"><title>API · DeepSeek-V4.1-Flash: 0.797 — n = 20 · 20260927T105400Z-eval-insurance_claims</title></path>
+<text class="val" x="505.0" y="74.0">0.797</text>
+<text class="lbl" x="192" y="98.0" text-anchor="end">API · Qwen3.7-Flash</text>
+<path class="deemph" d="M200.0,87.0 H486.0 Q490.0,87.0 490.0,91.0 V97.0 Q490.0,101.0 486.0,101.0 H200.0 Z"><title>API · Qwen3.7-Flash: 0.773 — n = 50 · 20260928T070248Z-eval-insurance_claims</title></path>
+<text class="val" x="496.0" y="98.0">0.773</text>
+<text class="lbl" x="192" y="122.0" text-anchor="end">API · Qwen3-8B</text>
+<path class="deemph" d="M200.0,111.0 H476.8 Q480.8,111.0 480.8,115.0 V121.0 Q480.8,125.0 476.8,125.0 H200.0 Z"><title>API · Qwen3-8B: 0.749 — n = 20 · 20260927T035135Z-eval-insurance_claims</title></path>
+<text class="val" x="486.8" y="122.0">0.749</text>
+<text class="lbl" x="192" y="146.0" text-anchor="end">API · Granite-4.2-8B</text>
+<path class="deemph" d="M200.0,135.0 H463.6 Q467.6,135.0 467.6,139.0 V145.0 Q467.6,149.0 463.6,149.0 H200.0 Z"><title>API · Granite-4.2-8B: 0.714 — n = 20 · 20260927T054211Z-eval-insurance_claims</title></path>
+<text class="val" x="473.6" y="146.0">0.714</text>
+<text class="lbl" x="192" y="170.0" text-anchor="end">Modal · Qwen3-8B-AWQ</text>
+<path class="s1" d="M200.0,159.0 H454.0 Q458.0,159.0 458.0,163.0 V169.0 Q458.0,173.0 454.0,173.0 H200.0 Z"><title>Modal · Qwen3-8B-AWQ: 0.688 — n = 50 · sand032-s3-insurance50</title></path>
+<text class="val" x="464.0" y="170.0">0.688</text>
+</svg></g><g transform="translate(0,264)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 570 212" width="570" height="212" role="img" aria-label="Corporate records">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="570" height="212" rx="8"/>
+<text class="title" x="16" y="24">Corporate records</text>
+<text class="sub" x="16" y="42">overall extraction score (0–1) · higher is better</text>
+<line class="grid" x1="200.0" y1="54" x2="200.0" y2="178"/>
+<text class="tick" x="200.0" y="194" text-anchor="middle">0</text>
+<line class="grid" x1="300.0" y1="54" x2="300.0" y2="178"/>
+<text class="tick" x="300.0" y="194" text-anchor="middle">0.2</text>
+<line class="grid" x1="400.0" y1="54" x2="400.0" y2="178"/>
+<text class="tick" x="400.0" y="194" text-anchor="middle">0.4</text>
+<line class="grid" x1="500.0" y1="54" x2="500.0" y2="178"/>
+<text class="tick" x="500.0" y="194" text-anchor="middle">0.6</text>
+<line class="axis" x1="200" y1="54" x2="200" y2="178"/>
+<text class="lbl" x="192" y="74.0" text-anchor="end">Modal · Qwen3-8B-AWQ</text>
+<path class="s1" d="M200.0,63.0 H425.1 Q429.1,63.0 429.1,67.0 V73.0 Q429.1,77.0 425.1,77.0 H200.0 Z"><title>Modal · Qwen3-8B-AWQ: 0.458 — n = 50 · sand032-s3-corporate50</title></path>
+<text class="val" x="435.1" y="74.0">0.458</text>
+<text class="lbl" x="192" y="98.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
+<path class="deemph" d="M200.0,87.0 H416.8 Q420.8,87.0 420.8,91.0 V97.0 Q420.8,101.0 416.8,101.0 H200.0 Z"><title>API · DeepSeek-V4.1-Flash: 0.442 — n = 20 · 20260927T110828Z-eval-corporate_records</title></path>
+<text class="val" x="426.8" y="98.0">0.442</text>
+<text class="lbl" x="192" y="122.0" text-anchor="end">API · Qwen3.7-Flash</text>
+<path class="deemph" d="M200.0,111.0 H404.9 Q408.9,111.0 408.9,115.0 V121.0 Q408.9,125.0 404.9,125.0 H200.0 Z"><title>API · Qwen3.7-Flash: 0.418 — n = 50 · 20260928T083627Z-eval-corporate_records</title></path>
+<text class="val" x="414.9" y="122.0">0.418</text>
+<text class="lbl" x="192" y="146.0" text-anchor="end">API · Granite-4.2-8B</text>
+<path class="deemph" d="M200.0,135.0 H403.8 Q407.8,135.0 407.8,139.0 V145.0 Q407.8,149.0 403.8,149.0 H200.0 Z"><title>API · Granite-4.2-8B: 0.416 — n = 20 · 20260927T065622Z-eval-corporate_records</title></path>
+<text class="val" x="413.8" y="146.0">0.416</text>
+<text class="lbl" x="192" y="170.0" text-anchor="end">API · Qwen3-8B</text>
+<path class="deemph" d="M200.0,159.0 H396.2 Q400.2,159.0 400.2,163.0 V169.0 Q400.2,173.0 396.2,173.0 H200.0 Z"><title>API · Qwen3-8B: 0.400 — n = 20 · 20260927T042239Z-eval-corporate_records</title></path>
+<text class="val" x="406.2" y="170.0">0.400</text>
+</svg></g><g transform="translate(650,264)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 570 212" width="570" height="212" role="img" aria-label="Contracts">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="570" height="212" rx="8"/>
+<text class="title" x="16" y="24">Contracts</text>
+<text class="sub" x="16" y="42">Modal: CUAD category F1 · API: pipeline rubric — not like-for-like</text>
+<line class="grid" x1="200.0" y1="54" x2="200.0" y2="178"/>
+<text class="tick" x="200.0" y="194" text-anchor="middle">0</text>
+<line class="grid" x1="275.0" y1="54" x2="275.0" y2="178"/>
+<text class="tick" x="275.0" y="194" text-anchor="middle">0.2</text>
+<line class="grid" x1="350.0" y1="54" x2="350.0" y2="178"/>
+<text class="tick" x="350.0" y="194" text-anchor="middle">0.4</text>
+<line class="grid" x1="425.0" y1="54" x2="425.0" y2="178"/>
+<text class="tick" x="425.0" y="194" text-anchor="middle">0.6</text>
+<line class="grid" x1="500.0" y1="54" x2="500.0" y2="178"/>
+<text class="tick" x="500.0" y="194" text-anchor="middle">0.8</text>
+<line class="axis" x1="200" y1="54" x2="200" y2="178"/>
+<text class="lbl" x="192" y="74.0" text-anchor="end">API · Qwen3-8B</text>
+<path class="deemph" d="M200.0,63.0 H427.3 Q431.3,63.0 431.3,67.0 V73.0 Q431.3,77.0 427.3,77.0 H200.0 Z"><title>API · Qwen3-8B: 0.617 — n = 20 · 20260927T035621Z-eval-contracts</title></path>
+<text class="val" x="437.3" y="74.0">0.617</text>
+<text class="lbl" x="192" y="98.0" text-anchor="end">Modal · Qwen3-8B-AWQ</text>
+<path class="s1" d="M200.0,87.0 H421.4 Q425.4,87.0 425.4,91.0 V97.0 Q425.4,101.0 421.4,101.0 H200.0 Z"><title>Modal · Qwen3-8B-AWQ: 0.601 — n = 47 · sand032-s3-contracts50</title></path>
+<text class="val" x="431.4" y="98.0">0.601</text>
+<text class="lbl" x="192" y="122.0" text-anchor="end">API · Qwen3.7-Flash</text>
+<path class="deemph" d="M200.0,111.0 H400.8 Q404.8,111.0 404.8,115.0 V121.0 Q404.8,125.0 400.8,125.0 H200.0 Z"><title>API · Qwen3.7-Flash: 0.546 — n = 50 · 20260928T063713Z-eval-contracts</title></path>
+<text class="val" x="410.8" y="122.0">0.546</text>
+<text class="lbl" x="192" y="146.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
+<path class="deemph" d="M200.0,135.0 H388.6 Q392.6,135.0 392.6,139.0 V145.0 Q392.6,149.0 388.6,149.0 H200.0 Z"><title>API · DeepSeek-V4.1-Flash: 0.514 — n = 20 · 20260927T105549Z-eval-contracts</title></path>
+<text class="val" x="398.6" y="146.0">0.514</text>
+<text class="lbl" x="192" y="170.0" text-anchor="end">API · Granite-4.2-8B</text>
+<path class="deemph" d="M200.0,159.0 H374.8 Q378.8,159.0 378.8,163.0 V169.0 Q378.8,173.0 374.8,173.0 H200.0 Z"><title>API · Granite-4.2-8B: 0.477 — n = 20 · 20260927T054738Z-eval-contracts</title></path>
+<text class="val" x="384.8" y="170.0">0.477</text>
+</svg></g><g transform="translate(0,492)"><svg xmlns="http://www.w3.org/2000/svg" class="viz" viewBox="0 0 634 212" width="634" height="212" role="img" aria-label="Merger agreements">
+
+<style>
+  .viz { font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    --surface:#fcfcfb; --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --axis:#c3c2b7; --s1:#2a78d6; --s2:#eb6834; --deemph:#c3c2b7;
+    --good:#0ca30c; --critical:#d03b3b; }
+  @media (prefers-color-scheme: dark) {
+    .viz { --surface:#1a1a19; --ink:#ffffff; --ink2:#c3c2b7; --muted:#898781;
+      --grid:#2c2c2a; --axis:#383835; --s1:#3987e5; --s2:#d95926; --deemph:#52514e; }
+  }
+  .viz .bg { fill: var(--surface); }
+  .viz .title { fill: var(--ink); font-size: 15px; font-weight: 600; }
+  .viz .sub { fill: var(--ink2); font-size: 12px; }
+  .viz .lbl { fill: var(--ink2); font-size: 12px; }
+  .viz .val { fill: var(--ink); font-size: 12px; font-variant-numeric: tabular-nums;
+    paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
+  .viz .reflbl { paint-order: stroke; stroke: var(--surface); stroke-width: 3px; }
+  .viz .tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+  .viz .grid { stroke: var(--grid); stroke-width: 1; }
+  .viz .axis { stroke: var(--axis); stroke-width: 1; }
+  .viz .ref { stroke: var(--ink2); stroke-width: 1; }
+  .viz .reflbl { fill: var(--ink2); font-size: 11px; }
+  .viz .s1 { fill: var(--s1); } .viz .s2 { fill: var(--s2); }
+  .viz .ln1 { stroke: var(--s1); } .viz .ln2 { stroke: var(--s2); }
+  .viz .deemph { fill: var(--deemph); }
+  .viz .conn { stroke: var(--axis); stroke-width: 2; }
+  .viz .ring { stroke: var(--surface); stroke-width: 2; }
+</style>
+
+<rect class="bg" width="634" height="212" rx="8"/>
+<text class="title" x="16" y="24">Merger agreements</text>
+<text class="sub" x="16" y="42">overall extraction score (0–1) · higher is better</text>
+<line class="grid" x1="264.0" y1="54" x2="264.0" y2="178"/>
+<text class="tick" x="264.0" y="194" text-anchor="middle">0</text>
+<line class="grid" x1="364.0" y1="54" x2="364.0" y2="178"/>
+<text class="tick" x="364.0" y="194" text-anchor="middle">0.2</text>
+<line class="grid" x1="464.0" y1="54" x2="464.0" y2="178"/>
+<text class="tick" x="464.0" y="194" text-anchor="middle">0.4</text>
+<line class="grid" x1="564.0" y1="54" x2="564.0" y2="178"/>
+<text class="tick" x="564.0" y="194" text-anchor="middle">0.6</text>
+<line class="axis" x1="264" y1="54" x2="264" y2="178"/>
+<text class="lbl" x="256" y="74.0" text-anchor="end">API · Qwen3.7-Flash</text>
+<path class="deemph" d="M264.0,63.0 H520.6 Q524.6,63.0 524.6,67.0 V73.0 Q524.6,77.0 520.6,77.0 H264.0 Z"><title>API · Qwen3.7-Flash: 0.521 — n = 50 · 20260928T070803Z-eval-merger_agreement</title></path>
+<text class="val" x="530.6" y="74.0">0.521</text>
+<text class="lbl" x="256" y="98.0" text-anchor="end">API · Granite-4.2-8B</text>
+<path class="deemph" d="M264.0,87.0 H487.4 Q491.4,87.0 491.4,91.0 V97.0 Q491.4,101.0 487.4,101.0 H264.0 Z"><title>API · Granite-4.2-8B: 0.455 — n = 20 · 20260927T082404Z-eval-merger_agreement</title></path>
+<text class="val" x="497.4" y="98.0">0.455</text>
+<text class="lbl" x="256" y="122.0" text-anchor="end">API · Qwen3.7-Flash (frozen prompts)</text>
+<path class="deemph" d="M264.0,111.0 H447.4 Q451.4,111.0 451.4,115.0 V121.0 Q451.4,125.0 447.4,125.0 H264.0 Z"><title>API · Qwen3.7-Flash (frozen prompts): 0.375 — n = 20 · 20260927T022750Z-eval-merger_agreement</title></path>
+<text class="val" x="457.4" y="122.0">0.375</text>
+<text class="lbl" x="256" y="146.0" text-anchor="end">API · DeepSeek-V4.1-Flash</text>
+<path class="deemph" d="M264.0,135.0 H381.1 Q385.1,135.0 385.1,139.0 V145.0 Q385.1,149.0 381.1,149.0 H264.0 Z"><title>API · DeepSeek-V4.1-Flash: 0.242 — n = 20 · 20260927T110153Z-eval-merger_agreement</title></path>
+<text class="val" x="391.1" y="146.0">0.242</text>
+<text class="lbl" x="256" y="170.0" text-anchor="end">Modal · Qwen3-8B-AWQ</text>
+<path class="s1" d="M264.0,159.0 H301.5 Q305.5,159.0 305.5,163.0 V169.0 Q305.5,173.0 301.5,173.0 H264.0 Z"><title>Modal · Qwen3-8B-AWQ: 0.083 — n = 46 · sand032-s5-merger50-maud</title></path>
+<text class="val" x="311.5" y="170.0">0.083</text>
+</svg></g></svg>

@@ -6,6 +6,19 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added — cross-repo evaluation reports
+
+- `reports/MASTER-REPORT.md` — current status and research findings for the
+  API leg (eval-environment), the Modal + vLLM leg (local-mailroom-sandbox,
+  SAND-032) and the ModernBERT intake classifier (mailroom-ml), with the
+  cross-leg verdict and the report-audit record.
+- `reports/COST-COMPARISON-MODAL-VS-API.md` — Modal L4 vs hosted API cost per
+  document and per 0.1 quality, batch and warm-fleet break-even, sorter routes,
+  spend and caveats.
+- `reports/figures/` — five cost figures drawn for these reports, plus verbatim
+  copies of the source repos' charts; `reports/README.md` indexes them.
+- `README.md` — new Reports section and `reports/` in the repository layout.
+
 ### Added — repository scaffold (initial)
 
 - `README.md` — canonical entry point: what this hub is, what belongs here,
