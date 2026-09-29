@@ -11,6 +11,7 @@ Prompt baselines cited in the reports: frozen v1 reference copies in
 | [MASTER-REPORT.md](MASTER-REPORT.md) | Where every front stands, the findings from the API leg (eval-environment), the Modal + vLLM leg (local-mailroom-sandbox, SAND-032) and the ModernBERT intake classifier (mailroom-ml), the cross-leg verdict, and this sweep's report audit |
 | [COST-COMPARISON-MODAL-VS-API.md](COST-COMPARISON-MODAL-VS-API.md) | Cost per document and per unit of quality for every route and model, the break-even volumes and the optimal Modal deployment, sorter routes, and spend |
 | [MODAL-VLLM-GPU-REPORT.md](MODAL-VLLM-GPU-REPORT.md) | The Modal + vLLM leg's GPU economics: cost per token, where the GPU spend went, how busy the GPUs were, and what adding the second L4 did |
+| [AMFAM-BIWEEKLY-ONEPAGER.md](AMFAM-BIWEEKLY-ONEPAGER.md) | AMFAM biweekly slide sheet: GPU scale-out, per-class quality, $/1M token economics, $100–250 stipend ask, and L4 ladder → DeepSeek-class Modal/vLLM scale-up path |
 
 **Site.** The same reports as static HTML:
 <https://llm-mailroom-services.github.io/mailroom-issues/>. GitHub Pages
