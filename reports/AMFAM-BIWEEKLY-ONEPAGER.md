@@ -5,6 +5,8 @@
 **Sources:** [MASTER-REPORT](MASTER-REPORT.md) · [COST-COMPARISON-MODAL-VS-API](COST-COMPARISON-MODAL-VS-API.md) · [MODAL-VLLM-GPU-REPORT](MODAL-VLLM-GPU-REPORT.md)  
 **Tips at MASTER export:** sandbox `95d89fa8f401` · eval `86b4e54fc5a2` · mailroom-ml `d3ad22263da0`
 
+**Five beats for AMFAM:** (1) L4 GPU scale-out · (2) per-class quality · (3) $/1M tokens · (4) **$100–250** stipend ask · (5) GPU-tier scale-up — L4 ladder → **DeepSeek-class** open-weight Modal/vLLM path (API-measured today; Modal self-host forward).
+
 ---
 
 ## 1. GPU scale-out (Modal L4, same docs)
@@ -70,6 +72,46 @@ Campaign spend so far: ~**$14.40** Modal + &lt;**$1** API (SAND-032 alone **$2.8
 | **$250** | ~155 h 2×L4 research time, or multi-model API + Modal scale-out on **~10×** current draw sizes |
 
 **Pitch line:** We’ve proven GPU scale-out is flat-cost and mapped where self-host vs API wins by class. **$100–250** funds the next order-of-magnitude on data volume so AMFAM sees production-scale confidence intervals — not another ~$15 pilot.
+
+---
+
+## 5. GPU-tier scale-up path (L4 ladder → DeepSeek-class Modal)
+
+**Framing for AMFAM:** Today we have a **measured** effectiveness/coverage ladder on **Qwen3-8B-AWQ @ Modal L4**. DeepSeek-V4.1-Flash is **API-measured** in our evals and **open-weight (MIT)** on HF (`deepseek-ai/DeepSeek-V4.1-Flash`), but it is **not yet self-hosted on Modal** in this campaign. The ask is to **replay the same ladder methodology** on a larger GPU tier once we stand up that open-weight stack via **vLLM** — not a claim it is already running.
+
+### What we already proved (Qwen @ L4)
+
+| Step | Measured effect | Coverage / quality note |
+|---|---|---|
+| Serving ladder L0→**L5** (1×L4) | ~**44%** wall and ~**44%** $/doc cut at **equal** correspondence quality (~0.28) | Tuning before adding GPUs |
+| Scale-out **1×L4 → 2×L4** (corr n=100) | Wall **95.0s → 46.1s (2.06×)**; **flat** $/doc (~$0.00021) | Balanced routing required; bad `max_inputs` collapsed economics |
+| Five-class sweep @ 2×L4 | All five specialists measured (n=50); insurance 0.69 · corp 0.46 · corr 0.30 · CUAD 0.60 · MAUD 8.5% | Effectiveness **by class**, not one headline number |
+| Busy vs cold | Cold batches **~2–22×** warm $/doc at current n | Scale-up funding must buy **warm busy windows** or large amortizing batches |
+
+**Methodology to mirror on any next GPU tier:** same corpus pin (**v9.1 / `ed7576b`**), same seed/draws where possible, report **wall · tok/s · $/doc · $/1M tokens · quality by class**, and separately report **1→N replica scale-out** vs **serving-knob ladder** so AMFAM sees both “more GPUs” and “better serving” effects.
+
+### Why DeepSeek-V4.1-Flash needs a different GPU tier
+
+| Fact | Implication |
+|---|---|
+| Sparse MoE ~**552B** backbone; **8B/16B active**; ~**511 GB** checkpoint (MXFP4/MXFP8) | **Does not fit L4 / 2×L4** — Qwen L4 topology **does not transfer** |
+| vLLM recipe VRAM floor ~**614 GB** | Plan **4×B200** (primary) or **8×H200** (fallback); not single-H100 / A10 / L4 |
+| OpenRouter slug already evaluated | API quality/cost baselines exist (insurance **0.797**, sorter class **95%**, cheapest on 4/5 N=20 tasks) |
+| Serving: vLLM ≥0.30, `--language-model-only`, thinking **off** for JSON extraction | Same discipline as SAND-032 frozen posture, on a heavier replica |
+
+List $/hr (Modal base, no region mult., from topology brief): **4×B200 ~$25/hr** · **8×H200 ~$36/hr** vs L4 ~**$0.80/GPU-hr**. Idle warm burn dominates unless batches stay busy — same lesson as L4 cold vs warm, amplified.
+
+### What the $100–250 ask buys on this path
+
+| Phase | Deliverable for AMFAM | Ties to stipend |
+|---|---|---|
+| **A — Replay on L4 (Qwen)** | Larger n (500–1k / full 3.3k) with the **same** 1→2 L4 + L5 ladder metrics | Mid of $100–175 band |
+| **B — Topology smoke (DeepSeek open-weight)** | Bring-up on **4×B200** (or 8×H200): load, thinking-off JSON, n=20 smoke per class | Needs higher GPU $/hr — why $175–250 matters |
+| **C — Mirror ladder on DeepSeek Modal** | Same tables AMFAM already likes: **scale-out effectiveness**, **per-class coverage**, **$/1M tokens** warm vs API Flash | Capstone evidence that API winners can move on-prem/self-host with measured economics |
+
+**Slide line:** *“We already showed GPU scale-out is flat-cost on L4. The stipend funds replaying that exact effectiveness/coverage ladder on a DeepSeek-class open-weight Modal/vLLM tier — so the next GPU jump is evidence-backed, not a leap of faith.”*
+
+**Explicit non-claims:** DeepSeek-V4.1-Flash Modal self-host is **planned / fundable**, not **already measured** in MASTER. Do not put DeepSeek Modal quality numbers on the slide until Phase C lands.
 
 ---
 
