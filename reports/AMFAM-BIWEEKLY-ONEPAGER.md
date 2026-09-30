@@ -59,7 +59,7 @@
 | Same-model hosted Qwen3-8B | **$0.17–0.31**/1M — self-host AWQ is **~2.6–21×** cheaper per doc than renting that model |
 | Cold batches | **~2–22×** warm cost at current n — amortize boots with bigger batches or keep warm (&lt;~5.6 min gaps) |
 
-Campaign spend so far: ~**$14.40** Modal + &lt;**$1** API (SAND-032 alone **$2.80** of $5).
+Spend across every experiment: **$18.93**: $14.40 Modal GPU + $4.53 hosted API (SAND-032 alone **$2.80** of $5; ModernBERT run-3's $4.11 estimate unmetered, not included).
 
 ---
 
@@ -71,7 +71,7 @@ Campaign spend so far: ~**$14.40** Modal + &lt;**$1** API (SAND-032 alone **$2.8
 | **$175** | Mid: replicate five-class sweeps at n=500–1k + prompt/scorer iters on merger / subclass |
 | **$250** | ~155 h 2×L4 research time, or multi-model API + Modal scale-out on **~10×** current draw sizes |
 
-**Pitch line:** We’ve proven GPU scale-out is flat-cost and mapped where self-host vs API wins by class. **$100–250** funds the next order-of-magnitude on data volume so AMFAM sees production-scale confidence intervals — not another ~$15 pilot.
+**Pitch line:** We’ve proven GPU scale-out is flat-cost and mapped where self-host vs API wins by class. **$100–250** funds the next order-of-magnitude on data volume so AMFAM sees production-scale confidence intervals — not another ~$19 pilot.
 
 ---
 
