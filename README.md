@@ -136,9 +136,11 @@ next to the reports hub that cross-checks every number against its source file.
 **Reports site:** <https://llm-mailroom-services.github.io/mailroom-issues/>.
 The same three reports, rendered as static pages in `docs/index.html` and
 `docs/reports/` (inline SVG figures, no JavaScript, no external requests).
-GitHub Pages serves them by deploying from a branch, so no workflow is involved.
-One-time setup by an org admin: **Settings → Pages → Build and deployment →
-Deploy from a branch → `main` / `/docs`**.
+Regeneration writes those paths under `docs/` on the hub checkout (alongside
+`reports/`). GitHub Pages publishes the live site from the **`gh-pages`** branch
+with source folder **`/docs`** (legacy branch deploy; no Pages workflow in this
+repository). One-time setup by an org admin: **Settings → Pages → Build and
+deployment → Deploy from a branch → `gh-pages` / `/docs`**.
 
 **Slides:** every figure is also exported as a presentation-ready PNG (2× resolution,
 dark background included) under [`reports/viz/`](reports/viz/), mirroring

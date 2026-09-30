@@ -27,7 +27,9 @@ in a sibling repo and is tracked back here by issue link.
    `reports/`, `docs/index.html` and `docs/reports/` are generated outputs
    (markdown, SVG and static HTML with no JavaScript), not code: regenerate
    them from `Exios66/local-mailroom-sandbox`
-   (`reports/dashboard/export_hub_reports.py`), never hand-edit them.
+   (`reports/dashboard/export_hub_reports.py`), never hand-edit them. The live
+   reports site on GitHub Pages is served from branch **`gh-pages`**, folder
+   **`/docs`** (not from `main`).
 2. **Search before filing.** Never duplicate an open issue, epic, or RFC.
    Update the existing one instead (update, don't duplicate). If a closed issue
    already settled the question, reference it and reopen only if the decision
