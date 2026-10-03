@@ -6,7 +6,7 @@ answer decides which store the issue lands in.
 
 ## Decision tree
 
-```
+```text
 Does the issue name one package/repo and nothing else?
 │
 ├─ YES — is that repo the hub monorepo?
@@ -33,7 +33,7 @@ Does the issue name one package/repo and nothing else?
 File here (with the matching template and labels):
 
 | Concern | Template | Domain label example |
-|---|---|---|
+| --- | --- | --- |
 | Workstream spanning multiple repos | Epic | multiple `domain/*` |
 | Platform / architecture decision | RFC | platform label (`Langfuse`, `Braintrust`, `Modal`, …) |
 | Corpus program of work (publish + migration) | Epic | `HuggingFace`, `Datasets` |

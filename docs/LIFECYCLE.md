@@ -6,7 +6,7 @@ which label is true.
 
 ## The flow
 
-```
+```text
 filed ──▶ status/triage ──▶ (route + scope + prioritize) ──▶ status/accepted
                                                                │
                                ┌───────────────────────────────┴───────────────┐
@@ -56,7 +56,7 @@ implementing repo's issue/PRs in this thread as they appear.
 ## Stage 5 — Closed (with a reason, Law 7)
 
 | Close reason | Evidence required |
-|---|---|
+| --- | --- |
 | `fixed` | Link the commit/PR in the implementing repo |
 | `duplicate` | Link the surviving issue |
 | `invalid` | Misrouted / misfiled — where it actually went |

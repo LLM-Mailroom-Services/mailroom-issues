@@ -25,7 +25,7 @@ File an issue here when the work is **cross-repo**, **org-wide**, or needs a
 repository where the code lives.
 
 | Scenario | Example | Where it lands |
-|---|---|---|
+| --- | --- | --- |
 | Workstream spanning several repos | v9 corpus expansion (architecture, expansion, GT conformance, publish & migration) | this hub, as an epic (#9–#16) |
 | Platform / architecture decision | "Add Braintrust as the trace sink", "New specialist agents" | this hub, as an RFC |
 | Org-wide agent / governance design | "New Evaluation Tasks → New Specialists + Agents" | this hub (#7) |
@@ -48,7 +48,7 @@ map (roles, layers, links) is [docs/CONSTELLATION.md](docs/CONSTELLATION.md).
 Use the issue template that matches the shape of the work:
 
 | Template | For | Labels applied |
-|---|---|---|
+| --- | --- | --- |
 | [Bug report](.github/ISSUE_TEMPLATE/bug_report.yml) | Something is broken | `bug` + `domain/*` |
 | [Feature request](.github/ISSUE_TEMPLATE/feature_request.yml) | New capability or enhancement | `enhancement` + `domain/*` |
 | [Task / TODO](.github/ISSUE_TEMPLATE/task_todo.yml) | Small, single-owner work item | `type/task`-style scoping |
@@ -182,8 +182,8 @@ Licensed under the [MIT License](LICENSE), matching the org convention.
 **[The-Mailroom](https://github.com/Exios66/The-Mailroom)** ·
 **[agent-mailroom](https://github.com/Exios66/agent-mailroom)**
 
-<sub>Built by the governed evaluation family under
+Built by the governed evaluation family under
 [LLM-Mailroom-Services](https://github.com/LLM-Mailroom-Services)
-(Exios66 · grantmooslin) · 2026</sub>
+(Exios66 · grantmooslin) · 2026
 
 </div>

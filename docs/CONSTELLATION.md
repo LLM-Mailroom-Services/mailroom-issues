@@ -35,7 +35,7 @@ file exists so an issue can be routed to the right repo from the first write.
 ## Repository map
 
 | Layer | Repository | Pages / surface |
-|:---|:---|:---|
+| :--- | :--- | :--- |
 | **Issue hub (this repo)** | [`LLM-Mailroom-Services/mailroom-issues`](https://github.com/LLM-Mailroom-Services/mailroom-issues) | cross-repo issues, epics, RFCs, label taxonomy |
 | **Hub (central truth)** | [`LLM-Mailroom-Services/Digital-Mailroom`](https://github.com/LLM-Mailroom-Services/Digital-Mailroom) | [Dispatch Board](https://digital-mailroom-theta.vercel.app) |
 | **Corpus feed** | [`Exios66/Enron-Evaluation-Environment`](https://github.com/Exios66/Enron-Evaluation-Environment) | [exios66.github.io/Enron-Evaluation-Environment](https://exios66.github.io/Enron-Evaluation-Environment/) |
