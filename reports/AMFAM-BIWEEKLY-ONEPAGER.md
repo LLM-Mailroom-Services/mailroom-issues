@@ -90,6 +90,8 @@ Campaign spend so far: ~**$14.40** Modal + &lt;**$1** API (SAND-032 alone **$2.8
 
 **Methodology to mirror on any next GPU tier:** same corpus pin (**v9.1 / `ed7576b`**), same seed/draws where possible, report **wall · tok/s · $/doc · $/1M tokens · quality by class**, and separately report **1→N replica scale-out** vs **serving-knob ladder** so AMFAM sees both “more GPUs” and “better serving” effects.
 
+**Canonical write-up:** [NEXT-GPU-TIER-PROTOCOL.md](NEXT-GPU-TIER-PROTOCOL.md) — pre-spend checklist and Axis A/B reporting templates ([#224](https://github.com/LLM-Mailroom-Services/mailroom-issues/issues/224)).
+
 ### Why DeepSeek-V4.1-Flash needs a different GPU tier
 
 | Fact | Implication |
