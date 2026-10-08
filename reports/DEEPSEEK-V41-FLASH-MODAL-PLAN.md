@@ -34,7 +34,7 @@ Self-hosting **`deepseek-ai/DeepSeek-V4.1-Flash`** on Modal with vLLM is a **dif
 
 | Topology | Aggregate HBM | Fits 614 GB floor? | Modal base $/hr (no region mult.) |
 | --- | ---: | --- | ---: |
-| **4×B200** | 720–768 GB | Yes (recipe path) | **$25.00** (4 × $6.250) |
+| **4×B200** | 720 GB | Yes (recipe path) | **$25.00** (4 × $6.250) |
 | **8×H200** | 1,128 GB | Yes (recipe; Engram CPU offload common) | **$36.32** (8 × $4.540) |
 | 8×H100 80GB | 640 GB | Marginal on paper — **no published vLLM recipe; do not plan** | $31.59 |
 | 1×L4 / 2×L4 | 24–48 GB | **Impossible** | ~$0.80 / ~$1.60 |
