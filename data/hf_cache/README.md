@@ -16,8 +16,10 @@ can skip Hub downloads when revision content matches the manifest pin.
 
 Authoritative file list, sizes, and SHA-256 digests: [`MANIFEST.json`](MANIFEST.json).
 
-The Hub tag `v9.1` may point at a different commit than this pin; the manifest
-records that drift. Prefer the SHA in `MANIFEST.json` over the moving tag.
+The Hub tag `v9.1` targets `bc9eab28` (a README-only delta over the data
+commit); `MANIFEST.json` pins the data commit `ed7576b…` explicitly. Prefer
+the data SHA in `MANIFEST.json` for byte-level cache identity; the latest
+published tag is `v9.2` (`670e8bc6`), not adopted by this cache.
 
 ## How the constellation calls this cache
 
