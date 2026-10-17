@@ -18,7 +18,7 @@ This report covers what the self-hosted leg cost and how well it used the GPUs. 
 
 ## 1. Setup and method
 
-| | |
+| Item | Value |
 | --- | --- |
 | Model / engine | `Qwen/Qwen3-8B-AWQ` (23 runs, quant `awq`, `awq_marlin`, `max_model_len` 32768); `Qwen/Qwen3-8B` (1 run, quant `bf16`, `max_model_len` 16384); vLLM `v0.29.0` (not recorded in the S6 report), prefix caching on |
 | Frozen serving posture (L5) | `awq_marlin`, fp8 KV cache, thinking off, CUDA graphs on (`enforce_eager=off`), `max_num_seqs` 16 (32 on the c64 runs) |

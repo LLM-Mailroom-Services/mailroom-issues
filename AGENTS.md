@@ -92,7 +92,7 @@ brief returns a vague report — name the issue number, the exact scope, and the
 repositories/templates involved.
 
 | # | Specialty | `subagent_type` | Call it for |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 1 | Data, databases, datasets | `athena-database-agent` | Schema/DB issues, data QA, dataset selection & integration, ingestion pipelines |
 | 2 | HuggingFace & data science | `lucius` | HF dataset publish/calibration (e.g. the v9 corpus family), EDA, model eval |
 | 3 | Prompt engineering | `prompt-engineer` | Run-failure diagnosis, GEPA prompt versions, sorter/specialist prompt issues in llm-entity-extraction + llm-mailroom |

@@ -12,7 +12,7 @@ from **each applicable family** — a bug filed about the visualizer gets
 ## type — what the issue *is*
 
 | Label | Meaning |
-|---|---|
+| --- | --- |
 | `bug` | Something is broken |
 | `enhancement` | New feature or capability |
 | `documentation` | Docs-only change (READMEs, guides, wiki) |
@@ -23,7 +23,7 @@ from **each applicable family** — a bug filed about the visualizer gets
 ## domain — which repo/platform it *touches*
 
 | Label | Touches |
-|---|---|
+| --- | --- |
 | `Digital Mailroom` | The hub monorepo |
 | `LLM Mailroom` | The `llm-mailroom` LangGraph pipeline |
 | `Mailroom ML` | `LLM-Mailroom-Services/mailroom-ml` — ModernBERT train/infer/calibrate + intake-handoff contract. |
@@ -43,7 +43,7 @@ Cross-repo work carries **multiple** `domain/*` labels (one per touched repo).
 ## priority — how *urgent*
 
 | Label | Meaning |
-|---|---|
+| --- | --- |
 | `priority/critical` | Blocks other work; must land immediately |
 | `priority/high` | Lands before routine work |
 | `priority/medium` | Normal priority |
@@ -52,7 +52,7 @@ Cross-repo work carries **multiple** `domain/*` labels (one per touched repo).
 ## status — where it *is* (the lifecycle)
 
 | Label | Meaning |
-|---|---|
+| --- | --- |
 | `status/triage` | Freshly filed; needs routing, scoping, prioritization, or a decision |
 | `status/accepted` | Triaged and scheduled — owned or explicitly backlogged |
 | `status/in-progress` | Work is actively underway |
