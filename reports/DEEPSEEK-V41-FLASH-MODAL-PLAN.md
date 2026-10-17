@@ -46,10 +46,13 @@ With region multiplier 1.15–1.75×: 4×B200 ≈ **$28.75–$43.75/hr**; 8×H20
 | Field | Value |
 | --- | --- |
 | Hugging Face repo | [`deepseek-ai/DeepSeek-V4.1-Flash`](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash) |
-| License | **MIT** |
+| License | **MIT** ([LICENSE at the pinned revision](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/blob/314113f8a7dadb388215396ba5fbee2c610a04d6/LICENSE)) |
 | OpenRouter slug (API leg) | `deepseek/deepseek-v4.1-flash` |
 | Released | 2026-09-10 (DeepSeek + HF + OpenRouter) |
-| Hub revision pin for **Modal** | **Not pinned in this plan** — record the resolved HF revision in the first deploy issue after go; do **not** invent a commit SHA here |
+| Hub revision pin for **Modal** | [`314113f8a7dadb388215396ba5fbee2c610a04d6`](https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/tree/314113f8a7dadb388215396ba5fbee2c610a04d6) |
+| Revision verification | 2026-10-17 (UTC): [Hub API at the pinned revision](https://huggingface.co/api/models/deepseek-ai/DeepSeek-V4.1-Flash/revision/314113f8a7dadb388215396ba5fbee2c610a04d6) returned the matching model ID and full SHA, public/ungated status, safetensors weight files, and `license: mit`; pinned LICENSE returned HTTP 200 with MIT text |
+
+This pin records checkpoint identity for planning; it grants **no deployment or spend authorization**. After the hard spend gate clears, the deploy issue must carry this full SHA, and vLLM must use it as `--revision` rather than a moving branch such as `main`. Verification covered Hub metadata and license only; weights were not downloaded and Modal compatibility remains unmeasured.
 
 Retired aliases (`deepseek-v4-flash`, `deepseek-v4-flash-vision-exp`) route to V4.1-Flash on OpenRouter.
 
@@ -86,7 +89,7 @@ Mirror SAND-032 **discipline** (frozen prompts, thinking off for JSON extraction
 | Knob | Planned value | Notes |
 | --- | --- | --- |
 | Image | `vllm/vllm-openai:nightly` with **vLLM ≥ 0.30.0** | Architecture support landed 2026-09-10 |
-| Weights | `deepseek-ai/DeepSeek-V4.1-Flash` | Native MXFP4/MXFP8 checkpoint |
+| Weights | `deepseek-ai/DeepSeek-V4.1-Flash` | Native MXFP4/MXFP8 checkpoint; `--revision` must use the full Hub SHA recorded above |
 | Mailroom text-only | `--language-model-only` | Drops ViT; frees VRAM for KV |
 | Tokenizer / parsers | `--tokenizer-mode deepseek_v41`, `--tool-call-parser deepseek_v41`, `--reasoning-parser deepseek_v41` | Per vLLM recipe |
 | Reasoning | **`thinking: false`** (or explicit budget) on extraction JSON | Default thinking-on inflates completions |
@@ -165,7 +168,7 @@ Modal $/doc for DeepSeek remains **UNMEASURED** until a serving smoke exists; do
 
 ## Issue #225 scope checklist
 
-- [x] Confirm open-weight HF: `deepseek-ai/DeepSeek-V4.1-Flash` (MIT); revision pinned at deploy time, not in this plan
+- [x] Confirm open-weight HF: `deepseek-ai/DeepSeek-V4.1-Flash` (MIT); full Hub revision pinned and verified above on 2026-10-17 — deployment remains spend-gated
 - [x] Draft Modal deploy + vLLM flags runbook (4×B200 primary, 8×H200 fallback) — **planning text only**
 - [x] Map API baselines → expected Modal cells under [#224](NEXT-GPU-TIER-PROTOCOL.md) protocol — **PLANNED** cells, no fabricated Modal scores
 - [x] Explicit **SPEND-GATED** gate documented — **no deploy until Jack authorizes $/hr cap**
