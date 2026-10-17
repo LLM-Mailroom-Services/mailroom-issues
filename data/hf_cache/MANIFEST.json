@@ -2,7 +2,7 @@
   "dataset": "Lucius-Morningstar/mailroom-dataset",
   "revision": "ed7576b676343e0b402ec5412cded301e629bdee",
   "previous_revision": "46a4d3c240a36671cde0182fff4960f6b8b73aca",
-  "tag_note": "HF Hub tag v9.1 currently points at 70b94127faef6bfdac31d6adc426d2d09cb1c122, not ed7576b676343e0b402ec5412cded301e629bdee. Train parquet sizes match tip; this manifest pins ed7576b… explicitly.",
+  "tag_note": "HF Hub tag v9.1 targets bc9eab28 (README-only delta over the data commit ed7576b676343e0b402ec5412cded301e629bdee). This manifest pins the data commit ed7576b… explicitly; the latest published tag is v9.2 (670e8bc6; parent data commit d49f60a4), not adopted by this cache.",
   "configs": ["default", "ground_truth"],
   "files": [
     {
