@@ -6,6 +6,31 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.4` (validated labels, header restoration list)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.4/`: the rc.3 master after several validation
+  passes against the document text. These checks changed 1,983 cells.
+  - 600 `cuad_family` values now use the canonical key that the scorer compares, not the raw CUAD
+    folder name.
+  - 228 `governing_law` values held a whole clause. Each now holds the jurisdiction the clause
+    names, and that jurisdiction is found in the text. 13 clauses that name none stay as they
+    were and are queued.
+  - 218 `parties` lists lost defined-term aliases ("(\"Licensee\")") and clause fragments.
+  - 904 Hub correspondence `keywords` lists lost the maildir user, folder and timestamp tokens.
+    These replace Hub values, so they are listed for sign-off.
+  - 7 partial dates are now unlabeled and queued, and 10 entity lists lost duplicate entries.
+  - 16 reviewed corrections were applied. Each quotes the document: wrong or missing agreement
+    and effective dates, and one governing law.
+  - Coverage: 43,145 of 48,688 cells. The queues now hold 104 cells for a person and 1,005 Hub
+    overrides awaiting sign-off.
+- `queues/header_restoration.csv` (new): 735 correspondence documents whose labels quote the
+  original Enron email header (sender, recipients, date, subject). The cleaned corpus text
+  dropped that header. These labels are kept as truth, and the next official release restores
+  the listed header lines into `doc_text` so a model can read them. `MANIFEST.json` records the
+  count, the validation counts and the input sha256s. rc.1 to rc.3 are unchanged.
+- `mailroom_cache/README.md`, `mailroom_cache/REGISTRY.json`: regenerated. They list rc.4 and
+  describe the validation step and the header-restoration queue.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.3` (self-contained, magnitudes repaired)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.3/`: the same merged master as rc.2, with two
