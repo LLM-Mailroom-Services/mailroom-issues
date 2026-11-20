@@ -1,0 +1,13 @@
+{
+  "byte_cache": "data/hf_cache (MANIFEST.json pins this data_revision)",
+  "channel": "hf-revision",
+  "data_revision": "ed7576b676343e0b402ec5412cded301e629bdee",
+  "dataset": "Lucius-Morningstar/mailroom-dataset",
+  "hf_tag": "v9.1",
+  "labels_cached_here": false,
+  "note": "Pin only: the published labels are read from the Hub at tag_commit. Pre-releases under ../pre-release/ build on this release.",
+  "schema": "mailroom-cache/v1",
+  "status": "superseded family pin",
+  "tag_commit": "bc9eab280044befb51e19dda3071d290a8677f42",
+  "version": "9.1.0"
+}

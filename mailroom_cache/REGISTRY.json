@@ -1,0 +1,35 @@
+{
+  "current_release": "v9.3.0",
+  "dataset": "Lucius-Morningstar/mailroom-dataset",
+  "schema": "mailroom-cache/v1",
+  "versions": [
+    {
+      "channel": "hf-revision",
+      "data_revision": "ed7576b676343e0b402ec5412cded301e629bdee",
+      "hf_tag": "v9.1",
+      "path": "v9.1.0/hf-revision",
+      "status": "superseded family pin",
+      "tag_commit": "bc9eab280044befb51e19dda3071d290a8677f42",
+      "version": "9.1.0"
+    },
+    {
+      "channel": "hf-revision",
+      "data_revision": "7fd99b406ab1b627f43602dd6a3af5fb5b7a3ac5",
+      "hf_tag": "v9.3",
+      "path": "v9.3.0/hf-revision",
+      "status": "current family pin",
+      "tag_commit": "ff4ca546d4346991628c2616ae014afc15e9fe04",
+      "version": "9.3.0"
+    },
+    {
+      "base_release": "9.3.0",
+      "channel": "pre-release",
+      "labels_commit": "10c2adaf4896ebe2b86f1d449e71ff89200622f6",
+      "manifest_sha256": "eca998e8a31a1cb40b8747e059a6ed7e6197c1b1de50b057abe92e949979a9f0",
+      "path": "v9.3.0/pre-release/v9.3.1-rc.1",
+      "semver": "9.3.1-rc.1+hf.ff4ca546",
+      "status": "unpublished: repairs and enhancements over the Hub labels; a Hub label still wins field by field until a later dataset release publishes them",
+      "version": "9.3.1-rc.1"
+    }
+  ]
+}
