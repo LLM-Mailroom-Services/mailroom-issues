@@ -24,12 +24,24 @@
     {
       "base_release": "9.3.0",
       "channel": "pre-release",
+      "kind": "label-sets",
       "labels_commit": "10c2adaf4896ebe2b86f1d449e71ff89200622f6",
       "manifest_sha256": "eca998e8a31a1cb40b8747e059a6ed7e6197c1b1de50b057abe92e949979a9f0",
       "path": "v9.3.0/pre-release/v9.3.1-rc.1",
       "semver": "9.3.1-rc.1+hf.ff4ca546",
       "status": "unpublished: repairs and enhancements over the Hub labels; a Hub label still wins field by field until a later dataset release publishes them",
       "version": "9.3.1-rc.1"
+    },
+    {
+      "base_release": "9.3.0",
+      "channel": "pre-release",
+      "kind": "production-overlay",
+      "labels_commit": "10c2adaf4896ebe2b86f1d449e71ff89200622f6",
+      "manifest_sha256": "3b960919dd4723374f10ce66331d519c123d1cb20c3d3f8f74a0e78e872ba10b",
+      "path": "v9.3.0/pre-release/v9.3.1-rc.2",
+      "semver": "9.3.1-rc.2+hf.ff4ca546",
+      "status": "staged for the planned v10 release, not published: overlay/ is applied over the Hub v9.3 labels for production scoring; overrides await sign-off in queues/",
+      "version": "9.3.1-rc.2"
     }
   ]
 }

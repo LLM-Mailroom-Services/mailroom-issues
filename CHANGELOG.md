@@ -6,6 +6,17 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added — staged production-scoring overlay `v9.3.1-rc.2` (planned v10 labels)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.2/` — the merged master label set on Hub v9.3
+  (`ff4ca546`), staged for the planned v10 release and not published: `master/` (joined wide
+  CSV, per-cell provenance, completeness, summary; 43,154 of 48,688 cells labeled against 24,812
+  in the Hub labels), `overlay/<class>.jsonl` (the 18,441 labels that differ from the Hub,
+  101 of them Hub overrides marked `override: true`) for deployments to pull for production
+  scoring, and `queues/` (84 cells for a person; the 101 overrides awaiting sign-off).
+- `mailroom_cache/README.md`, `mailroom_cache/REGISTRY.json` — regenerated: both pre-release kinds
+  (`label-sets`, `production-overlay`) and how production applies the overlay.
+
 ### Added — SemVer label cache (`mailroom_cache/`)
 
 - `mailroom_cache/` — semantically versioned cache of the mailroom-dataset labels,

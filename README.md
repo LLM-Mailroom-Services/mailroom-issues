@@ -79,7 +79,7 @@ mailroom-issues/
 │   └── labels.py          # sync/audit .github/labels.json against the repo
 ├── data/
 │   └── hf_cache/          # colocated HF parquet cache (pin + MANIFEST — see data/hf_cache/README.md)
-├── mailroom_cache/        # generated SemVer label cache: vX.Y.0/{hf-revision,pre-release/vX.Y.P-rc.N} (see mailroom_cache/README.md)
+├── mailroom_cache/        # generated SemVer label cache + staged production-scoring overlay (see mailroom_cache/README.md)
 ├── reports/               # generated cross-repo evaluation reports (markdown + SVG; see reports/README.md)
 │   ├── MASTER-REPORT.md   # status + research findings: API leg, Modal + vLLM leg, ModernBERT
 │   ├── COST-COMPARISON-MODAL-VS-API.md   # cost per doc / per quality, break-even + optimal Modal scenario, sorter routes, spend
