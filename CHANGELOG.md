@@ -6,6 +6,23 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.3` (self-contained, magnitudes repaired)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.3/`: the same merged master as rc.2, with two
+  changes.
+  - `builder/` now holds the repaired-label builder's four output files, verified
+    byte-identical to builder commit `f0951873`, so the cut restages without that unmerged
+    branch. `MANIFEST.json` records the builder script's sha256 and commit; the script itself
+    stays in the sandbox (this repository holds no code).
+  - Twelve staged `termination_notice_period` values that the builder had cut to "eighty (180)
+    days" now carry the document's own spelling ("one hundred eighty (180) days").
+  - Coverage is unchanged: 43,154 of 48,688 cells, 101 Hub overrides awaiting sign-off, 84 cells
+    for a person. rc.1 and rc.2 are unchanged.
+- The sandbox scores production against a pinned cut: `config/staged_overlays.yaml` holds this
+  repository's commit and the cut's `MANIFEST.json` sha256 (`dataset.staged_overlay`).
+- `mailroom_cache/README.md`, `mailroom_cache/REGISTRY.json`: regenerated. They describe
+  `builder/` and how production pins a cut.
+
 ### Added — staged production-scoring overlay `v9.3.1-rc.2` (planned v10 labels)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.2/` — the merged master label set on Hub v9.3
