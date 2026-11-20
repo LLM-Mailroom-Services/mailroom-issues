@@ -6,6 +6,28 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.5` (review findings applied)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.5/`: rc.4 with the fixes from review.
+  - 23 merger `effective_date` labels are signing dates whose interim audit still waits for the
+    owner. They are now `disputed_unresolved` (not truth) and queued, until the owner decides
+    whether a signing date counts as the effective date.
+  - Party lists no longer hold suffix-only captures ("Inc.") or bare defined terms ("the
+    Company"). That cleaned 50 more `parties` lists, and the `acquirer` "Inc." and the `target`
+    "Holdings, Inc." are now unlabeled and queued.
+  - Two pairs of documents with identical text carried conflicting labels (`maud_clauses`, and
+    `parties` with `cuad_clauses`). Those 6 cells are disputed and queued for a person.
+  - Assist notice terms with the same period under another operator ("at least six (6)
+    months" against "six (6) months") are now queued for review instead of dropped. An extended
+    Hub value would now leave the Hub agreement and enter the overlay; no rc.5 cell is affected.
+  - The summary's `label_cells_targeted` is recomputed (48,688, previously 48,686).
+  - Coverage: 43,114 of 48,688 cells. The queues hold 144 cells for a person and 1,005 Hub
+    overrides awaiting sign-off. `header_restoration.csv` is unchanged (735). rc.1 to rc.4 are
+    unchanged.
+- `mailroom_cache/README.md`, `mailroom_cache/REGISTRY.json`: regenerated. They list rc.5 and
+  describe both label paths (label-sets precedence, and production-overlay replacement), the
+  non-Hub scope of validation and the rc.5 rules.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.4` (validated labels, header restoration list)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.4/`: the rc.3 master after several validation
