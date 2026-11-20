@@ -53,7 +53,10 @@ applies reviewed corrections (a populated one must quote the document text). Fro
 drops bare defined terms ("the Company") and suffix-only captures ("Inc.") from `parties` and
 unlabels a name field that holds only one. It holds back as `disputed_unresolved` an interim
 value whose audit waits for the owner, and the conflicting values of documents with the same
-text. Both go to `queues/needs_human.csv`.
+text. Both go to `queues/needs_human.csv`. From rc.6 a party, advisor or counsel name loses a
+describing lead-in ("the retention of X", "Subsidiary of Y, and X" become X; the evidence quote is
+kept), and the master summary's `outputs_sha256` hashes the `master/` files, with the builder's
+own digests under `builder_outputs_sha256`.
 
 Some correspondence labels quote the original Enron email header (sender, recipients, date,
 subject). The cleaned corpus text dropped that header, so `queues/header_restoration.csv` lists
@@ -76,6 +79,7 @@ restores those lines into `doc_text`, so a model can read what the labels expect
 | `9.3.1-rc.3` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.3/` | production-overlay on `9.3.0`; sandbox labels `10c2adaf` |
 | `9.3.1-rc.4` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.4/` | production-overlay on `9.3.0`; sandbox labels `dbf16215` |
 | `9.3.1-rc.5` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.5/` | production-overlay on `9.3.0`; sandbox labels `9e641d99` |
+| `9.3.1-rc.6` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.6/` | production-overlay on `9.3.0`; sandbox labels `9e641d99` |
 
 The current family pin is `v9.3.0`. Two label paths exist, and a run uses
 one of them. With the `label-sets` layers, precedence is the Hub label, then interim truth, then

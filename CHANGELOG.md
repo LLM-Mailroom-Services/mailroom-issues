@@ -6,6 +6,21 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.6` (rc.5 review findings applied)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.6/`: rc.5 with three name cells corrected and the
+  master summary's digests relabelled.
+  - `DOC-cbc95a0d161254eb` `financial_advisors` drop the "the retention of" lead-in (now "Keefe,
+    Bruyette & Woods, Inc." and "Boenning & Scattergood, Inc.").
+  - `DOC-d9157f4ad78024e5` `merger_sub` and its `parties` element are now "Gibraltar Merger Sub
+    Inc." without the preceding "Subsidiary of Standard Industries Holdings Inc., and". The
+    evidence quotes are unchanged.
+  - The master summary's `outputs_sha256` now hashes the released `master/` files and matches
+    `MANIFEST.json`. The builder's own digests move to `builder_outputs_sha256`, and
+    `needs_human` reports the queue length (144).
+  - Everything else is as in rc.5: coverage 43,114 of 48,688 cells, 144 cells for a person,
+    1,005 overrides awaiting sign-off and 735 header restorations. rc.1 to rc.5 are unchanged.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.5` (review findings applied)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.5/`: rc.4 with the fixes from review.
