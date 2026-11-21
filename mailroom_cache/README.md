@@ -56,7 +56,12 @@ value whose audit waits for the owner, and the conflicting values of documents w
 text. Both go to `queues/needs_human.csv`. From rc.6 a party, advisor or counsel name loses a
 describing lead-in ("the retention of X", "Subsidiary of Y, and X" become X; the evidence quote is
 kept), and the master summary's `outputs_sha256` hashes the `master/` files, with the builder's
-own digests under `builder_outputs_sha256`.
+own digests under `builder_outputs_sha256`. From rc.7 `parties` also loses party-role words ("the
+Customer", "Member"), descriptions of a party ("an individual", "your") and alias clauses ("d/b/a
+X"), and a role label before a name is trimmed ("the Supplier: X" becomes X). A merger
+`effective_date` that is only the signing date follows the owner's answer in the interim audit
+(`signing_date_policy` in the manifest): held back as disputed while it is pending, cleared or
+kept once it is recorded.
 
 Some correspondence labels quote the original Enron email header (sender, recipients, date,
 subject). The cleaned corpus text dropped that header, so `queues/header_restoration.csv` lists
@@ -80,6 +85,7 @@ restores those lines into `doc_text`, so a model can read what the labels expect
 | `9.3.1-rc.4` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.4/` | production-overlay on `9.3.0`; sandbox labels `dbf16215` |
 | `9.3.1-rc.5` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.5/` | production-overlay on `9.3.0`; sandbox labels `9e641d99` |
 | `9.3.1-rc.6` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.6/` | production-overlay on `9.3.0`; sandbox labels `9e641d99` |
+| `9.3.1-rc.7` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.7/` | production-overlay on `9.3.0`; sandbox labels `9e641d99` |
 
 The current family pin is `v9.3.0`. Two label paths exist, and a run uses
 one of them. With the `label-sets` layers, precedence is the Hub label, then interim truth, then

@@ -6,6 +6,22 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.7` (party-role words, merger signing dates)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.7/`: rc.6 with two more stager rules.
+  - Contract and merger `parties` lose party-role words ("the Customer", "Licensee", "Member"),
+    descriptions of a party ("an individual", "your", "the party named above") and alias clauses
+    ("d/b/a X"); a role label before a name is trimmed ("the Supplier: X" becomes X). 180
+    `parties` cells change. `DOC-e37d7016ebb3e7bc` held only "Member" and "Franchisee", so its
+    `parties` is now unlabeled and queued.
+  - A merger `effective_date` that is only the signing date follows the owner's answer on the
+    `signing_date_as_effective_date` rows of the sandbox interim audit. That answer is still
+    pending, so the 90 generated merger effective dates (all signing dates) are now held as
+    `disputed_unresolved` and queued, alongside the 23 audited ones already held since rc.5. The
+    manifest records `signing_date_policy: pending`.
+  - Coverage 43,023 of 48,688 cells, 235 cells for a person, 1,005 overrides awaiting sign-off
+    and 735 header restorations. rc.1 to rc.6 are unchanged.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.6` (rc.5 review findings applied)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.6/`: rc.5 with three name cells corrected and the

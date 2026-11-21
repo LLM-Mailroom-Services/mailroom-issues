@@ -86,6 +86,17 @@
       "semver": "9.3.1-rc.6+hf.ff4ca546",
       "status": "staged for the planned v10 release, not published: overlay/ is applied over the Hub v9.3 labels for production scoring; overrides await sign-off in queues/",
       "version": "9.3.1-rc.6"
+    },
+    {
+      "base_release": "9.3.0",
+      "channel": "pre-release",
+      "kind": "production-overlay",
+      "labels_commit": "9e641d997f18c0dd43cd6052bad51df79c3d7388",
+      "manifest_sha256": "438ce30a6661c4c00aa2f10acc6b20a2df76210cccdb6ca1d3a80aa523b04d19",
+      "path": "v9.3.0/pre-release/v9.3.1-rc.7",
+      "semver": "9.3.1-rc.7+hf.ff4ca546",
+      "status": "staged for the planned v10 release, not published: overlay/ is applied over the Hub v9.3 labels for production scoring; overrides await sign-off in queues/",
+      "version": "9.3.1-rc.7"
     }
   ]
 }
