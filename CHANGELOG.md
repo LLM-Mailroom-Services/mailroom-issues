@@ -6,6 +6,125 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.7` (party-role words, merger signing dates)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.7/`: rc.6 with two more stager rules.
+  - Contract and merger `parties` lose party-role words ("the Customer", "Licensee", "Member"),
+    descriptions of a party ("an individual", "your", "the party named above") and alias clauses
+    ("d/b/a X"); a role label before a name is trimmed ("the Supplier: X" becomes X). 180
+    `parties` cells change. `DOC-e37d7016ebb3e7bc` held only "Member" and "Franchisee", so its
+    `parties` is now unlabeled and queued.
+  - A merger `effective_date` that is only the signing date follows the owner's answer on the
+    `signing_date_as_effective_date` rows of the sandbox interim audit. That answer is still
+    pending, so the 90 generated merger effective dates (all signing dates) are now held as
+    `disputed_unresolved` and queued, alongside the 23 audited ones already held since rc.5. The
+    manifest records `signing_date_policy: pending`.
+  - Coverage 43,023 of 48,688 cells, 235 cells for a person, 1,005 overrides awaiting sign-off
+    and 735 header restorations. rc.1 to rc.6 are unchanged.
+
+### Added: staged production-scoring overlay `v9.3.1-rc.6` (rc.5 review findings applied)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.6/`: rc.5 with three name cells corrected and the
+  master summary's digests relabelled.
+  - `DOC-cbc95a0d161254eb` `financial_advisors` drop the "the retention of" lead-in (now "Keefe,
+    Bruyette & Woods, Inc." and "Boenning & Scattergood, Inc.").
+  - `DOC-d9157f4ad78024e5` `merger_sub` and its `parties` element are now "Gibraltar Merger Sub
+    Inc." without the preceding "Subsidiary of Standard Industries Holdings Inc., and". The
+    evidence quotes are unchanged.
+  - The master summary's `outputs_sha256` now hashes the released `master/` files and matches
+    `MANIFEST.json`. The builder's own digests move to `builder_outputs_sha256`, and
+    `needs_human` reports the queue length (144).
+  - Everything else is as in rc.5: coverage 43,114 of 48,688 cells, 144 cells for a person,
+    1,005 overrides awaiting sign-off and 735 header restorations. rc.1 to rc.5 are unchanged.
+
+### Added: staged production-scoring overlay `v9.3.1-rc.5` (review findings applied)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.5/`: rc.4 with the fixes from review.
+  - 23 merger `effective_date` labels are signing dates whose interim audit still waits for the
+    owner. They are now `disputed_unresolved` (not truth) and queued, until the owner decides
+    whether a signing date counts as the effective date.
+  - Party lists no longer hold suffix-only captures ("Inc.") or bare defined terms ("the
+    Company"). That cleaned 50 more `parties` lists, and the `acquirer` "Inc." and the `target`
+    "Holdings, Inc." are now unlabeled and queued.
+  - Two pairs of documents with identical text carried conflicting labels (`maud_clauses`, and
+    `parties` with `cuad_clauses`). Those 6 cells are disputed and queued for a person.
+  - Assist notice terms with the same period under another operator ("at least six (6)
+    months" against "six (6) months") are now queued for review instead of dropped. An extended
+    Hub value would now leave the Hub agreement and enter the overlay; no rc.5 cell is affected.
+  - The summary's `label_cells_targeted` is recomputed (48,688, previously 48,686).
+  - Coverage: 43,114 of 48,688 cells. The queues hold 144 cells for a person and 1,005 Hub
+    overrides awaiting sign-off. `header_restoration.csv` is unchanged (735). rc.1 to rc.4 are
+    unchanged.
+- `mailroom_cache/README.md`, `mailroom_cache/REGISTRY.json`: regenerated. They list rc.5 and
+  describe both label paths (label-sets precedence, and production-overlay replacement), the
+  non-Hub scope of validation and the rc.5 rules.
+
+### Added: staged production-scoring overlay `v9.3.1-rc.4` (validated labels, header restoration list)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.4/`: the rc.3 master after several validation
+  passes against the document text. These checks changed 1,983 cells.
+  - 600 `cuad_family` values now use the canonical key that the scorer compares, not the raw CUAD
+    folder name.
+  - 228 `governing_law` values held a whole clause. Each now holds the jurisdiction the clause
+    names, and that jurisdiction is found in the text. 13 clauses that name none stay as they
+    were and are queued.
+  - 218 `parties` lists lost defined-term aliases ("(\"Licensee\")") and clause fragments.
+  - 904 Hub correspondence `keywords` lists lost the maildir user, folder and timestamp tokens.
+    These replace Hub values, so they are listed for sign-off.
+  - 7 partial dates are now unlabeled and queued, and 10 entity lists lost duplicate entries.
+  - 16 reviewed corrections were applied. Each quotes the document: wrong or missing agreement
+    and effective dates, and one governing law.
+  - Coverage: 43,145 of 48,688 cells. The queues now hold 104 cells for a person and 1,005 Hub
+    overrides awaiting sign-off.
+- `queues/header_restoration.csv` (new): 735 correspondence documents whose labels quote the
+  original Enron email header (sender, recipients, date, subject). The cleaned corpus text
+  dropped that header. These labels are kept as truth, and the next official release restores
+  the listed header lines into `doc_text` so a model can read them. `MANIFEST.json` records the
+  count, the validation counts and the input sha256s. rc.1 to rc.3 are unchanged.
+- `mailroom_cache/README.md`, `mailroom_cache/REGISTRY.json`: regenerated. They list rc.4 and
+  describe the validation step and the header-restoration queue.
+
+### Added: staged production-scoring overlay `v9.3.1-rc.3` (self-contained, magnitudes repaired)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.3/`: the same merged master as rc.2, with two
+  changes.
+  - `builder/` now holds the repaired-label builder's four output files, verified
+    byte-identical to builder commit `f0951873`, so the cut restages without that unmerged
+    branch. `MANIFEST.json` records the builder script's sha256 and commit; the script itself
+    stays in the sandbox (this repository holds no code).
+  - Twelve staged `termination_notice_period` values that the builder had cut to "eighty (180)
+    days" now carry the document's own spelling ("one hundred eighty (180) days").
+  - Coverage is unchanged: 43,154 of 48,688 cells, 101 Hub overrides awaiting sign-off, 84 cells
+    for a person. rc.1 and rc.2 are unchanged.
+- The sandbox scores production against a pinned cut: `config/staged_overlays.yaml` holds this
+  repository's commit and the cut's `MANIFEST.json` sha256 (`dataset.staged_overlay`).
+- `mailroom_cache/README.md`, `mailroom_cache/REGISTRY.json`: regenerated. They describe
+  `builder/` and how production pins a cut.
+
+### Added — staged production-scoring overlay `v9.3.1-rc.2` (planned v10 labels)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.2/` — the merged master label set on Hub v9.3
+  (`ff4ca546`), staged for the planned v10 release and not published: `master/` (joined wide
+  CSV, per-cell provenance, completeness, summary; 43,154 of 48,688 cells labeled against 24,812
+  in the Hub labels), `overlay/<class>.jsonl` (the 18,441 labels that differ from the Hub,
+  101 of them Hub overrides marked `override: true`) for deployments to pull for production
+  scoring, and `queues/` (84 cells for a person; the 101 overrides awaiting sign-off).
+- `mailroom_cache/README.md`, `mailroom_cache/REGISTRY.json` — regenerated: both pre-release kinds
+  (`label-sets`, `production-overlay`) and how production applies the overlay.
+
+### Added — SemVer label cache (`mailroom_cache/`)
+
+- `mailroom_cache/` — semantically versioned cache of the mailroom-dataset labels,
+  generated by `scripts/export_mailroom_cache.py` in `Exios66/local-mailroom-sandbox`.
+  One folder per dataset release (`v9.1.0`, `v9.3.0`) with an `hf-revision/` pin
+  manifest; unpublished label work nests under it as an immutable pre-release.
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.1/` — first pre-release on Hub tag v9.3
+  (`ff4ca546`): the full 3,302-row repaired label set (two accepted subclass repairs),
+  the review records behind the repairs, the near-gold catalogs, overlay and
+  supplementary output, and the repaired interim labels; sha256 for every file in
+  its `MANIFEST.json`, all versions in `mailroom_cache/REGISTRY.json`.
+- `README.md` (repository tree) and `AGENTS.md` (law 1: generated outputs) name the cache.
+
 ### Added — next GPU tier evaluation protocol (#224)
 
 - `reports/NEXT-GPU-TIER-PROTOCOL.md` — repeatable methodology to compare future Modal GPU SKUs to SAND-032 on L4: corpus pin (`ed7576b6…`, `ground_truth` / `all`, seed 42, nested 20 ⊂ 50 ⊂ 100), metrics dictionary (busy-window $, tok/s per GPU, $/doc, $/1M tokens, quality by class), separate Axis A (replica scale-out) and Axis B (serving-knob ladder) templates, pre-spend checklist, and pointers to hub L4 baselines; links [#225](https://github.com/LLM-Mailroom-Services/mailroom-issues/issues/225) for DeepSeek-class planning.

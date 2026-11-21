@@ -1,0 +1,241 @@
+{
+  "base_hf": {
+    "data_revision": "7fd99b406ab1b627f43602dd6a3af5fb5b7a3ac5",
+    "dataset": "Lucius-Morningstar/mailroom-dataset",
+    "hf_tag": "v9.3",
+    "labels_revision": "ccd040f6a1b6b414bdefd161cdc622b68f6dacf8",
+    "tag_commit": "ff4ca546d4346991628c2616ae014afc15e9fe04"
+  },
+  "base_release": "9.3.0",
+  "channel": "pre-release",
+  "files": {
+    "enhancements/gold-overlay/MANIFEST.json": {
+      "bytes": 1373,
+      "sha256": "c9d3b9594c36b5058d436474e9ec7b361a5125560c47583fb2f12f6f9e678ba6"
+    },
+    "enhancements/gold-overlay/contract.jsonl": {
+      "bytes": 461111,
+      "lines": 110,
+      "sha256": "46930027eae7579db19dd12ec08c8f5ab9b36dcab3b202d1e979e51b631f861b"
+    },
+    "enhancements/gold-overlay/corporate_record.jsonl": {
+      "bytes": 753556,
+      "lines": 425,
+      "sha256": "432a99f5b931e759e48b1c47c2e3e13b9c0a098b6b88ef892751c6c56fabf79a"
+    },
+    "enhancements/gold-overlay/correspondence.jsonl": {
+      "bytes": 3548318,
+      "lines": 1000,
+      "sha256": "b9a8a001095a1eb08af3a94b95927daffea7325c6c3f32b0f5f62a62b2b42f1b"
+    },
+    "enhancements/gold-supplementary/MANIFEST.json": {
+      "bytes": 12496,
+      "sha256": "4c083cc3f16c08c74034cc19a1b37a348a465afc6c18f19b44e2f5a5840c5df6"
+    },
+    "enhancements/gold-supplementary/contract.jsonl": {
+      "bytes": 135454,
+      "lines": 302,
+      "sha256": "e806499c8395815e0a7d4c612116770c3b4f3dee8594b8e946854d4d8d29bc0e"
+    },
+    "enhancements/gold-supplementary/corporate_record.jsonl": {
+      "bytes": 118424,
+      "lines": 420,
+      "sha256": "e72a8a0451e0490db2d561dfe3af33e71c9f0fe5816196be43845f4ceed4cae4"
+    },
+    "enhancements/gold-supplementary/correspondence.jsonl": {
+      "bytes": 297929,
+      "lines": 1091,
+      "sha256": "64f472cc3fff363fa13ca858bf85de094a9281d92ccb43c8358d12691ea877b7"
+    },
+    "enhancements/gold/MANIFEST.json": {
+      "bytes": 13508,
+      "sha256": "02d363302404c26c1d5bf248d99d29b3b14a843f9e911d591247e8fd36bffc26"
+    },
+    "enhancements/gold/contract.jsonl": {
+      "bytes": 2485320,
+      "lines": 1987,
+      "sha256": "edf2401362b5885d1cae98927ee72c75334214722602f29d086de127d8b357d3"
+    },
+    "enhancements/gold/corporate_record.jsonl": {
+      "bytes": 1618286,
+      "lines": 1207,
+      "sha256": "cce111a1cae4bda15b15fdc12c426ee05de035029ac67a5cb11bb472c8a8c462"
+    },
+    "enhancements/gold/correspondence.jsonl": {
+      "bytes": 9206734,
+      "lines": 6994,
+      "sha256": "63cb3e9abd61e36412043c7aa877cf1b9d7ac117e2c95653dc2f3ab03b03f209"
+    },
+    "enhancements/interim/MANIFEST.json": {
+      "bytes": 4833,
+      "sha256": "4e3a2857f85d28f726c251606b00e0b58f7904ea6c99c2dc510a12d9e62c6757"
+    },
+    "enhancements/interim/README.md": {
+      "bytes": 6151,
+      "sha256": "32c549d2108d65dc610f2700a09e583717ca45285a7d75c9a8b00b1bcaedb71d"
+    },
+    "enhancements/interim/contract.jsonl": {
+      "bytes": 31534,
+      "lines": 45,
+      "sha256": "17802d8b410cf32efffe6bd758365ef13ce2e6353c40079bcde088538c0aff44"
+    },
+    "enhancements/interim/corporate_record.jsonl": {
+      "bytes": 242721,
+      "lines": 219,
+      "sha256": "ce4a58b56ef7d69bb7e0227e63213ab382a5bc24356dd5605594627badfff495"
+    },
+    "enhancements/interim/correspondence.jsonl": {
+      "bytes": 2009053,
+      "lines": 813,
+      "sha256": "a871a63fbed494f0e6fffe699abadd5c084368710d559352bf13670d1d042f5f"
+    },
+    "enhancements/interim/insurance_claim.jsonl": {
+      "bytes": 281471,
+      "lines": 536,
+      "sha256": "5396ceb39cd72f110184212adbecf28167d0e868a9d1b189741a164377230c97"
+    },
+    "enhancements/interim/merger_agreement.jsonl": {
+      "bytes": 26452,
+      "lines": 30,
+      "sha256": "033732dc412f2fc4594283e909d42c3e9a55e27dd623ba7d1ea5862c41be1753"
+    },
+    "repairs/full-label-set/mailroom_dataset_v9.3.1-rc.1_labels.csv": {
+      "bytes": 3954593,
+      "lines": 3365,
+      "sha256": "e9fbb9e660cd347256d9173998f311ef938ae7c64f6078ae2b6a54bf8da88431"
+    },
+    "repairs/review/INTERIM_AUDIT.md": {
+      "bytes": 12076,
+      "sha256": "930760f3cf93565e6c1e4cdfb31d4f93fd837a591cb70bab0dba8b60065ce189"
+    },
+    "repairs/review/README.md": {
+      "bytes": 18734,
+      "sha256": "4f632d3dbc1fc57879f3b673457f48296f30651dc209f9241ce797d22de7e8d4"
+    },
+    "repairs/review/VALIDATION.md": {
+      "bytes": 14320,
+      "sha256": "474ca3edaf42f93a0b0d47c4e2ec7f60ce1792fb55739824cbc35568de5f585a"
+    },
+    "repairs/review/consensus_votes.jsonl": {
+      "bytes": 61453,
+      "lines": 131,
+      "sha256": "b6d585c3f07a93db9a8bde9be534bef7d07c784d317a7d3c5d6d182411bf9c18"
+    },
+    "repairs/review/contract_value_review.jsonl": {
+      "bytes": 2867,
+      "lines": 7,
+      "sha256": "ba4aa45900f5f7176fcc505003ae28c4029a2c4ee3e8f9d54a9015bdb63f98c8"
+    },
+    "repairs/review/decisions.jsonl": {
+      "bytes": 938438,
+      "lines": 3304,
+      "sha256": "e6a8d8ed512e7de86b0be9a58ed3e97a1750ed6b94c8d2ce9bc64049539f4a6f"
+    },
+    "repairs/review/decisions_held.jsonl": {
+      "bytes": 477,
+      "lines": 1,
+      "sha256": "17985b4507ac2512944282408117e102d36c7b9628680dc4c0bd5e5a958a17b3"
+    },
+    "repairs/review/decisions_supersede.jsonl": {
+      "bytes": 6066,
+      "lines": 11,
+      "sha256": "54fa3fdb1860a0f8d2ebaf795945597b8c830bebe7211cc2c6de2d62e455987e"
+    },
+    "repairs/review/human_reviews.jsonl": {
+      "bytes": 3749,
+      "lines": 8,
+      "sha256": "05244782961983ceb741946ee25aa89ce45b5726dc0de9c2dbfe3b50b7624a1b"
+    },
+    "repairs/review/interim_audit.jsonl": {
+      "bytes": 618142,
+      "lines": 2682,
+      "sha256": "25d86e2f7e0901b9108fc3af15e92655038a644d1e7c8485ae11fcbc54d9e633"
+    },
+    "repairs/review/interim_reviews.jsonl": {
+      "bytes": 1783904,
+      "lines": 1894,
+      "sha256": "dba4e107a0d43120a34d996c8734f6126826365adaaa324b45112e3ad4389c83"
+    },
+    "repairs/review/policy_questions.json": {
+      "bytes": 8676,
+      "sha256": "6cae6fd194367b236e8cf40ca5ad1aa0a14979f9386650f90ff83e9491906a6e"
+    },
+    "repairs/review/subclass_corrections.jsonl": {
+      "bytes": 2430,
+      "lines": 3,
+      "sha256": "266304cedebadb469c1c212f0328da9c5852d9558705114f4a0a8a06210baaa3"
+    },
+    "repairs/review/verdicts.jsonl": {
+      "bytes": 3004061,
+      "lines": 8286,
+      "sha256": "5066bb5a0f90246b2f1f3c55d31c37f110f7bf0485c6cda9a2fb542a45a6e3eb"
+    }
+  },
+  "full_label_set": {
+    "classes": {
+      "contract": 600,
+      "corporate_record": 450,
+      "correspondence": 1000,
+      "insurance_claim": 1100,
+      "merger_agreement": 152
+    },
+    "columns": 93,
+    "original_filename": "mailroom_dataset_v9.3_label_repaired_copy.csv",
+    "path": "repairs/full-label-set/mailroom_dataset_v9.3.1-rc.1_labels.csv",
+    "rows": 3302,
+    "splits": {
+      "test": 323,
+      "train": 2979
+    },
+    "subclass_repairs": [
+      {
+        "doc_class": "corporate_record",
+        "document_id": "DOC-59d072355f2c3b14",
+        "hub_v9_3": "board_resolution",
+        "repaired": "charter_amendment"
+      },
+      {
+        "doc_class": "merger_agreement",
+        "document_id": "DOC-cf1ba08690065ad0",
+        "hub_v9_3": "other",
+        "repaired": "all_cash"
+      }
+    ]
+  },
+  "schema": "mailroom-cache/v1",
+  "semver": "9.3.1-rc.1+hf.ff4ca546",
+  "sets": {
+    "enhancements/gold": {
+      "files": 4,
+      "lines": 10188,
+      "source": "data/labels/gold"
+    },
+    "enhancements/gold-overlay": {
+      "files": 4,
+      "lines": 1535,
+      "source": "data/labels/gold-overlay"
+    },
+    "enhancements/gold-supplementary": {
+      "files": 4,
+      "lines": 1813,
+      "source": "data/labels/gold-supplementary"
+    },
+    "enhancements/interim": {
+      "files": 7,
+      "lines": 1643,
+      "source": "data/labels/interim"
+    },
+    "repairs/review": {
+      "files": 14,
+      "lines": 16327,
+      "source": "data/labels/review"
+    }
+  },
+  "source": {
+    "builder": "scripts/export_mailroom_cache.py",
+    "labels_commit": "10c2adaf4896ebe2b86f1d449e71ff89200622f6",
+    "repo": "Exios66/local-mailroom-sandbox"
+  },
+  "status": "unpublished: repairs and enhancements over the Hub labels; a Hub label still wins field by field until a later dataset release publishes them",
+  "version": "9.3.1-rc.1"
+}

@@ -1,0 +1,156 @@
+{
+  "assist_join": {
+    "kept_builder_duplicate_keeper": 5,
+    "kept_builder_only": 7,
+    "notice_filled": 4,
+    "notice_refused_terms": 27,
+    "notice_same_terms": 126,
+    "notice_terms_added": 9,
+    "notice_terms_total": 13,
+    "queued_notice": 6
+  },
+  "base_hf": {
+    "data_revision": "7fd99b406ab1b627f43602dd6a3af5fb5b7a3ac5",
+    "dataset": "Lucius-Morningstar/mailroom-dataset",
+    "hf_tag": "v9.3",
+    "tag_commit": "ff4ca546d4346991628c2616ae014afc15e9fe04"
+  },
+  "base_release": "9.3.0",
+  "channel": "pre-release",
+  "coverage": {
+    "cells_labeled": 43154,
+    "cells_labeled_hub_v9_3": 24812,
+    "cells_targeted": 48688,
+    "completeness": 0.8863
+  },
+  "files": {
+    "builder/mailroom_dataset_v9.3_label_repaired.csv": {
+      "bytes": 3942781,
+      "lines": 3365,
+      "sha256": "f7f8d907588f0158d24f47679c548c7ccb74cab0cb29c2de83c7c5c8b8c80be4"
+    },
+    "builder/mailroom_dataset_v9.3_label_repaired_field_completeness.csv": {
+      "bytes": 6115,
+      "lines": 75,
+      "sha256": "ebd035b6013326a1c75a7f54093c0e0e32a3a87af02f0a08f7069196882979ad"
+    },
+    "builder/mailroom_dataset_v9.3_label_repaired_label_provenance.csv": {
+      "bytes": 13284434,
+      "lines": 48751,
+      "sha256": "25756ef1c74d5fe3e604e9c791a97c372bc7ddd79b3a2e6d2398b75ac956a9de"
+    },
+    "builder/mailroom_dataset_v9.3_label_repaired_summary.json": {
+      "bytes": 4684,
+      "sha256": "95f9ac111790dc4f95aa3d667a984e2c0d68e95d43a6c393f6b2b169cd38516b"
+    },
+    "master/mailroom_dataset_v9.3.1-rc.3_field_completeness.csv": {
+      "bytes": 6040,
+      "lines": 75,
+      "sha256": "a8934a5b71ef775d5add01c37b55ed2b0affe7df6694662d65ed6361e974014b"
+    },
+    "master/mailroom_dataset_v9.3.1-rc.3_label_provenance.csv": {
+      "bytes": 13240018,
+      "lines": 48751,
+      "sha256": "ada39ed959529da73fd03a39ddb94cdb20d49b9d0d93fe3dce90f5f55280f9c3"
+    },
+    "master/mailroom_dataset_v9.3.1-rc.3_labels.csv": {
+      "bytes": 3939959,
+      "lines": 3365,
+      "sha256": "4cb43e57d97201f799f5e6223b44c3f931918adbbc7f9ac2f94a8db7885faa9e"
+    },
+    "master/mailroom_dataset_v9.3.1-rc.3_summary.json": {
+      "bytes": 5069,
+      "sha256": "7f8b24bdf4419ea8a19e52de2c5a40fca5ee6fcad365e80cc421625bbb066ad3"
+    },
+    "overlay/contract.jsonl": {
+      "bytes": 1935428,
+      "lines": 600,
+      "sha256": "716efea8a056e571b2255e406867fcfb8b97b6be8489249a2e62ed4cbff69bb2"
+    },
+    "overlay/corporate_record.jsonl": {
+      "bytes": 510615,
+      "lines": 445,
+      "sha256": "173f3658ddc09223b71bc332ce284e48a3c12b766909a0ff6552a212bdbf3a45"
+    },
+    "overlay/correspondence.jsonl": {
+      "bytes": 2756457,
+      "lines": 1000,
+      "sha256": "72c92d7dcdc44ae8d886c44e9071ff924242ba9971c28966aadd5b6122161871"
+    },
+    "overlay/insurance_claim.jsonl": {
+      "bytes": 359734,
+      "lines": 1100,
+      "sha256": "8c3fc2129c7d1c5ce35f3d8f39795ca0223d8931dedf190773385e25a54b515d"
+    },
+    "overlay/merger_agreement.jsonl": {
+      "bytes": 490461,
+      "lines": 152,
+      "sha256": "93137bc5d50bba1912eb098197cbb3f11364bfaf0457829d609fdd429b2daba8"
+    },
+    "queues/gold_override_signoff.csv": {
+      "bytes": 14480,
+      "lines": 102,
+      "sha256": "f86ed5715c4aae6fb8dc3601e6573c7ccef52ecc225abcd58a10bba5a685b332"
+    },
+    "queues/needs_human.csv": {
+      "bytes": 6916,
+      "lines": 85,
+      "sha256": "886d4dd91f9f1033a3f04d1dd64ce324a5e3445f9bf63c6c90568e8e14f2fbc8"
+    }
+  },
+  "inputs_sha256": {
+    "assist": "e9fbb9e660cd347256d9173998f311ef938ae7c64f6078ae2b6a54bf8da88431",
+    "builder_labels": "f7f8d907588f0158d24f47679c548c7ccb74cab0cb29c2de83c7c5c8b8c80be4",
+    "builder_provenance": "25756ef1c74d5fe3e604e9c791a97c372bc7ddd79b3a2e6d2398b75ac956a9de",
+    "builder_script": "aac93fbaf57a9fd7cbed4a7e7205457e4bc53078120659c2c3d593e73adf7170",
+    "corpus": "8a5f0ce26067cef4fa958f5aa53035d6dbd63d0eba9455b3c1f8b5ab509ad45f"
+  },
+  "kind": "production-overlay",
+  "magnitude_repair": {
+    "magnitude_cells_repaired": 12,
+    "magnitude_phrases_repaired": 12
+  },
+  "overlay": {
+    "contract": {
+      "documents": 600,
+      "labels": 6566,
+      "overrides": 0
+    },
+    "corporate_record": {
+      "documents": 445,
+      "labels": 1523,
+      "overrides": 45
+    },
+    "correspondence": {
+      "documents": 1000,
+      "labels": 8049,
+      "overrides": 55
+    },
+    "insurance_claim": {
+      "documents": 1100,
+      "labels": 1100,
+      "overrides": 0
+    },
+    "merger_agreement": {
+      "documents": 152,
+      "labels": 1203,
+      "overrides": 1
+    }
+  },
+  "queues": {
+    "gold_override_signoff": 101,
+    "needs_human": 84
+  },
+  "schema": "mailroom-cache/v1",
+  "semver": "9.3.1-rc.3+hf.ff4ca546",
+  "source": {
+    "builder": "reports/datasets/mailroom-dataset-v9.3-label-repaired/build_label_repaired.py",
+    "builder_commit": "f0951873709fef6e7f4681ef2d77727690172f84",
+    "builder_outputs": "builder/",
+    "labels_commit": "10c2adaf4896ebe2b86f1d449e71ff89200622f6",
+    "repo": "Exios66/local-mailroom-sandbox",
+    "stager": "scripts/stage_label_overlay.py"
+  },
+  "status": "staged for the planned v10 release, not published: overlay/ is applied over the Hub v9.3 labels for production scoring; overrides await sign-off in queues/",
+  "version": "9.3.1-rc.3"
+}

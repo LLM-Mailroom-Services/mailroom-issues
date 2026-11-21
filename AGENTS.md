@@ -30,6 +30,10 @@ in a sibling repo and is tracked back here by issue link.
    (`reports/dashboard/export_hub_reports.py`), never hand-edit them. The live
    reports site on GitHub Pages is served from branch **`gh-pages`**, folder
    **`/docs`** (not from `main`).
+   `mailroom_cache/` (the SemVer label cache) is generated data too: regenerate
+   it with `scripts/export_mailroom_cache.py` in the same sandbox repo, and
+   never edit a cached pre-release (`vX.Y.P-rc.N`) in place — cut the next
+   `rc.N` instead.
 2. **Search before filing.** Never duplicate an open issue, epic, or RFC.
    Update the existing one instead (update, don't duplicate). If a closed issue
    already settled the question, reference it and reopen only if the decision
