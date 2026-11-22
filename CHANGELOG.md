@@ -6,6 +6,16 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.8` (field completeness matches provenance)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.8/`: rc.7 with `master/..._field_completeness.csv`
+  recomputed from the validated provenance. rc.7 built that table before validation, so 10 of its
+  74 rows disagreed with its own provenance; the largest was merger `effective_date`, reported
+  75.7% complete while 113 of its cells are held as `disputed_unresolved` (1.3% once corrected).
+  The overlay, queues, builder, labels and provenance are byte-identical to rc.7, so scoring does
+  not change; only the report, the master summary's digests and `MANIFEST.json` differ. The stager
+  now refuses to stage a cut whose table disagrees with its provenance. rc.1 to rc.7 are unchanged.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.7` (party-role words, merger signing dates)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.7/`: rc.6 with two more stager rules.
