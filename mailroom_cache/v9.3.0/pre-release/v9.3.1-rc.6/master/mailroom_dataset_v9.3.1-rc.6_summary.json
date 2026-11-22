@@ -1,0 +1,161 @@
+{
+  "assist_join": {
+    "kept_builder_duplicate_keeper": 5,
+    "kept_builder_only": 7,
+    "notice_filled": 4,
+    "notice_refused_terms": 38,
+    "notice_same_terms": 117,
+    "notice_terms_added": 9,
+    "notice_terms_total": 13,
+    "queued_notice": 15
+  },
+  "builder_outputs_sha256": {
+    "mailroom_dataset_v9.3_label_repaired.csv": "f7f8d907588f0158d24f47679c548c7ccb74cab0cb29c2de83c7c5c8b8c80be4",
+    "mailroom_dataset_v9.3_label_repaired_field_completeness.csv": "ebd035b6013326a1c75a7f54093c0e0e32a3a87af02f0a08f7069196882979ad",
+    "mailroom_dataset_v9.3_label_repaired_label_provenance.csv": "25756ef1c74d5fe3e604e9c791a97c372bc7ddd79b3a2e6d2398b75ac956a9de"
+  },
+  "chosen_source_counts": {
+    "assist_upload": 4,
+    "cuad_span": 223,
+    "generated_derived": 5902,
+    "generated_rule": 970,
+    "gold_candidate": 880,
+    "gold_disputed": 4,
+    "hub_v9.3": 23809,
+    "interim_correction": 44,
+    "interim_derived": 836,
+    "interim_gate": 323,
+    "interim_reviewed": 1894,
+    "near_gold_reviewed": 3567,
+    "near_gold_two_pass": 3730,
+    "owner_review": 8,
+    "subclass_review": 2,
+    "validation_review": 14,
+    "validation_rule": 904
+  },
+  "class_counts": {
+    "contract": 600,
+    "corporate_record": 450,
+    "correspondence": 1000,
+    "insurance_claim": 1100,
+    "merger_agreement": 152
+  },
+  "conflicts_resolved": 2088,
+  "dataset": "Lucius-Morningstar/mailroom-dataset",
+  "documents": 3302,
+  "duplicate_rows_flagged": 13,
+  "inputs_sha256": {
+    "data/cache/Lucius-Morningstar__mailroom-dataset__ff4ca546d434/ground_truth_all.jsonl": "8a5f0ce26067cef4fa958f5aa53035d6dbd63d0eba9455b3c1f8b5ab509ad45f",
+    "data/labels/gold-overlay/contract.jsonl": "46930027eae7579db19dd12ec08c8f5ab9b36dcab3b202d1e979e51b631f861b",
+    "data/labels/gold-overlay/corporate_record.jsonl": "432a99f5b931e759e48b1c47c2e3e13b9c0a098b6b88ef892751c6c56fabf79a",
+    "data/labels/gold-overlay/correspondence.jsonl": "b9a8a001095a1eb08af3a94b95927daffea7325c6c3f32b0f5f62a62b2b42f1b",
+    "data/labels/gold/contract.jsonl": "edf2401362b5885d1cae98927ee72c75334214722602f29d086de127d8b357d3",
+    "data/labels/gold/corporate_record.jsonl": "cce111a1cae4bda15b15fdc12c426ee05de035029ac67a5cb11bb472c8a8c462",
+    "data/labels/gold/correspondence.jsonl": "63cb3e9abd61e36412043c7aa877cf1b9d7ac117e2c95653dc2f3ab03b03f209",
+    "data/labels/interim/contract.jsonl": "17802d8b410cf32efffe6bd758365ef13ce2e6353c40079bcde088538c0aff44",
+    "data/labels/interim/corporate_record.jsonl": "ce4a58b56ef7d69bb7e0227e63213ab382a5bc24356dd5605594627badfff495",
+    "data/labels/interim/correspondence.jsonl": "a871a63fbed494f0e6fffe699abadd5c084368710d559352bf13670d1d042f5f",
+    "data/labels/interim/insurance_claim.jsonl": "5396ceb39cd72f110184212adbecf28167d0e868a9d1b189741a164377230c97",
+    "data/labels/interim/merger_agreement.jsonl": "033732dc412f2fc4594283e909d42c3e9a55e27dd623ba7d1ea5862c41be1753",
+    "data/labels/review/human_reviews.jsonl": "05244782961983ceb741946ee25aa89ce45b5726dc0de9c2dbfe3b50b7624a1b",
+    "data/labels/review/subclass_corrections.jsonl": "266304cedebadb469c1c212f0328da9c5852d9558705114f4a0a8a06210baaa3",
+    "hf-snapshot/ff4ca546d4346991628c2616ae014afc15e9fe04/parquet/ground_truth/test/test-00000-of-00001.parquet": "769334cf81c2dc6dc9c64dc30f8676794adc48b2b8df19f013d19d337116f75a",
+    "hf-snapshot/ff4ca546d4346991628c2616ae014afc15e9fe04/parquet/ground_truth/train/train-00000-of-00001.parquet": "2b30be9e2f864f86a3c42c2d5fa6237bfd4e2210f82a0883bc3de6da9c9601d2"
+  },
+  "label_cells_disputed_unresolved": 107,
+  "label_cells_labeled_hub_v9_3": 24812,
+  "label_cells_labeled_repaired": 43114,
+  "label_cells_targeted": 48688,
+  "label_cells_unlabeled": 5467,
+  "magnitude_repair": {
+    "magnitude_cells_repaired": 12,
+    "magnitude_phrases_repaired": 12
+  },
+  "nan_placeholders_dropped": 2100,
+  "needs_human": 144,
+  "outputs_sha256": {
+    "mailroom_dataset_v9.3.1-rc.6_field_completeness.csv": "a8934a5b71ef775d5add01c37b55ed2b0affe7df6694662d65ed6361e974014b",
+    "mailroom_dataset_v9.3.1-rc.6_label_provenance.csv": "3858d3d65a0c0617039a51a4a43c7f47f497c09415cca9c24b58c566dcdc9012",
+    "mailroom_dataset_v9.3.1-rc.6_labels.csv": "4606f9f8df77691de36889636ad501379ec81e128ce0403dc226a5d9551c40ea"
+  },
+  "release": "v9.3",
+  "revision": "ff4ca546d4346991628c2616ae014afc15e9fe04",
+  "source_weights": {
+    "cuad_span": {
+      "tie_rank": 8,
+      "weight": 1.5
+    },
+    "generated_derived": {
+      "tie_rank": 7,
+      "weight": 2.0
+    },
+    "generated_rule": {
+      "tie_rank": 10,
+      "weight": 1.0
+    },
+    "gold_candidate": {
+      "tie_rank": 9,
+      "weight": 1.0
+    },
+    "gold_disputed": {
+      "tie_rank": 11,
+      "weight": 0.5
+    },
+    "hub_v9.3": {
+      "tie_rank": 5,
+      "weight": 2.0
+    },
+    "interim_correction": {
+      "tie_rank": 2,
+      "weight": 3.0
+    },
+    "interim_derived": {
+      "tie_rank": 6,
+      "weight": 2.0
+    },
+    "interim_disputed": {
+      "tie_rank": 11,
+      "weight": 0.5
+    },
+    "interim_gate": {
+      "tie_rank": 8,
+      "weight": 1.5
+    },
+    "interim_reviewed": {
+      "tie_rank": 1,
+      "weight": 3.0
+    },
+    "near_gold_reviewed": {
+      "tie_rank": 3,
+      "weight": 3.0
+    },
+    "near_gold_two_pass": {
+      "tie_rank": 4,
+      "weight": 2.0
+    },
+    "owner_review": {
+      "tie_rank": 0,
+      "weight": 99.0
+    },
+    "subclass_review": {
+      "tie_rank": 1,
+      "weight": 3.0
+    }
+  },
+  "stale_overlay_records_skipped": {},
+  "subclass_changed": 2,
+  "validation_repair": {
+    "cuad_family_canonical": 600,
+    "entity_list_deduplicated": 10,
+    "governing_law_clause_queued": 13,
+    "governing_law_jurisdiction": 228,
+    "keyword_metadata_stripped": 904,
+    "name_capture_unlabeled": 2,
+    "name_lead_in_trimmed": 2,
+    "owner_decision_pending": 23,
+    "partial_date_unlabeled": 7,
+    "parties_cleaned": 269,
+    "same_text_conflict": 6,
+    "validation_review": 16
+  }
+}

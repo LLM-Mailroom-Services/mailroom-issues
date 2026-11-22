@@ -1,0 +1,14 @@
+{
+  "channel": "hf-revision",
+  "data_revision": "7fd99b406ab1b627f43602dd6a3af5fb5b7a3ac5",
+  "dataset": "Lucius-Morningstar/mailroom-dataset",
+  "hf_tag": "v9.3",
+  "labels_cached_here": false,
+  "labels_revision": "ccd040f6a1b6b414bdefd161cdc622b68f6dacf8",
+  "labels_revision_note": "Hub commit the sandbox gold catalogs, label review and prime filter read the published v9.3 ground truth from.",
+  "note": "Pin only: the published labels are read from the Hub at tag_commit. Pre-releases under ../pre-release/ build on this release.",
+  "schema": "mailroom-cache/v1",
+  "status": "current family pin",
+  "tag_commit": "ff4ca546d4346991628c2616ae014afc15e9fe04",
+  "version": "9.3.0"
+}
