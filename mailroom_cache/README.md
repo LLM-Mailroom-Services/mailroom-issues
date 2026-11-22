@@ -87,6 +87,7 @@ restores those lines into `doc_text`, so a model can read what the labels expect
 | `9.3.1-rc.6` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.6/` | production-overlay on `9.3.0`; sandbox labels `9e641d99` |
 | `9.3.1-rc.7` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.7/` | production-overlay on `9.3.0`; sandbox labels `9e641d99` |
 | `9.3.1-rc.8` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.8/` | production-overlay on `9.3.0`; sandbox labels `9e641d99` |
+| `9.3.1-rc.9` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.9/` | production-overlay on `9.3.0`; sandbox labels `3c24ccba` |
 
 The current family pin is `v9.3.0`. Two label paths exist, and a run uses
 one of them. With the `label-sets` layers, precedence is the Hub label, then interim truth, then
