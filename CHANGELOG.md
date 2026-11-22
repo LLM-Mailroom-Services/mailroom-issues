@@ -6,6 +6,21 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.9` (merger Effective Times, one recipient)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.9/`: rc.8 with six reviewed corrections from the
+  sandbox's `data/labels/review/validation_corrections.jsonl`, each checked against the document
+  text. They answer the outside-diff findings on #250 that still held in rc.8.
+  - Merger `effective_time`: `DOC-5d30efc302f3c431`, `DOC-cbc95a0d161254eb` and
+    `DOC-fc07b37a0f0d1234` were labeled absent although the agreement defines the Effective Time
+    (the interim audit marks them `missed_value`); `DOC-7d93372810daa57b` stopped before the
+    later-time alternative; `DOC-e6c8852b877c4598` cited a section the agreement lacks. Each now
+    holds the defining clause.
+  - Correspondence `recipient` of `DOC-2ccf94f14bd5f040` is unlabeled: two reviewed sources
+    disagreed and the tie rank picked the sender of the quoted message.
+  - Coverage 43,022 of 48,688 cells. Queues, builder outputs and the contract, corporate record
+    and insurance overlays are byte-identical to rc.8. rc.1 to rc.8 are unchanged.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.8` (field completeness matches provenance)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.8/`: rc.7 with `master/..._field_completeness.csv`
