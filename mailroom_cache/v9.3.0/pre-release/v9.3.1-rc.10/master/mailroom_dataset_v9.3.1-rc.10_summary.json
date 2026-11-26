@@ -1,0 +1,163 @@
+{
+  "assist_join": {
+    "kept_builder_duplicate_keeper": 5,
+    "kept_builder_only": 197,
+    "notice_filled": 4,
+    "notice_refused_terms": 38,
+    "notice_same_terms": 117,
+    "notice_terms_added": 9,
+    "notice_terms_total": 13,
+    "queued_notice": 15,
+    "queued_other_field": 27
+  },
+  "builder_outputs_sha256": {
+    "mailroom_dataset_v9.3_label_repaired.csv": "03217afdeffd5457a59645e0a3eb91ec5033b08bbd113d9b149c4d0bc970d8cf",
+    "mailroom_dataset_v9.3_label_repaired_field_completeness.csv": "19fa4e890210bde0977a0e39fe02d2ef8b24194c391061047c983f7c932f44dd",
+    "mailroom_dataset_v9.3_label_repaired_label_provenance.csv": "e269501964ac64c8ece09cb24bdbd6a203fede32779fb9f41bdc209f2e291d8e"
+  },
+  "chosen_source_counts": {
+    "assist_upload": 4,
+    "cuad_span": 224,
+    "generated_derived": 5803,
+    "generated_rule": 847,
+    "gold_candidate": 703,
+    "gold_disputed": 4,
+    "hub_v9.3": 23809,
+    "interim_correction": 44,
+    "interim_derived": 836,
+    "interim_gate": 318,
+    "interim_reviewed": 1893,
+    "near_gold_reviewed": 3814,
+    "near_gold_two_pass": 4025,
+    "owner_review": 8,
+    "subclass_review": 2,
+    "validation_review": 19,
+    "validation_rule": 904
+  },
+  "class_counts": {
+    "contract": 600,
+    "corporate_record": 450,
+    "correspondence": 1000,
+    "insurance_claim": 1100,
+    "merger_agreement": 152
+  },
+  "conflicts_resolved": 2102,
+  "dataset": "Lucius-Morningstar/mailroom-dataset",
+  "documents": 3302,
+  "duplicate_rows_flagged": 13,
+  "inputs_sha256": {
+    "data/cache/Lucius-Morningstar__mailroom-dataset__ff4ca546d434/ground_truth_all.jsonl": "8a5f0ce26067cef4fa958f5aa53035d6dbd63d0eba9455b3c1f8b5ab509ad45f",
+    "data/labels/gold-overlay/contract.jsonl": "d14a57e6ddac17a6bfa18c3de94a154459a18c1c9b6ba41d5787d333cb1be713",
+    "data/labels/gold-overlay/corporate_record.jsonl": "835f98cf9ee3f09bd8bc0c834c44b0c424ddc493fb79d1f1eaf0106d7365e2aa",
+    "data/labels/gold-overlay/correspondence.jsonl": "ead3019a07101a43f0ee3982ae7e5f8249dd983e7762345dcc444585a7dfc0c8",
+    "data/labels/gold/contract.jsonl": "aeb9f5e414e156ac0dda34fe17343b62a06bacdd98c20c6e6828dd69f6e8733c",
+    "data/labels/gold/corporate_record.jsonl": "cce111a1cae4bda15b15fdc12c426ee05de035029ac67a5cb11bb472c8a8c462",
+    "data/labels/gold/correspondence.jsonl": "63cb3e9abd61e36412043c7aa877cf1b9d7ac117e2c95653dc2f3ab03b03f209",
+    "data/labels/interim/contract.jsonl": "17802d8b410cf32efffe6bd758365ef13ce2e6353c40079bcde088538c0aff44",
+    "data/labels/interim/corporate_record.jsonl": "ce4a58b56ef7d69bb7e0227e63213ab382a5bc24356dd5605594627badfff495",
+    "data/labels/interim/correspondence.jsonl": "a871a63fbed494f0e6fffe699abadd5c084368710d559352bf13670d1d042f5f",
+    "data/labels/interim/insurance_claim.jsonl": "5396ceb39cd72f110184212adbecf28167d0e868a9d1b189741a164377230c97",
+    "data/labels/interim/merger_agreement.jsonl": "033732dc412f2fc4594283e909d42c3e9a55e27dd623ba7d1ea5862c41be1753",
+    "data/labels/review/human_reviews.jsonl": "05244782961983ceb741946ee25aa89ce45b5726dc0de9c2dbfe3b50b7624a1b",
+    "data/labels/review/subclass_corrections.jsonl": "266304cedebadb469c1c212f0328da9c5852d9558705114f4a0a8a06210baaa3",
+    "hf-snapshot/ff4ca546d4346991628c2616ae014afc15e9fe04/parquet/ground_truth/test/test-00000-of-00001.parquet": "769334cf81c2dc6dc9c64dc30f8676794adc48b2b8df19f013d19d337116f75a",
+    "hf-snapshot/ff4ca546d4346991628c2616ae014afc15e9fe04/parquet/ground_truth/train/train-00000-of-00001.parquet": "2b30be9e2f864f86a3c42c2d5fa6237bfd4e2210f82a0883bc3de6da9c9601d2"
+  },
+  "label_cells_disputed_unresolved": 197,
+  "label_cells_labeled_hub_v9_3": 24812,
+  "label_cells_labeled_repaired": 43257,
+  "label_cells_targeted": 48688,
+  "label_cells_unlabeled": 5234,
+  "magnitude_repair": {
+    "magnitude_cells_repaired": 12,
+    "magnitude_phrases_repaired": 12
+  },
+  "nan_placeholders_dropped": 2100,
+  "needs_human": 262,
+  "outputs_sha256": {
+    "mailroom_dataset_v9.3.1-rc.10_field_completeness.csv": "450471db0adaffb7ba1a787644538216ed6af671d06eb7d227b01342c3078d77",
+    "mailroom_dataset_v9.3.1-rc.10_label_provenance.csv": "2ac179b2676fef75761d5a5335b4b6b9fa18ae1f5f30d9a0e620717ca7c7c6d4",
+    "mailroom_dataset_v9.3.1-rc.10_labels.csv": "8a39c13f7968eeaeb65a5b4f15b55f4f4452791b40597f0ac85b26ae7ac4d71c"
+  },
+  "release": "v9.3",
+  "revision": "ff4ca546d4346991628c2616ae014afc15e9fe04",
+  "source_weights": {
+    "cuad_span": {
+      "tie_rank": 8,
+      "weight": 1.5
+    },
+    "generated_derived": {
+      "tie_rank": 7,
+      "weight": 2.0
+    },
+    "generated_rule": {
+      "tie_rank": 10,
+      "weight": 1.0
+    },
+    "gold_candidate": {
+      "tie_rank": 9,
+      "weight": 1.0
+    },
+    "gold_disputed": {
+      "tie_rank": 11,
+      "weight": 0.5
+    },
+    "hub_v9.3": {
+      "tie_rank": 5,
+      "weight": 2.0
+    },
+    "interim_correction": {
+      "tie_rank": 2,
+      "weight": 3.0
+    },
+    "interim_derived": {
+      "tie_rank": 6,
+      "weight": 2.0
+    },
+    "interim_disputed": {
+      "tie_rank": 11,
+      "weight": 0.5
+    },
+    "interim_gate": {
+      "tie_rank": 8,
+      "weight": 1.5
+    },
+    "interim_reviewed": {
+      "tie_rank": 1,
+      "weight": 3.0
+    },
+    "near_gold_reviewed": {
+      "tie_rank": 3,
+      "weight": 3.0
+    },
+    "near_gold_two_pass": {
+      "tie_rank": 4,
+      "weight": 2.0
+    },
+    "owner_review": {
+      "tie_rank": 0,
+      "weight": 99.0
+    },
+    "subclass_review": {
+      "tie_rank": 1,
+      "weight": 3.0
+    }
+  },
+  "stale_overlay_records_skipped": {},
+  "subclass_changed": 2,
+  "validation_repair": {
+    "cuad_family_canonical": 600,
+    "entity_list_deduplicated": 10,
+    "governing_law_clause_queued": 13,
+    "governing_law_jurisdiction": 228,
+    "keyword_metadata_stripped": 904,
+    "name_capture_unlabeled": 2,
+    "name_lead_in_trimmed": 2,
+    "owner_decision_pending": 23,
+    "partial_date_unlabeled": 7,
+    "parties_cleaned": 376,
+    "same_text_conflict": 6,
+    "signing_date_pending_owner": 90,
+    "validation_review": 22
+  }
+}

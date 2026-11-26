@@ -6,6 +6,25 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.10` (near-gold labels for 61 contracts)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.10/`: rc.9 rebuilt from the sandbox's regenerated
+  v9.3 label-repaired release (builder commit `736fe3ee`, labels commit `f8a9c5bd`).
+  - The 61 SEC EDGAR contracts that have neither CUAD clause labels nor reviewed field labels now
+    carry near-gold labels for the nine scored contract fields. Each comes from independent label
+    and check passes, with disagreements settled by a reviewing model; 21 documents' earlier
+    unreviewed candidates were reviewed in place (175 accepted, 7 corrected). They are near-gold,
+    not human gold. The contract overlay grows from 6,552 to 6,787 labels.
+  - The builder fix that stops treating an event-defined CUAD date ("the date of the last
+    signature") as a documented absence reaches the cache: about 90 contract `effective_date` /
+    `agreement_date` cells move from absent to unlabeled.
+  - No cell held by a reviewed, near-gold, interim-reviewed, owner or Hub source changed value or
+    presence. 27 cells where the rc.1 assist file disagrees with a new near-gold value keep the
+    near-gold value and join `queues/needs_human.csv` (235 to 262 rows) for sign-off.
+  - Coverage 43,257 of 48,688 cells (rc.9: 43,022). The corporate record, correspondence,
+    insurance and merger overlays, `gold_override_signoff.csv` and `header_restoration.csv` are
+    byte-identical to rc.9. rc.1 to rc.9 are unchanged.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.9` (merger Effective Times, one recipient)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.9/`: rc.8 with six reviewed corrections from the
