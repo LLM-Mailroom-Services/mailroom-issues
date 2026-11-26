@@ -1,0 +1,125 @@
+{
+  "dataset": "Lucius-Morningstar/mailroom-dataset",
+  "revision": "ff4ca546d4346991628c2616ae014afc15e9fe04",
+  "release": "v9.3",
+  "documents": 3302,
+  "class_counts": {
+    "insurance_claim": 1100,
+    "contract": 600,
+    "corporate_record": 450,
+    "correspondence": 1000,
+    "merger_agreement": 152
+  },
+  "label_cells_targeted": 48686,
+  "label_cells_labeled_hub_v9_3": 24812,
+  "label_cells_labeled_repaired": 43380,
+  "label_cells_unlabeled": 5228,
+  "label_cells_disputed_unresolved": 78,
+  "conflicts_resolved": 2102,
+  "needs_human": 78,
+  "subclass_changed": 2,
+  "nan_placeholders_dropped": 2100,
+  "duplicate_rows_flagged": 13,
+  "stale_overlay_records_skipped": {},
+  "chosen_source_counts": {
+    "hub_v9.3": 24713,
+    "generated_derived": 5828,
+    "near_gold_two_pass": 4026,
+    "near_gold_reviewed": 3814,
+    "interim_reviewed": 1894,
+    "generated_rule": 939,
+    "interim_derived": 836,
+    "gold_candidate": 703,
+    "interim_gate": 346,
+    "cuad_span": 224,
+    "gold_disputed": 82,
+    "interim_correction": 45,
+    "owner_review": 8,
+    "subclass_review": 2
+  },
+  "source_weights": {
+    "owner_review": {
+      "weight": 99.0,
+      "tie_rank": 0
+    },
+    "interim_reviewed": {
+      "weight": 3.0,
+      "tie_rank": 1
+    },
+    "subclass_review": {
+      "weight": 3.0,
+      "tie_rank": 1
+    },
+    "interim_correction": {
+      "weight": 3.0,
+      "tie_rank": 2
+    },
+    "near_gold_reviewed": {
+      "weight": 3.0,
+      "tie_rank": 3
+    },
+    "near_gold_two_pass": {
+      "weight": 2.0,
+      "tie_rank": 4
+    },
+    "hub_v9.3": {
+      "weight": 2.0,
+      "tie_rank": 5
+    },
+    "interim_derived": {
+      "weight": 2.0,
+      "tie_rank": 6
+    },
+    "generated_derived": {
+      "weight": 2.0,
+      "tie_rank": 7
+    },
+    "interim_gate": {
+      "weight": 1.5,
+      "tie_rank": 8
+    },
+    "cuad_span": {
+      "weight": 1.5,
+      "tie_rank": 8
+    },
+    "gold_candidate": {
+      "weight": 1.0,
+      "tie_rank": 9
+    },
+    "generated_rule": {
+      "weight": 1.0,
+      "tie_rank": 10
+    },
+    "gold_disputed": {
+      "weight": 0.5,
+      "tie_rank": 11
+    },
+    "interim_disputed": {
+      "weight": 0.5,
+      "tie_rank": 11
+    }
+  },
+  "inputs_sha256": {
+    "data/cache/Lucius-Morningstar__mailroom-dataset__ff4ca546d434/ground_truth_all.jsonl": "8a5f0ce26067cef4fa958f5aa53035d6dbd63d0eba9455b3c1f8b5ab509ad45f",
+    "data/labels/gold-overlay/contract.jsonl": "d14a57e6ddac17a6bfa18c3de94a154459a18c1c9b6ba41d5787d333cb1be713",
+    "data/labels/gold-overlay/corporate_record.jsonl": "835f98cf9ee3f09bd8bc0c834c44b0c424ddc493fb79d1f1eaf0106d7365e2aa",
+    "data/labels/gold-overlay/correspondence.jsonl": "ead3019a07101a43f0ee3982ae7e5f8249dd983e7762345dcc444585a7dfc0c8",
+    "data/labels/gold/contract.jsonl": "aeb9f5e414e156ac0dda34fe17343b62a06bacdd98c20c6e6828dd69f6e8733c",
+    "data/labels/gold/corporate_record.jsonl": "cce111a1cae4bda15b15fdc12c426ee05de035029ac67a5cb11bb472c8a8c462",
+    "data/labels/gold/correspondence.jsonl": "63cb3e9abd61e36412043c7aa877cf1b9d7ac117e2c95653dc2f3ab03b03f209",
+    "data/labels/interim/contract.jsonl": "17802d8b410cf32efffe6bd758365ef13ce2e6353c40079bcde088538c0aff44",
+    "data/labels/interim/corporate_record.jsonl": "ce4a58b56ef7d69bb7e0227e63213ab382a5bc24356dd5605594627badfff495",
+    "data/labels/interim/correspondence.jsonl": "a871a63fbed494f0e6fffe699abadd5c084368710d559352bf13670d1d042f5f",
+    "data/labels/interim/insurance_claim.jsonl": "5396ceb39cd72f110184212adbecf28167d0e868a9d1b189741a164377230c97",
+    "data/labels/interim/merger_agreement.jsonl": "033732dc412f2fc4594283e909d42c3e9a55e27dd623ba7d1ea5862c41be1753",
+    "data/labels/review/human_reviews.jsonl": "05244782961983ceb741946ee25aa89ce45b5726dc0de9c2dbfe3b50b7624a1b",
+    "data/labels/review/subclass_corrections.jsonl": "266304cedebadb469c1c212f0328da9c5852d9558705114f4a0a8a06210baaa3",
+    "hf-snapshot/ff4ca546d4346991628c2616ae014afc15e9fe04/parquet/ground_truth/test/test-00000-of-00001.parquet": "769334cf81c2dc6dc9c64dc30f8676794adc48b2b8df19f013d19d337116f75a",
+    "hf-snapshot/ff4ca546d4346991628c2616ae014afc15e9fe04/parquet/ground_truth/train/train-00000-of-00001.parquet": "2b30be9e2f864f86a3c42c2d5fa6237bfd4e2210f82a0883bc3de6da9c9601d2"
+  },
+  "outputs_sha256": {
+    "mailroom_dataset_v9.3_label_repaired.csv": "03217afdeffd5457a59645e0a3eb91ec5033b08bbd113d9b149c4d0bc970d8cf",
+    "mailroom_dataset_v9.3_label_repaired_field_completeness.csv": "19fa4e890210bde0977a0e39fe02d2ef8b24194c391061047c983f7c932f44dd",
+    "mailroom_dataset_v9.3_label_repaired_label_provenance.csv": "e269501964ac64c8ece09cb24bdbd6a203fede32779fb9f41bdc209f2e291d8e"
+  }
+}
