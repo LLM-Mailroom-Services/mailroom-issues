@@ -8,7 +8,7 @@ refer to this repo's issues.
 
 ### Added: staged production-scoring overlay `v9.3.1-rc.10` (near-gold labels for 61 contracts)
 
-- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.10/`: rc.9 rebuilt from the sandbox's regenerated
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.10/`: a new cut based on rc.9, rebuilt from the sandbox's regenerated
   v9.3 label-repaired release (builder commit `736fe3ee`, labels commit `f8a9c5bd`).
   - The 61 SEC EDGAR contracts that have neither CUAD clause labels nor reviewed field labels now
     carry near-gold labels for the nine scored contract fields. Each comes from independent label
