@@ -1,0 +1,188 @@
+{
+  "assist_join": {
+    "kept_builder_duplicate_keeper": 1,
+    "kept_builder_only": 542,
+    "kept_builder_subclass_review": 137,
+    "notice_filled": 4,
+    "notice_refused_terms": 38,
+    "notice_same_terms": 117,
+    "notice_terms_added": 9,
+    "notice_terms_total": 13,
+    "queued_notice": 15,
+    "queued_other_field": 32
+  },
+  "base_hf": {
+    "data_revision": "7fd99b406ab1b627f43602dd6a3af5fb5b7a3ac5",
+    "dataset": "Lucius-Morningstar/mailroom-dataset",
+    "hf_tag": "v9.3",
+    "tag_commit": "ff4ca546d4346991628c2616ae014afc15e9fe04"
+  },
+  "base_release": "9.3.0",
+  "channel": "pre-release",
+  "coverage": {
+    "cells_labeled": 43882,
+    "cells_labeled_hub_v9_3": 24812,
+    "cells_targeted": 50299,
+    "completeness": 0.8724
+  },
+  "files": {
+    "builder/mailroom_dataset_v9.3_label_repaired.csv": {
+      "bytes": 4104816,
+      "lines": 3365,
+      "sha256": "f3693bd16786b7176dede29afb5c63e0a107544b3097d49f91b3b2de4331008a"
+    },
+    "builder/mailroom_dataset_v9.3_label_repaired_field_completeness.csv": {
+      "bytes": 8643,
+      "lines": 105,
+      "sha256": "12927838c9813eac23f8e7befd22318e4cd668b5f6fb5c98a339bda7a3958f63"
+    },
+    "builder/mailroom_dataset_v9.3_label_repaired_label_provenance.csv": {
+      "bytes": 13860959,
+      "lines": 50362,
+      "sha256": "d10cf5f121a34be36dfe8f047d298bcedd5b58e24a8a5f5f63d6e4241929daee"
+    },
+    "builder/mailroom_dataset_v9.3_label_repaired_summary.json": {
+      "bytes": 5085,
+      "sha256": "54882c511ed6f34990af59bda9450ed2a7daef87aefbc6b4572b849f0f3cd8c7"
+    },
+    "master/mailroom_dataset_v9.3.1-rc.11_field_completeness.csv": {
+      "bytes": 8545,
+      "lines": 105,
+      "sha256": "aa594fba284d138b2ad94187d6431e240caf716c210cbc15860fc67f752bc7ee"
+    },
+    "master/mailroom_dataset_v9.3.1-rc.11_label_provenance.csv": {
+      "bytes": 13821198,
+      "lines": 50362,
+      "sha256": "ff0c910d1ebbe6732a78895ab6d086907c236eda047d03dcd2752ce42a59cc23"
+    },
+    "master/mailroom_dataset_v9.3.1-rc.11_labels.csv": {
+      "bytes": 3984623,
+      "lines": 3365,
+      "sha256": "c96dbaec5a8e0ef6c9f43bb927c61805bfa6766b9c7f95d18d85ad7c538c5484"
+    },
+    "master/mailroom_dataset_v9.3.1-rc.11_summary.json": {
+      "bytes": 6476,
+      "sha256": "501063456b0b1ff2c4d900e990018424adb4bb61e9bc9b30dd92cda49dfa9783"
+    },
+    "overlay/contract.jsonl": {
+      "bytes": 2001291,
+      "lines": 600,
+      "sha256": "585f2e59ae9696928664f041db82d5e6b54e19b8fc3428ef72dd4b28473f3b6f"
+    },
+    "overlay/corporate_record.jsonl": {
+      "bytes": 758156,
+      "lines": 447,
+      "sha256": "b30d317e93c63a37acab82944084f4d75cfa01b95079d439cb989c69230cc616"
+    },
+    "overlay/correspondence.jsonl": {
+      "bytes": 2912456,
+      "lines": 1000,
+      "sha256": "327c22104cc02f85cb15ecae84022d9c5f2ce086b3907e54fc3a44f699c8f71f"
+    },
+    "overlay/insurance_claim.jsonl": {
+      "bytes": 359734,
+      "lines": 1100,
+      "sha256": "8c3fc2129c7d1c5ce35f3d8f39795ca0223d8931dedf190773385e25a54b515d"
+    },
+    "overlay/merger_agreement.jsonl": {
+      "bytes": 477460,
+      "lines": 152,
+      "sha256": "2869960cde45a4184e61912ad31a6f622c4924bf9450af8a6b90a89e5be0e744"
+    },
+    "queues/gold_override_signoff.csv": {
+      "bytes": 198126,
+      "lines": 1070,
+      "sha256": "d9722eea54b63e38b299001f84a649573e04cd54e0197ad375cd81310e423270"
+    },
+    "queues/header_restoration.csv": {
+      "bytes": 476803,
+      "lines": 736,
+      "sha256": "385994a2783bb514d9307fae7148dca2d1953067c48900671999c1d318779509"
+    },
+    "queues/needs_human.csv": {
+      "bytes": 51275,
+      "lines": 291,
+      "sha256": "7257e378d6d0deca18a2c902a50dd02b71b0825a59c7e4759c081cc6f3d9ebfa"
+    }
+  },
+  "header_restoration": {
+    "documents": 735,
+    "file": "queues/header_restoration.csv",
+    "note": "correspondence labels that quote the original Enron email header, which the corpus text lost in cleaning; the next release restores these header lines into doc_text"
+  },
+  "inputs_sha256": {
+    "assist": "e9fbb9e660cd347256d9173998f311ef938ae7c64f6078ae2b6a54bf8da88431",
+    "builder_labels": "f3693bd16786b7176dede29afb5c63e0a107544b3097d49f91b3b2de4331008a",
+    "builder_provenance": "d10cf5f121a34be36dfe8f047d298bcedd5b58e24a8a5f5f63d6e4241929daee",
+    "builder_script": "6ac3445e9bb010039b72910eba1855c7c026e0e15e700b02006ea52e3a15fcf8",
+    "corpus": "8a5f0ce26067cef4fa958f5aa53035d6dbd63d0eba9455b3c1f8b5ab509ad45f",
+    "header_source": "a871a63fbed494f0e6fffe699abadd5c084368710d559352bf13670d1d042f5f",
+    "interim_audit": "25d86e2f7e0901b9108fc3af15e92655038a644d1e7c8485ae11fcbc54d9e633",
+    "validation_corrections": "d8217a2964868b1bea0fa3e78fe0417ccf13ed8bdf81198bfb85a27f7cb1933e"
+  },
+  "kind": "production-overlay",
+  "magnitude_repair": {
+    "magnitude_cells_repaired": 12,
+    "magnitude_phrases_repaired": 12
+  },
+  "overlay": {
+    "contract": {
+      "documents": 600,
+      "labels": 6802,
+      "overrides": 9
+    },
+    "corporate_record": {
+      "documents": 447,
+      "labels": 2111,
+      "overrides": 99
+    },
+    "correspondence": {
+      "documents": 1000,
+      "labels": 8956,
+      "overrides": 959
+    },
+    "insurance_claim": {
+      "documents": 1100,
+      "labels": 1100,
+      "overrides": 0
+    },
+    "merger_agreement": {
+      "documents": 152,
+      "labels": 1104,
+      "overrides": 2
+    }
+  },
+  "queues": {
+    "gold_override_signoff": 1069,
+    "header_restoration": 735,
+    "needs_human": 290
+  },
+  "schema": "mailroom-cache/v1",
+  "semver": "9.3.1-rc.11+hf.ff4ca546",
+  "signing_date_policy": "pending",
+  "source": {
+    "builder": "reports/datasets/mailroom-dataset-v9.3-label-repaired/build_label_repaired.py",
+    "builder_commit": "0e083b7108cee86d5973bb88f08431d18dab9493",
+    "builder_outputs": "builder/",
+    "labels_commit": "0e083b7108cee86d5973bb88f08431d18dab9493",
+    "repo": "Exios66/local-mailroom-sandbox",
+    "stager": "scripts/stage_label_overlay.py"
+  },
+  "status": "staged for the planned v10 release, not published: overlay/ is applied over the Hub v9.3 labels for production scoring; overrides await sign-off in queues/",
+  "validation_repair": {
+    "cuad_family_canonical": 600,
+    "entity_list_deduplicated": 11,
+    "governing_law_clause_queued": 13,
+    "governing_law_jurisdiction": 229,
+    "keyword_metadata_stripped": 904,
+    "name_capture_unlabeled": 2,
+    "name_lead_in_trimmed": 2,
+    "owner_decision_pending": 23,
+    "partial_date_unlabeled": 7,
+    "parties_cleaned": 376,
+    "same_text_conflict": 6,
+    "signing_date_pending_owner": 90,
+    "validation_review": 22
+  },
+  "version": "9.3.1-rc.11"
+}
