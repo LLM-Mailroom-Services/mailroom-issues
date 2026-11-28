@@ -6,6 +6,18 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.11` (corporate subclass fields)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.11/` is a new cut. It is built from the sandbox's v9.3 label-repaired release at builder and labels commit `0e083b71` (local-mailroom-sandbox #453).
+  - **Corporate subclass fields:** before this cut the release targeted only the Dojo core fields, so no earlier cut carried a corporate subclass field. The near-gold labels for `trustee`, `registered_agent`, `certifying_officer`, `authorized_capital`, `subsidiaries` and the other salient fields of each record's subclass are now in the corporate overlay: 534 labels, 323 populated and 211 documented absences. The corporate overlay grows from 1,523 to 2,111 labels.
+  - **Reviewed subclass corrections:** the corrections reviewed since rc.10 are carried, with the fields derived from them: 54 corporate, 9 contract `Consulting Agreements` with their `cuad_family`, and 1 merger `mixed_cash_stock`. Scoring does not apply `subclass` from the overlay, so the Hub subclass stays the raw truth.
+  - **Other labels:** the near-gold contract, merger and correspondence labels admitted since rc.10 are carried as well. In contract there are 6 new labels and 2 upgrades from a rule or CUAD-span value to a reviewed one. In merger there are 16 new labels and 3 party lists upgraded from a rule value to near-gold. Correspondence has 4 new documented absences.
+  - **Protected truth:** compared with rc.10, no cell was removed, and no reviewed, near-gold, interim-reviewed, owner or Hub value changed. 14 values changed: 9 derived contract `cuad_family` values follow the reviewed corrections, and 5 rule or CUAD-span values were upgraded to near-gold. Insurance and `header_restoration.csv` are byte-identical to rc.10.
+  - **Needs-human queue:** grows from 262 to 290 rows. In 23 cells a reviewed absence overrides a populated value, so they need sign-off; the value stays the reviewed absence.
+  - **Overrides of Hub values:** go from 1,005 to 1,069 rows in `gold_override_signoff.csv`. All 64 new rows are reviewed subclass corrections.
+  - **Coverage:** 43,882 of 50,299 cells, up from 43,257 of 48,688 in rc.10. 1,547 of the 1,611 new target cells are corporate subclass fields; those without a label yet count as unlabeled.
+  - rc.1 to rc.10 are unchanged.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.10` (near-gold labels for 61 contracts)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.10/`: a new cut based on rc.9, rebuilt from the sandbox's regenerated
