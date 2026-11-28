@@ -82,6 +82,7 @@ restores those lines into `doc_text`, so a model can read what the labels expect
 | `9.3.1-rc.1` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.1/` | label-sets on `9.3.0`; sandbox labels `10c2adaf` |
 | `9.3.1-rc.10` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.10/` | production-overlay on `9.3.0`; sandbox labels `f8a9c5bd` |
 | `9.3.1-rc.11` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.11/` | production-overlay on `9.3.0`; sandbox labels `0e083b71` |
+| `9.3.1-rc.12` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.12/` | production-overlay on `9.3.0`; sandbox labels `84360786` |
 | `9.3.1-rc.2` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.2/` | production-overlay on `9.3.0`; sandbox labels `10c2adaf` |
 | `9.3.1-rc.3` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.3/` | production-overlay on `9.3.0`; sandbox labels `10c2adaf` |
 | `9.3.1-rc.4` | pre-release | `v9.3.0/pre-release/v9.3.1-rc.4/` | production-overlay on `9.3.0`; sandbox labels `dbf16215` |
