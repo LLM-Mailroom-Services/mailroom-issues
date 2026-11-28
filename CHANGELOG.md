@@ -6,6 +6,17 @@ refer to this repo's issues.
 
 ## [Unreleased]
 
+### Added: staged production-scoring overlay `v9.3.1-rc.12` (contract and corporate label rounds)
+
+- `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.12/` is a new cut. It is built from the sandbox's v9.3 label-repaired release at builder and labels commit `84360786` (local-mailroom-sandbox #474).
+  - **New labels:** two near-gold rounds, each document read by two independent passes, with every dispute settled by a source-reading review and no `heldout` document labelled. Phase 1 fills the open contract target fields that the production slices 100, 250 and 500 score. Phase 2 fills the open corporate gate fields on 100 calibration documents. Contract labels grow from 6,802 to 7,121, corporate from 2,111 to 2,679, and correspondence from 8,956 to 8,957.
+  - **Held-back cells released:** 74 contract cells and 1 corporate cell that rc.11 held as `disputed_unresolved` now carry a reviewed near-gold value. `label_cells_disputed_unresolved` goes from 197 to 125.
+  - **Protected truth:** compared with rc.11, no cell was removed, and 888 cells were added. One value changed, on purpose: the reviewed `jurisdiction` of `DOC-971bbacf86cd7a94` goes from a documented absence to `New York`, following the owner-requested review of held absences. The merger and insurance overlays, `gold_override_signoff.csv` and `header_restoration.csv` are byte-identical to rc.11.
+  - **Motor Cargo:** the rc.11 `subsidiaries` values of `DOC-91af5bdd6f0ad4bb` were already right; the exhibit lists `Motor Cargo, a Utah corporation` as its own entry. Only that entry's evidence span is corrected here. The rc.11 cut is unchanged.
+  - **Needs-human queue:** goes from 290 to 217 rows. 75 rows close because their cells now have a reviewed value. 2 rows open: `DOC-18f682a3054d35c5` and `DOC-3c328f7374a079a9` share the same text but disagree on the wording of `authorized_capital`, so both cells are held back until the labels agree.
+  - **Coverage:** 44,770 of 50,299 cells, up from 43,882 in rc.11.
+  - rc.1 to rc.11 are unchanged.
+
 ### Added: staged production-scoring overlay `v9.3.1-rc.11` (corporate subclass fields)
 
 - `mailroom_cache/v9.3.0/pre-release/v9.3.1-rc.11/` is a new cut. It is built from the sandbox's v9.3 label-repaired release at builder and labels commit `0e083b71` (local-mailroom-sandbox #453).
